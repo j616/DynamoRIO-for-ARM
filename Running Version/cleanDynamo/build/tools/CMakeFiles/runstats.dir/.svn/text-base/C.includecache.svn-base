@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ste/workspace/cleanDynamo/tools/runstats.c
+sys/types.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+assert.h
+-
+stdio.h
+-
+sys/time.h
+-
+stdlib.h
+-
+string.h
+-
+

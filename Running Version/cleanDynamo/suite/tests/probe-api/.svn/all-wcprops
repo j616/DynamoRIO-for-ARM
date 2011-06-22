@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/probe-api
+END
+insert_liboffs.template
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/probe-api/insert_liboffs.template
+END
+insert_liboffs.client.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/probe-api/insert_liboffs.client.c
+END
+insert_liboffs.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/probe-api/insert_liboffs.c
+END

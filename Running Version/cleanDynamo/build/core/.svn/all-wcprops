@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/stebarton-projects/!svn/ver/22/cleanDynamo/build/core
+END
+dr_ntdll.def
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/core/dr_ntdll.def
+END
+ldscript
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/22/cleanDynamo/build/core/ldscript
+END
+cmake_install.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/17/cleanDynamo/build/core/cmake_install.cmake
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/17/cleanDynamo/build/core/Makefile
+END

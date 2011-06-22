@@ -1,0 +1,8 @@
+Sending SIGUSR2
+Sending SIGUSR1
+signal_handler: sig=10
+Got SIGUSR1
+Generating SIGSEGV
+signal_handler: sig=11
+Got SIGSEGV
+250006.749760

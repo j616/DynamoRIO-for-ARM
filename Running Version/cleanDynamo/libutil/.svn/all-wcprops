@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil
+END
+policy.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/policy.c
+END
+utils.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/utils.c
+END
+parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/parser.h
+END
+mfapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/mfapi.h
+END
+tests.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/tests.c
+END
+policy.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/policy.h
+END
+config.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/config.c
+END
+utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/utils.h
+END
+processes.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/processes.c
+END
+tester.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/tester.c
+END
+dumpevts.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/dumpevts.c
+END
+drconfig.def
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/drconfig.def
+END
+share.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/share.h
+END
+tests.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/tests.h
+END
+mfapi.def
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/mfapi.def
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/config.h
+END
+processes.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/processes.h
+END
+elm.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/elm.c
+END
+sample.mfp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/sample.mfp
+END
+elm.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/elm.h
+END
+services.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/services.c
+END
+detach.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/detach.c
+END
+services.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/services.h
+END
+dr_config.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/dr_config.c
+END
+parser.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/parser.c
+END
+mfapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/mfapi.c
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/libutil/CMakeLists.txt
+END

@@ -1,0 +1,4 @@
+/usr/bin/gcc  -fPIC   -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector  -fPIC -shared -nostartfiles -nodefaultlibs -lgcc -shared -Wl,-soname,libsignal.so -o bin/libsignal.so CMakeFiles/signal.dir/signal.c.o ../../lib/libdynamorio.so.2.0 
+/usr/bin/objcopy --only-keep-debug bin/libsignal.so bin/libsignal.so.debug
+/usr/bin/objcopy --add-gnu-debuglink=bin/libsignal.so.debug bin/libsignal.so
+/usr/bin/strip -g -x -p bin/libsignal.so

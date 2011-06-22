@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite
+END
+runsuite_ssh.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/runsuite_ssh.cmake
+END
+runsuite_long.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/runsuite_long.cmake
+END
+nightly.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly.cmake
+END
+old-runregression-runs-2-6-08
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/old-runregression-runs-2-6-08
+END
+runsuite.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/runsuite.cmake
+END

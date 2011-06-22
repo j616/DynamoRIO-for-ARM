@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bartons7/cMakeExamples/3/TutorialConfig.h
+
+/home/bartons7/cMakeExamples/3/tutorial.c
+stdio.h
+-
+math.h
+-
+TutorialConfig.h
+/home/bartons7/cMakeExamples/3/TutorialConfig.h
+newOutput.h
+/home/bartons7/cMakeExamples/3/newOutput.h
+

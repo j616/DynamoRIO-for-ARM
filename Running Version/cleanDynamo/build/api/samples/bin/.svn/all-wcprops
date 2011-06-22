@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin
+END
+libbbcount.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libbbcount.so.debug
+END
+libmemtrace.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libmemtrace.so.debug
+END
+libempty.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libempty.so.debug
+END
+libprefetch.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libprefetch.so.debug
+END
+libstl_test.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libstl_test.so.debug
+END
+libinc2add.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libinc2add.so.debug
+END
+libcbr.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libcbr.so.debug
+END
+libcountcalls.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libcountcalls.so.debug
+END
+tracedump.debug
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/tracedump.debug
+END
+libsignal.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libsignal.so.debug
+END
+libinstrcalls.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libinstrcalls.so.debug
+END
+libinline.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libinline.so.debug
+END
+libbbsize.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libbbsize.so.debug
+END
+libstrace.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libstrace.so.debug
+END
+libdiv.so.debug
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/bin/libdiv.so.debug
+END

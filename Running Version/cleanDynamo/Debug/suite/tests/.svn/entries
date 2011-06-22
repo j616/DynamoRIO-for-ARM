@@ -1,0 +1,95 @@
+10
+
+dir
+22
+https://subversion.assembla.com/svn/stebarton-projects/cleanDynamo/Debug/suite/tests
+https://subversion.assembla.com/svn/stebarton-projects
+
+
+
+2011-02-22T18:14:16.508132Z
+11
+stephen.barton
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2708fa46-d68b-49aa-b082-ac826ae47a74
+
+linux
+dir
+
+win32
+dir
+
+security-linux
+dir
+
+security-win32
+dir
+
+common
+dir
+
+api
+dir
+
+pthreads
+dir
+
+client-interface
+dir
+
+runall
+dir
+
+security-common
+dir
+
+probe-api
+dir
+
+subdir.mk
+file
+
+
+
+
+2011-03-25T17:12:55.035460Z
+b357e83df3f6ac3f43ff55cd57dad560
+2011-02-22T18:14:16.508132Z
+11
+stephen.barton
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+706
+

@@ -1,0 +1,315 @@
+backup.txt:  # since our defines are mostly in configure.h where we can't as easily tweak them
+backup.txt:  ${PROJECT_BINARY_DIR}/configure.h
+backup.txt:# If we append this to configure.h we'll trigger recompilation of
+backup.txt:file(READ ${PROJECT_BINARY_DIR}/configure.h configure_h)
+backup.txt:  "\\1\\2\\3-D\\2\n" configure_h_mod "${configure_h}")
+backup.txt:file(WRITE ${defines_tmpfile} "${configure_h_mod}")
+backup.txt:# in configure.h, except the -Ddynamorio_EXPORTS that cmake defines.
+backup.txt:  ${PROJECT_BINARY_DIR} # for configure.h and configure_defines.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:../core/linux/../configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:/home/bartons7/workspace/cleanDynamo/core/configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:/home/bartons7/workspace/cleanDynamo/core/configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:/home/bartons7/workspace/cleanDynamo/core/configure.h
+build/core/CMakeFiles/dynamorio.dir/C.includecache:configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.internal: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/buildmark.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/config.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/dispatch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/dynamo.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/emit.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/fcache.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/fragment.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/hashtable.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/heap.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/hotpatch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/instrlist.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/io.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/link.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/linux/diagnost.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/linux/module.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/linux/os.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/linux/signal.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/linux/stackdump.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/loader_shared.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/module_list.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/moduledb.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/monitor.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/nudge.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/options.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/perfctr.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/perscache.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/rct.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/stats.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/synch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/utils.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/vmareas.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/arch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/decode.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/decode_fast.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/disassemble.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/emit_utils.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/encode.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/instr.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/instrument.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/interp.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/mangle.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/proc.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/depend.make:core/CMakeFiles/dynamorio.dir/x86/x86_code.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/build.make:core/CMakeFiles/dynamorio.dir/x86/x86.asm.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/build.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/x86.asm.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/buildmark.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/config.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/dispatch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/dynamo.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/emit.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/fcache.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/fragment.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/hashtable.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/heap.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/hotpatch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/instrlist.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/io.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/link.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/linux/diagnost.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/linux/module.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/linux/os.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/linux/signal.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/linux/stackdump.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/loader_shared.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/module_list.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/moduledb.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/monitor.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/nudge.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/options.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/perfctr.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/perscache.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/rct.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/stats.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/synch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/utils.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/vmareas.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/arch.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/decode.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/decode_fast.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/disassemble.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/emit_utils.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/encode.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/instr.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/instrument.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/interp.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/mangle.c.o: configure.h
+build/core/CMakeFiles/dynamorio.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/dynamorio.dir/x86/proc.c.o: configure.h
+build/core/CMakeFiles/drpreload.dir/C.includecache:configure.h
+build/core/CMakeFiles/drpreload.dir/C.includecache:../core/linux/../configure.h
+build/core/CMakeFiles/drpreload.dir/C.includecache:configure.h
+build/core/CMakeFiles/drpreload.dir/C.includecache:/home/bartons7/workspace/cleanDynamo/core/configure.h
+build/core/CMakeFiles/drpreload.dir/C.includecache:configure.h
+build/core/CMakeFiles/drpreload.dir/depend.internal: configure.h
+build/core/CMakeFiles/drpreload.dir/depend.internal: configure.h
+build/core/CMakeFiles/drpreload.dir/depend.internal: configure.h
+build/core/CMakeFiles/drpreload.dir/depend.make:core/CMakeFiles/drpreload.dir/config.c.o: configure.h
+build/core/CMakeFiles/drpreload.dir/depend.make:core/CMakeFiles/drpreload.dir/linux/os.c.o: configure.h
+build/core/CMakeFiles/drpreload.dir/depend.make:core/CMakeFiles/drpreload.dir/linux/preload.c.o: configure.h
+build/core/CMakeFiles/drpreload.dir/build.make:core/CMakeFiles/drpreload.dir/x86/x86.asm.o: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/build.make.svn-base:core/CMakeFiles/drpreload.dir/x86/x86.asm.o: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/drpreload.dir/config.c.o: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/drpreload.dir/linux/os.c.o: configure.h
+build/core/CMakeFiles/drpreload.dir/.svn/text-base/depend.make.svn-base:core/CMakeFiles/drpreload.dir/linux/preload.c.o: configure.h
+build/tools/CMakeFiles/run_in_bg.dir/C.includecache:configure.h
+build/tools/CMakeFiles/run_in_bg.dir/C.includecache:/home/ste/workspace/cleanDynamo/tools/configure.h
+build/tools/CMakeFiles/run_in_bg.dir/C.includecache:configure.h
+build/tools/CMakeFiles/run_in_bg.dir/depend.internal: configure.h
+build/tools/CMakeFiles/run_in_bg.dir/depend.make:tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o: configure.h
+build/tools/CMakeFiles/run_in_bg.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/tools/CMakeFiles/run_in_bg.dir/.svn/text-base/depend.make.svn-base:tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o: configure.h
+build/tools/CMakeFiles/run_in_bg.dir/.svn/text-base/C.includecache.svn-base:configure.h
+build/tools/CMakeFiles/run_in_bg.dir/.svn/text-base/C.includecache.svn-base:/home/ste/workspace/cleanDynamo/tools/configure.h
+build/tools/CMakeFiles/run_in_bg.dir/.svn/text-base/C.includecache.svn-base:configure.h
+build/tools/CMakeFiles/nudgeunix.dir/C.includecache:configure.h
+build/tools/CMakeFiles/nudgeunix.dir/C.includecache:/home/ste/workspace/cleanDynamo/tools/configure.h
+build/tools/CMakeFiles/nudgeunix.dir/C.includecache:configure.h
+build/tools/CMakeFiles/nudgeunix.dir/depend.internal: configure.h
+build/tools/CMakeFiles/nudgeunix.dir/depend.make:tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o: configure.h
+build/tools/CMakeFiles/nudgeunix.dir/.svn/text-base/depend.internal.svn-base: configure.h
+build/tools/CMakeFiles/nudgeunix.dir/.svn/text-base/depend.make.svn-base:tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o: configure.h
+build/tools/CMakeFiles/nudgeunix.dir/.svn/text-base/C.includecache.svn-base:configure.h
+build/tools/CMakeFiles/nudgeunix.dir/.svn/text-base/C.includecache.svn-base:/home/ste/workspace/cleanDynamo/tools/configure.h
+build/tools/CMakeFiles/nudgeunix.dir/.svn/text-base/C.includecache.svn-base:configure.h
+Binary file build/bin/run_in_bg.debug matches
+Binary file build/bin/.svn/text-base/run_in_bg.debug.svn-base matches
+Binary file build/bin/.svn/text-base/nudgeunix.debug.svn-base matches
+Binary file build/bin/nudgeunix.debug matches
+build/.svn/entries:configure.h
+build/.svn/all-wcprops:configure.h
+build/.svn/all-wcprops:/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/configure.h
+CMakeLists.txt:  # since our defines are mostly in configure.h where we can't as easily tweak them
+CMakeLists.txt:  ${PROJECT_BINARY_DIR}/configure.h
+CMakeLists.txt:# If we append this to configure.h we'll trigger recompilation of
+CMakeLists.txt:file(READ ${PROJECT_BINARY_DIR}/configure.h configure_h)
+CMakeLists.txt:  "\\1\\2\\3-D\\2\n" configure_h_mod "${configure_h}")
+CMakeLists.txt:file(WRITE ${defines_tmpfile} "${configure_h_mod}")
+CMakeLists.txt:# in configure.h, except the -Ddynamorio_EXPORTS that cmake defines.
+CMakeLists.txt:  ${PROJECT_BINARY_DIR} # for configure.h and configure_defines.h
+core/nudge.c:#include "configure.h"
+core/linux/.svn/text-base/preload.c.svn-base:#include "configure.h"
+core/linux/preload.c:#include "configure.h"
+core/config.c:#include "configure.h"
+core/globals.h:#include "configure.h"
+core/win32/callback.c:#include "configure.h"
+core/win32/inject_shared.c:#include "configure.h"
+core/win32/ntdll.c:#include "configure.h"
+core/win32/resources.rc:#include "configure.h"
+core/win32/drmarker.c:#include "configure.h"
+core/win32/.svn/text-base/resources.rc.svn-base:#include "configure.h"
+core/win32/.svn/text-base/ntdll.c.svn-base:#include "configure.h"
+core/win32/.svn/text-base/inject_shared.c.svn-base:#include "configure.h"
+core/win32/.svn/text-base/pre_inject.c.svn-base:#include "configure.h"
+core/win32/.svn/text-base/drmarker.c.svn-base:#include "configure.h"
+core/win32/.svn/text-base/callback.c.svn-base:#include "configure.h"
+core/win32/.svn/text-base/module_shared.c.svn-base:#include "configure.h"
+core/win32/pre_inject.c:#include "configure.h"
+core/win32/module_shared.c:#include "configure.h"
+core/options.c:#  include "configure.h"
+core/.svn/text-base/config.c.svn-base:#include "configure.h"
+core/.svn/text-base/CMakeLists.txt.svn-base:  ${PROJECT_BINARY_DIR}/configure.h)
+core/.svn/text-base/nudge.c.svn-base:#include "configure.h"
+core/.svn/text-base/options.c.svn-base:#  include "configure.h"
+core/.svn/text-base/globals.h.svn-base:#include "configure.h"
+core/CMakeLists.txt:  ${PROJECT_BINARY_DIR}/configure.h)
+ext/drcontainers/.svn/text-base/hashtable.c.svn-base:hashtable_configure(hashtable_t *table, hashtable_config_t *config)
+ext/drcontainers/.svn/text-base/hashtable.h.svn-base:hashtable_configure(hashtable_t *table, hashtable_config_t *config);
+ext/drcontainers/hashtable.c:hashtable_configure(hashtable_t *table, hashtable_config_t *config)
+ext/drcontainers/hashtable.h:hashtable_configure(hashtable_t *table, hashtable_config_t *config);
+libutil/.svn/text-base/dr_config.c.svn-base:#include "configure.h" /* since not including share.h */
+libutil/.svn/text-base/share.h.svn-base:#include "configure.h"
+libutil/dr_config.c:#include "configure.h" /* since not including share.h */
+libutil/share.h:#include "configure.h"
+suite/tests/api/startstop.c:#include "configure.h"
+suite/tests/api/.svn/text-base/ir.c.svn-base:#include "configure.h"
+suite/tests/api/.svn/text-base/startstop.c.svn-base:#include "configure.h"
+suite/tests/api/ir.c:#include "configure.h"
+suite/tests/tools.h:#include "configure.h"
+suite/tests/tools.h: * configure.h before either)
+suite/tests/.svn/text-base/tools.h.svn-base:#include "configure.h"
+suite/tests/.svn/text-base/tools.h.svn-base: * configure.h before either)
+suite/tests/.svn/text-base/CMakeLists.txt.svn-base:# Since we're including configure.h we do not want any default defines.
+suite/tests/.svn/text-base/CMakeLists.txt.svn-base:  # We support a test either getting defines from configure.h or
+suite/tests/.svn/text-base/CMakeLists.txt.svn-base:    # getting defines from configure.h
+suite/tests/.svn/text-base/CMakeLists.txt.svn-base:  # since we're including configure.h we do not want any default defines
+suite/tests/CMakeLists.txt:# Since we're including configure.h we do not want any default defines.
+suite/tests/CMakeLists.txt:  # We support a test either getting defines from configure.h or
+suite/tests/CMakeLists.txt:    # getting defines from configure.h
+suite/tests/CMakeLists.txt:  # since we're including configure.h we do not want any default defines
+tools/svccntrl.c:#include "configure.h"
+tools/DRgui/OptionsDlg.cpp:#include "configure.h"
+tools/DRgui/DynamoRIO.h:#include "configure.h"
+tools/DRgui/SyswideDlg.cpp:#include "configure.h"
+tools/DRgui/.svn/text-base/DynamoRIO.h.svn-base:#include "configure.h"
+tools/DRgui/.svn/text-base/SyswideDlg.cpp.svn-base:#include "configure.h"
+tools/DRgui/.svn/text-base/OptionsDlg.cpp.svn-base:#include "configure.h"
+tools/DRgui/.svn/text-base/DynamoRIO.rc.svn-base:#include "configure.h"
+tools/DRgui/DynamoRIO.rc:#include "configure.h"
+tools/drdeploy.c:#include "configure.h"
+tools/nudgeunix.c:#include "configure.h"
+tools/run_in_bg.c:#include "configure.h"
+tools/.svn/text-base/nudgeunix.c.svn-base:#include "configure.h"
+tools/.svn/text-base/drdeploy.c.svn-base:#include "configure.h"
+tools/.svn/text-base/run_in_bg.c.svn-base:#include "configure.h"
+tools/.svn/text-base/svccntrl.c.svn-base:#include "configure.h"
+tools/.svn/text-base/winstats.c.svn-base:#include "configure.h"
+tools/winstats.c:#include "configure.h"

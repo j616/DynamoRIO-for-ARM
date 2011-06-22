@@ -1,0 +1,350 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/config.c
+configure.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/configure.h
+../globals.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/../globals.h
+ntdll.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/ntdll.h
+string.h
+-
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../config.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dispatch.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../fragment.h
+hashtable.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtable.h
+hashtablex.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+hashtablex.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+hashtablex.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+hashtablex.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../globals.h
+configure.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../configure.h
+globals_shared.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../globals_shared.h
+stdlib.h
+-
+stdio.h
+-
+windows.h
+-
+sys/types.h
+-
+dr_app.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dr_app.h
+heap.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../heap.h
+utils.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../utils.h
+options.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../options.h
+os_exports.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../os_exports.h
+arch_exports.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../arch_exports.h
+vmareas.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../vmareas.h
+instrlist.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../instrlist.h
+dispatch.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dispatch.h
+dr_stats.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dr_stats.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtable.h
+hashtablex.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../heap.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../instrlist.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../module_shared.h
+module.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../module.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../options.h
+optionsx.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+optionsx.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+optionsx.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+utils.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../utils.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+optionsx.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../rct.h
+fragment.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../fragment.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../stats.h
+kstatsx.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../kstatsx.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../synch.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../utils.h
+config.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../config.h
+stats.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../stats.h
+event_strings.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../event_strings.h
+events.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../events.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../vmareas.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/os.c
+sys/types.h
+-
+sys/mman.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+sched.h
+-
+../globals.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../globals.h
+string.h
+-
+unistd.h
+-
+limits.h
+-
+sys/sysinfo.h
+-
+sys/vfs.h
+-
+errno.h
+-
+instr.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/instr.h
+link.h
+-
+dlfcn.h
+-
+stdlib.h
+-
+stdio.h
+-
+signal.h
+-
+syslog.h
+-
+../vmareas.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../vmareas.h
+../rct.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../rct.h
+syscall.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/syscall.h
+../module_shared.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../module_shared.h
+os_private.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/os_private.h
+../synch.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../synch.h
+instrument.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/instrument.h
+asm/ldt.h
+-
+stddef.h
+-
+sys/utsname.h
+-
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/os_private.h
+signal.h
+-
+module.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/module.h
+sys/time.h
+-
+vmkuw.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/vmkuw.h
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/preload.c
+configure.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/configure.h
+globals_shared.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/globals_shared.h
+../config.h
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../config.h
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/syscall.h
+
+configure.h
+
+core/lib/dr_app.h
+
+core/lib/dr_stats.h
+globals_shared.h
+core/lib/globals_shared.h
+statsx.h
+core/lib/statsx.h
+statsx.h
+core/lib/statsx.h
+
+core/lib/globals_shared.h
+windows.h
+-
+winbase.h
+-
+stdio.h
+-
+stdlib.h
+-
+limits.h
+-
+sys/types.h
+-
+signal.h
+-
+
+core/lib/kstatsx.h
+
+core/lib/statsx.h
+
+core/link.h
+
+core/linux/../config.h
+
+core/linux/../dispatch.h
+
+core/linux/../globals.h
+configure.h
+core/linux/../configure.h
+globals_shared.h
+core/linux/../globals_shared.h
+stdlib.h
+-
+stdio.h
+-
+windows.h
+-
+sys/types.h
+-
+dr_app.h
+core/linux/../dr_app.h
+heap.h
+core/linux/../heap.h
+utils.h
+core/linux/../utils.h
+options.h
+core/linux/../options.h
+os_exports.h
+core/linux/../os_exports.h
+arch_exports.h
+core/linux/../arch_exports.h
+vmareas.h
+core/linux/../vmareas.h
+instrlist.h
+core/linux/../instrlist.h
+dispatch.h
+core/linux/../dispatch.h
+dr_stats.h
+core/linux/../dr_stats.h
+
+core/linux/../heap.h
+
+core/linux/../instrlist.h
+
+core/linux/../options.h
+optionsx.h
+core/linux/../optionsx.h
+optionsx.h
+core/linux/../optionsx.h
+optionsx.h
+core/linux/../optionsx.h
+utils.h
+core/linux/../utils.h
+
+core/linux/../optionsx.h
+optionsx.h
+core/linux/../optionsx.h
+
+core/linux/../os_shared.h
+
+core/linux/../stats.h
+kstatsx.h
+core/linux/../kstatsx.h
+
+core/linux/../utils.h
+config.h
+core/linux/../config.h
+stats.h
+core/linux/../stats.h
+event_strings.h
+core/linux/../event_strings.h
+events.h
+core/linux/../events.h
+
+core/linux/../vmareas.h
+
+core/linux/module.h
+
+core/linux/os_exports.h
+stdarg.h
+-
+../os_shared.h
+core/linux/../os_shared.h
+stdarg.h
+-
+
+core/x86/arch.h
+stddef.h
+-
+instr.h
+core/x86/instr.h
+
+core/x86/arch_exports.h
+proc.h
+core/x86/proc.h
+
+core/x86/instr.h
+
+core/x86/instrument.h
+../globals.h
+core/x86/../globals.h
+../module_shared.h
+core/x86/../module_shared.h
+arch.h
+core/x86/arch.h
+instr.h
+core/x86/instr.h
+
+core/x86/proc.h
+
+event_strings.h
+

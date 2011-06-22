@@ -1,0 +1,6 @@
+/home/james/Uni/summer11/code/Current Version/cleanDynamo/CMakeFiles/api_headers.dir
+/home/james/Uni/summer11/code/Current Version/cleanDynamo/core/CMakeFiles/drpreload.dir
+/home/james/Uni/summer11/code/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir
+/home/james/Uni/summer11/code/Current Version/cleanDynamo/tools/CMakeFiles/nudgeunix.dir
+/home/james/Uni/summer11/code/Current Version/cleanDynamo/tools/CMakeFiles/run_in_bg.dir
+/home/james/Uni/summer11/code/Current Version/cleanDynamo/tools/CMakeFiles/runstats.dir

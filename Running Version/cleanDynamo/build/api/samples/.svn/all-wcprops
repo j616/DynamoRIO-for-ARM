@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples
+END
+cmake_install.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/cmake_install.cmake
+END
+CMakeLists-public.txt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/CMakeLists-public.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/Makefile
+END
+CMakeLists-public.txt.in
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/build/api/samples/CMakeLists-public.txt.in
+END

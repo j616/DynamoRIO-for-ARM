@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common
+END
+memoryhog.template
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/memoryhog.template
+END
+fib.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/fib.c
+END
+broadfun.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/broadfun.c
+END
+eflags.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/eflags.c
+END
+conflict.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/conflict.c
+END
+ops.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/ops.c
+END
+hello.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/hello.c
+END
+fib.expect
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/fib.expect
+END
+broadfun.expect
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/broadfun.expect
+END
+eflags.expect
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/eflags.expect
+END
+decode-bad.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/decode-bad.c
+END
+conflict.expect
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/conflict.expect
+END
+ops.expect
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/ops.expect
+END
+recurse.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/recurse.c
+END
+hello.expect
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/hello.expect
+END
+segfault.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/segfault.c
+END
+decode.template
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/decode.template
+END
+decode-bad.expect
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/decode-bad.expect
+END
+recurse.expect
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/recurse.expect
+END
+segfault.expect
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/segfault.expect
+END
+decode.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/decode.c
+END
+getretaddr.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/getretaddr.c
+END
+protect-dstack.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/protect-dstack.c
+END
+getretaddr.expect
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/getretaddr.expect
+END
+protect-dstack.expect
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/common/protect-dstack.expect
+END

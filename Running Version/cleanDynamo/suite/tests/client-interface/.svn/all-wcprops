@@ -1,0 +1,503 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface
+END
+alloc.expect
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/alloc.expect
+END
+timer.templatex
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/timer.templatex
+END
+unregister.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/unregister.dll.c
+END
+cbr2.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr2.dll.c
+END
+cbr4.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr4.dll.c
+END
+security.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/security.c
+END
+fragdel.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/fragdel.dll.c
+END
+decode-bb.runall
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/decode-bb.runall
+END
+strace.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/strace.c
+END
+flush.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/flush.c
+END
+cbr2.template
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr2.template
+END
+thread.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/thread.dll.c
+END
+signal.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/signal.dll.c
+END
+cleancall.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cleancall.dll.c
+END
+count-ctis.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/count-ctis.c
+END
+cbr3.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr3.c
+END
+timer.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/timer.dll.c
+END
+truncate.expect
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/truncate.expect
+END
+file_io_data.txt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/file_io_data.txt
+END
+syscall-mod.expect
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/syscall-mod.expect
+END
+syscall-mod.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/syscall-mod.dll.c
+END
+cbr2.runall
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr2.runall
+END
+events.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/events.c
+END
+alloc.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/alloc.dll.c
+END
+custom_traces.template
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/custom_traces.template
+END
+abort.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/abort.c
+END
+modules.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/modules.c
+END
+strace.template
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/strace.template
+END
+fragdel.expect
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/fragdel.expect
+END
+flush.template
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/flush.template
+END
+nudge_test.runall
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/nudge_test.runall
+END
+security.expect
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/security.expect
+END
+security.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/security.dll.c
+END
+cbr3.template
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr3.template
+END
+truncate.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/truncate.c
+END
+call-retarget.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/call-retarget.c
+END
+pc-check.runall
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/pc-check.runall
+END
+strace.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/strace.dll.c
+END
+flush.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/flush.dll.c
+END
+call-retarget.expect
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/call-retarget.expect
+END
+cbr.template
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr.template
+END
+thread.template
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/thread.template
+END
+count-ctis.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/count-ctis.dll.c
+END
+cbr3.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr3.dll.c
+END
+file_io.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/file_io.c
+END
+syscall.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/syscall.c
+END
+file_io.expect
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/file_io.expect
+END
+abort.expect
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/abort.expect
+END
+events.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/events.dll.c
+END
+cbr.runall
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr.runall
+END
+abort.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/abort.dll.c
+END
+count-ctis.template
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/count-ctis.template
+END
+modules.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/modules.dll.c
+END
+signal.expect
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/signal.expect
+END
+cbr4.template
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr4.template
+END
+unregister.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/unregister.c
+END
+nudge_test.template
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/nudge_test.template
+END
+cbr4.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr4.c
+END
+syscall.templatex
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/syscall.templatex
+END
+events.template
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/events.template
+END
+truncate.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/truncate.dll.c
+END
+call-retarget.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/call-retarget.dll.c
+END
+fragdel.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/fragdel.c
+END
+pc-check.template
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/pc-check.template
+END
+cleancall.template
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cleancall.template
+END
+thread.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/thread.c
+END
+nudge_test.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/nudge_test.dll.c
+END
+signal.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/signal.c
+END
+modules.expect
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/modules.expect
+END
+cleancall.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cleancall.c
+END
+decode-bb.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/decode-bb.dll.c
+END
+file_io.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/file_io.dll.c
+END
+cbr.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/cbr.dll.c
+END
+timer.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/timer.c
+END
+thread.appdll.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/thread.appdll.c
+END
+syscall.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/syscall.dll.c
+END
+custom_traces.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/custom_traces.dll.c
+END
+custom_traces.runall
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/custom_traces.runall
+END
+pc-check.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/pc-check.dll.c
+END
+syscall-mod.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/syscall-mod.c
+END
+alloc.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/alloc.c
+END
+decode-bb.template
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/decode-bb.template
+END
+unregister.expect
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/client-interface/unregister.expect
+END

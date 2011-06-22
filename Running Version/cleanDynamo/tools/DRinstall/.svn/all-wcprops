@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall
+END
+StdAfx.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/StdAfx.h
+END
+Wizard.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/Wizard.cpp
+END
+CopyDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/CopyDlg.cpp
+END
+WizSheet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/WizSheet.cpp
+END
+Wizard.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/Wizard.h
+END
+CopyDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/CopyDlg.h
+END
+WizSheet.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/WizSheet.h
+END
+LicenseDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/LicenseDlg.cpp
+END
+LicenseDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/LicenseDlg.h
+END
+FinalDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/FinalDlg.cpp
+END
+Wizard.rc
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/Wizard.rc
+END
+FinalDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/FinalDlg.h
+END
+ShellInterface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/ShellInterface.cpp
+END
+StdAfx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/StdAfx.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/resource.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/Makefile
+END
+ShellInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/DRinstall/ShellInterface.h
+END

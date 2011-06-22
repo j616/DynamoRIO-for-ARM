@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32
+END
+hooker-ntdll.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/hooker-ntdll.c
+END
+aslr-ind.template
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/aslr-ind.template
+END
+gbop-test.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/gbop-test.c
+END
+sec-fixed.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-fixed.c
+END
+ret-SEH.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/ret-SEH.c
+END
+sec-xdata.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-xdata.c
+END
+except-execution.templatex
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/except-execution.templatex
+END
+indexisting.template
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/indexisting.template
+END
+selfmod-threads.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/selfmod-threads.c
+END
+secalign-fixed.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/secalign-fixed.c
+END
+TestNTFlush.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/TestNTFlush.c
+END
+aslr-ind.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/aslr-ind.dll.c
+END
+sd_tester.template
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sd_tester.template
+END
+except-thread.template
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/except-thread.template
+END
+hooker.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/hooker.c
+END
+secalign-fixed.expect
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/secalign-fixed.expect
+END
+patterns.template
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/patterns.template
+END
+codemod-threads.template
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/codemod-threads.template
+END
+sd_tester.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sd_tester.c
+END
+except.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/except.h
+END
+ret-SEH.template
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/ret-SEH.template
+END
+patterns.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/patterns.c
+END
+codemod-threads.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/codemod-threads.c
+END
+sec-xdata.template
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-xdata.template
+END
+apc-shellcode.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/apc-shellcode.c
+END
+aslr-ind.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/aslr-ind.c
+END
+selfmod-threads.template
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/selfmod-threads.template
+END
+sec-adata.template
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-adata.template
+END
+TestNTFlush.template
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/TestNTFlush.template
+END
+sec-fixed.expect
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-fixed.expect
+END
+hooker.template
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/hooker.template
+END
+sec-fixed.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-fixed.dll.c
+END
+sec-adata.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-adata.c
+END
+sec-xdata.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/sec-xdata.dll.c
+END
+indexisting.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/indexisting.c
+END
+except-execution.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/except-execution.c
+END
+hooker-ntdll.template
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/hooker-ntdll.template
+END
+apc-shellcode.template
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/apc-shellcode.template
+END
+secalign-fixed.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/secalign-fixed.dll.c
+END
+except-thread.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/except-thread.c
+END
+gbop-test.template
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/security-win32/gbop-test.template
+END

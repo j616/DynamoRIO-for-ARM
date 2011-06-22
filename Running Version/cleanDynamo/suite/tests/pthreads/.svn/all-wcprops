@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/pthreads
+END
+pthreads.expect
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/pthreads/pthreads.expect
+END
+ptsig.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/pthreads/ptsig.c
+END
+pthreads.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/pthreads/pthreads.c
+END
+ptsig.expect
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/pthreads/ptsig.expect
+END

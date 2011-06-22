@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts
+END
+last_build_num.txt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/last_build_num.txt
+END
+lionfish_core_srv_exes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/lionfish_core_srv_exes.txt
+END
+desktop_nightly.pl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/desktop_nightly.pl
+END
+sleep.pl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/sleep.pl
+END
+reboot_qatest.pl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/reboot_qatest.pl
+END
+measure_options.pl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/measure_options.pl
+END
+install_new_core
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/install_new_core
+END
+install_new_core.bat
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/install_new_core.bat
+END
+uptime.vbs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/uptime.vbs
+END
+getservices.pl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/getservices.pl
+END
+sysmark_automate.bat
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/sysmark_automate.bat
+END
+cpu_idle.pl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/cpu_idle.pl
+END
+install_new_core.pl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/install_new_core.pl
+END
+getmeminfo_automate.pl
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/getmeminfo_automate.pl
+END
+lionfish-desktop-services-def.bat
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/lionfish-desktop-services-def.bat
+END
+measure_cores.pl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/measure_cores.pl
+END
+measure_word.pl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/measure_word.pl
+END
+measure_mem.pl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/measure_mem.pl
+END
+go.bat
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/go.bat
+END
+install_cores.pl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/install_cores.pl
+END
+lionfish-desktop-services-med.bat
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/lionfish-desktop-services-med.bat
+END
+email_mem_summary.pl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/email_mem_summary.pl
+END
+desktop_nightly.bat
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/desktop_nightly.bat
+END
+getmem5.pl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/getmem5.pl
+END
+measure_reset.pl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/measure_reset.pl
+END
+lionfish-desktop-services-all.bat
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/tools/desktop-scripts/lionfish-desktop-services-all.bat
+END

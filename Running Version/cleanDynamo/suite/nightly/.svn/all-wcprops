@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly
+END
+linux-slave.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/linux-slave.sh
+END
+nightly_bashrc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/nightly_bashrc
+END
+nightly_windows.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/nightly_windows.sh
+END
+cygwin_nightly.bat
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/cygwin_nightly.bat
+END
+linux-nightly.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/linux-nightly.sh
+END
+nightly_linux.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/nightly_linux.sh
+END
+memory_xp.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/memory_xp.sh
+END
+do_nightly.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/do_nightly.sh
+END
+linux-win32checkup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/linux-win32checkup.sh
+END
+east_coast_daily_rsync.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/east_coast_daily_rsync.sh
+END
+east_coast_weekend_rsync.sh
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/east_coast_weekend_rsync.sh
+END
+linux-memory.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/linux-memory.sh
+END
+utreport.pl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/nightly/utreport.pl
+END

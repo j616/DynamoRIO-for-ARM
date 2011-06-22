@@ -1,0 +1,4 @@
+/usr/bin/c++  -fPIC   -m32 -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector   /usr/lib/gcc/i486-linux-gnu/4.4.3/libstdc++.a /usr/lib/gcc/i486-linux-gnu/4.4.3/libgcc.a /usr/lib/gcc/i486-linux-gnu/4.4.3/libgcc_eh.a -Xlinker -wrap=malloc -Xlinker -wrap=realloc -Xlinker -wrap=free -fPIC -shared -nostartfiles -nodefaultlibs -lgcc -shared -Wl,-soname,libstl_test.so -o bin/libstl_test.so CMakeFiles/stl_test.dir/stl_test.cpp.o ../../lib/libdynamorio.so.2.0 
+/usr/bin/objcopy --only-keep-debug bin/libstl_test.so bin/libstl_test.so.debug
+/usr/bin/objcopy --add-gnu-debuglink=bin/libstl_test.so.debug bin/libstl_test.so
+/usr/bin/strip -g -x -p bin/libstl_test.so

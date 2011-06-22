@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples
+END
+empty.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/empty.c
+END
+stats.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/stats.c
+END
+prefetch.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/prefetch.c
+END
+stl_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/stl_test.cpp
+END
+inc2add.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/inc2add.c
+END
+cbr.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/cbr.c
+END
+countcalls.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/countcalls.c
+END
+signal.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/signal.c
+END
+MF_moduledb.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/MF_moduledb.c
+END
+instrcalls.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/instrcalls.c
+END
+inline.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/inline.c
+END
+bbsize.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/bbsize.c
+END
+MF_moduledb-sample.config
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/MF_moduledb-sample.config
+END
+strace.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/strace.c
+END
+div.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/div.c
+END
+tracedump.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/tracedump.c
+END
+bbcount.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/bbcount.c
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/CMakeLists.txt
+END
+memtrace.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/memtrace.c
+END
+VIPA_test.exe
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/api/samples/VIPA_test.exe
+END

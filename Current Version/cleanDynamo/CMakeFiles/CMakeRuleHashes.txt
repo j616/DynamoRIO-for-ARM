@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+6acf4df15e6f7677c460012e0ef8d828 CMakeFiles/api_headers
+17ab07f72ad1a4285662458cf83b817e event_strings.h
+a72fb2e0516ddd7ab29189556a3b159e include/dr_app.h

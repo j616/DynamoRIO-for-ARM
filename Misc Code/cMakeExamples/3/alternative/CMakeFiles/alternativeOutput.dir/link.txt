@@ -1,0 +1,2 @@
+/usr/bin/ar cr libalternativeOutput.a  CMakeFiles/alternativeOutput.dir/newOutput.c.o
+/usr/bin/ranlib libalternativeOutput.a

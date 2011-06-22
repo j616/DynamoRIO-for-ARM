@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+36ed13268a32205d5eb27e539f2380fb event_strings.h

@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall
+END
+calc-hotp.template
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-hotp.template
+END
+preunload.runall
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/preunload.runall
+END
+calc.runall
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc.runall
+END
+earlythread.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/earlythread.dll.c
+END
+initapc.template
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/initapc.template
+END
+processchain.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/processchain.c
+END
+calc-detach.template
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-detach.template
+END
+calc-persist.template
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-persist.template
+END
+notepad.template
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/notepad.template
+END
+runalltest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/runalltest.sh
+END
+calc-hotp.runall
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-hotp.runall
+END
+preunload.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/preunload.c
+END
+earlythread.template
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/earlythread.template
+END
+detach_test.expect
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/detach_test.expect
+END
+initapc.dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/initapc.dll.c
+END
+initapc.runall
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/initapc.runall
+END
+detach_test.runall
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/detach_test.runall
+END
+calc-detach.runall
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-detach.runall
+END
+calc-persist.runall
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-persist.runall
+END
+earlythread.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/earlythread.c
+END
+notepad.runall
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/notepad.runall
+END
+calc-freeze.template
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-freeze.template
+END
+processchain.template
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/processchain.template
+END
+calc-reset.template
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-reset.template
+END
+earlythread.runall
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/earlythread.runall
+END
+preunload.template
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/preunload.template
+END
+initapc.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/initapc.c
+END
+detach_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/detach_test.c
+END
+calc-freeze.runall
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-freeze.runall
+END
+calc.template
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc.template
+END
+processchain.runall
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/processchain.runall
+END
+calc-reset.runall
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stebarton-projects/!svn/ver/11/cleanDynamo/suite/tests/runall/calc-reset.runall
+END
