@@ -137,7 +137,6 @@ if (UNIX)
     linux/stackdump.c
     linux/diagnost.c
     )
-  include_directories(/usr/include)
   if (VMKERNEL)
     set(VMKUW_DIR ${PROJECT_SOURCE_DIR}/../internal/core/linux)
     include_directories(${VMKUW_DIR})
