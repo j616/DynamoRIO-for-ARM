@@ -102,7 +102,7 @@ set(ARCH_SRCS
   if (ARM_CROSS)
     set(CMAKE_ASM_COMPILER arm-none-linux-gnueabi-as)
   endif(ARM_CROSS)
-    set(ASM_FLAGS "--noexecstack")
+    set(ASM_FLAGS "--noexecstack -march=armv7-a")
 else(ARM)
 set(ARCH_SRCS
   x86/arch.c

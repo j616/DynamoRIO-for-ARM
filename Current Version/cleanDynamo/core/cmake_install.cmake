@@ -1,8 +1,8 @@
-# Install script for directory: /home/james/Uni/summer11/code/Current Version/cleanDynamo/core
+# Install script for directory: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/james/Uni/summer11/code/Current Version/cleanDynamo/exports")
+  SET(CMAKE_INSTALL_PREFIX "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/exports")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FOREACH(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdynamorio.so.2.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdynamorio.so"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdynamorio.so.2.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdynamorio.so"
       )
     IF(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -44,43 +44,43 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
            RPATH "")
     ENDIF()
   ENDFOREACH()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/debug" TYPE SHARED_LIBRARY FILES
-    "/home/james/Uni/summer11/code/Current Version/cleanDynamo/lib/libdynamorio.so.2.0"
-    "/home/james/Uni/summer11/code/Current Version/cleanDynamo/lib/libdynamorio.so"
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/release" TYPE SHARED_LIBRARY FILES
+    "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/lib/libdynamorio.so.2.0"
+    "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/lib/libdynamorio.so"
     )
   FOREACH(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdynamorio.so.2.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdynamorio.so"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdynamorio.so.2.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdynamorio.so"
       )
     IF(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
       IF(CMAKE_INSTALL_DO_STRIP)
-        EXECUTE_PROCESS(COMMAND "~/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/bin/strip" "${file}")
+        EXECUTE_PROCESS(COMMAND "arm-linux-gnueabi-strip" "${file}")
       ENDIF(CMAKE_INSTALL_DO_STRIP)
     ENDIF()
   ENDFOREACH()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdrpreload.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdrpreload.so")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdrpreload.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdrpreload.so")
     FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdrpreload.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdrpreload.so"
          RPATH "")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/debug" TYPE SHARED_LIBRARY FILES "/home/james/Uni/summer11/code/Current Version/cleanDynamo/lib/libdrpreload.so")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdrpreload.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdrpreload.so")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/release" TYPE SHARED_LIBRARY FILES "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/lib/libdrpreload.so")
+  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdrpreload.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdrpreload.so")
     IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "~/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/debug/libdrpreload.so")
+      EXECUTE_PROCESS(COMMAND "arm-linux-gnueabi-strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib32/release/libdrpreload.so")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/debug" TYPE FILE FILES
-    "/home/james/Uni/summer11/code/Current Version/cleanDynamo/lib/libdynamorio.so.1.4"
-    "/home/james/Uni/summer11/code/Current Version/cleanDynamo/lib/libdynamorio.so.1.5"
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/release" TYPE FILE FILES
+    "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/lib/libdynamorio.so.1.4"
+    "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/lib/libdynamorio.so.1.5"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

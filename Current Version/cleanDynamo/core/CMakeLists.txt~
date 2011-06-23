@@ -99,7 +99,9 @@ set(ARCH_SRCS
   )
   # Had to add these lines here because for some reason not listening 
   # when I add them to main file
+  if (ARM_CROSS)
     set(CMAKE_ASM_COMPILER arm-none-linux-gnueabi-as)
+  endif(ARM_CROSS)
     set(ASM_FLAGS "--noexecstack")
 else(ARM)
 set(ARCH_SRCS

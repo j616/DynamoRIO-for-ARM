@@ -38,8 +38,7 @@
 
 /* exposed options */
 /* #undef INTERNAL */
-#define DEBUG
--DDEBUG
+/* #undef DEBUG */
 /* #undef DRGUI_DEMO */
 
 /* target */

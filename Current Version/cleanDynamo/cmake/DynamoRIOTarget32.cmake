@@ -18,7 +18,7 @@ ADD_LIBRARY(dynamorio SHARED IMPORTED)
 # Import target "dynamorio" for configuration ""
 SET_PROPERTY(TARGET dynamorio APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 SET_TARGET_PROPERTIES(dynamorio PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/james/Uni/summer11/code/Current Version/cleanDynamo/lib/libdynamorio.so.2.0"
+  IMPORTED_LOCATION_NOCONFIG "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/lib/libdynamorio.so.2.0"
   IMPORTED_SONAME_NOCONFIG "libdynamorio.so.2.0"
   )
 

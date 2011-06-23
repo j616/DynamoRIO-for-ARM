@@ -18,8 +18,6 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "make/DynamoRIOConfig.cmake.in"
   "make/DynamoRIOConfigVersion.cmake.in"
   "make/configure.cmake.h"
-  "tools/CMakeLists.txt"
-  "tools/drdeploy.in"
   "/usr/share/cmake-2.8/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
@@ -58,7 +56,6 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "core/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tools/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -66,7 +63,4 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/api_headers.dir/DependInfo.cmake"
   "core/CMakeFiles/drpreload.dir/DependInfo.cmake"
   "core/CMakeFiles/dynamorio.dir/DependInfo.cmake"
-  "tools/CMakeFiles/nudgeunix.dir/DependInfo.cmake"
-  "tools/CMakeFiles/run_in_bg.dir/DependInfo.cmake"
-  "tools/CMakeFiles/runstats.dir/DependInfo.cmake"
   )
