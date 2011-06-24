@@ -1,3 +1,0 @@
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles/api_headers.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/drpreload.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir
