@@ -50,7 +50,6 @@ core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/os.c
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/os_private.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/syscall.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: configure.h
-core/CMakeFiles/drpreload.dir/linux/os.c.o: core/Arm/instr.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/lib/dr_app.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/lib/dr_stats.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/lib/globals_shared.h
@@ -60,6 +59,7 @@ core/CMakeFiles/drpreload.dir/linux/os.c.o: core/link.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/../os_shared.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/module.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/os_exports.h
+core/CMakeFiles/drpreload.dir/linux/os.c.o: core/x86/instr.h
 core/CMakeFiles/drpreload.dir/linux/os.c.o: event_strings.h
 
 core/CMakeFiles/drpreload.dir/linux/preload.c.o: core/linux/../config.h

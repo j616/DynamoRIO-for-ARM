@@ -57,3 +57,27 @@ decode_next_pc(void *drcontext, byte *pc);
 
 
 #endif /* _DR_IR_UTILS_H_ */
+
+/** 
+ * Decodes only enough of the instruction at address \p pc to determine its size.
+ * Returns that size.
+ * If \p num_prefixes is non-NULL, returns the number of prefix bytes.
+ * If \p rip_rel_pos is non-NULL, returns the offset into the instruction
+ * of a rip-relative addressing displacement (for data only: ignores
+ * control-transfer relative addressing), or 0 if none.
+ * May return 0 size for certain invalid instructions.
+ */
+int 
+decode_sizeof(void *drcontext, byte *pc, int *num_prefixes
+              _IF_X64(uint *rip_rel_pos));
+
+/** 
+ * Decodes only enough of the instruction at address \p pc to determine its size.
+ * Returns the address of the byte following the instruction.
+ * Returns NULL on decoding an invalid instruction.
+ */
+byte *
+decode_next_pc(void *drcontext, byte *pc);
+
+
+#endif /* _DR_IR_UTILS_H_ */

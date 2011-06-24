@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/config.c
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c
 configure.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/configure.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/configure.h
 ../globals.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/../globals.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/../globals.h
 ntdll.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/ntdll.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/ntdll.h
 string.h
 -
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../config.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../config.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dispatch.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../dispatch.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../fragment.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../fragment.h
 hashtable.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtable.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtable.h
 hashtablex.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtablex.h
 hashtablex.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtablex.h
 hashtablex.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtablex.h
 hashtablex.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtablex.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../globals.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../globals.h
 configure.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../configure.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../configure.h
 globals_shared.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../globals_shared.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../globals_shared.h
 stdlib.h
 -
 stdio.h
@@ -46,77 +46,77 @@ windows.h
 sys/types.h
 -
 dr_app.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dr_app.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../dr_app.h
 heap.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../heap.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../heap.h
 utils.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../utils.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../utils.h
 options.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../options.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../options.h
 os_exports.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../os_exports.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../os_exports.h
 arch_exports.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../arch_exports.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../arch_exports.h
 vmareas.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../vmareas.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../vmareas.h
 instrlist.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../instrlist.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../instrlist.h
 dispatch.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dispatch.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../dispatch.h
 dr_stats.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../dr_stats.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../dr_stats.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtable.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtable.h
 hashtablex.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtablex.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../hashtablex.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../hashtablex.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../heap.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../heap.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../instrlist.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../instrlist.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../module_shared.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../module_shared.h
 module.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../module.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../module.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../options.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../options.h
 optionsx.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../optionsx.h
 optionsx.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../optionsx.h
 optionsx.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../optionsx.h
 utils.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../utils.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../utils.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../optionsx.h
 optionsx.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../optionsx.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../optionsx.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../rct.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../rct.h
 fragment.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../fragment.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../fragment.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../stats.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../stats.h
 kstatsx.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../kstatsx.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../kstatsx.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../synch.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../synch.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../utils.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../utils.h
 config.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../config.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../config.h
 stats.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../stats.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../stats.h
 event_strings.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../event_strings.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../event_strings.h
 events.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../events.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../events.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../vmareas.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../vmareas.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/os.c
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c
 sys/types.h
 -
 sys/mman.h
@@ -128,7 +128,7 @@ fcntl.h
 sched.h
 -
 ../globals.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../globals.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../globals.h
 string.h
 -
 unistd.h
@@ -142,7 +142,7 @@ sys/vfs.h
 errno.h
 -
 instr.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/instr.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/instr.h
 link.h
 -
 dlfcn.h
@@ -156,19 +156,19 @@ signal.h
 syslog.h
 -
 ../vmareas.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../vmareas.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../vmareas.h
 ../rct.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../rct.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../rct.h
 syscall.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/syscall.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/syscall.h
 ../module_shared.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../module_shared.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../module_shared.h
 os_private.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/os_private.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os_private.h
 ../synch.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../synch.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../synch.h
 instrument.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/instrument.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/instrument.h
 asm/ldt.h
 -
 stddef.h
@@ -176,23 +176,23 @@ stddef.h
 sys/utsname.h
 -
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/os_private.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os_private.h
 signal.h
 -
 module.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/module.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/module.h
 sys/time.h
 -
 vmkuw.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/vmkuw.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/vmkuw.h
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/preload.c
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c
 configure.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/configure.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/configure.h
 globals_shared.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/globals_shared.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/globals_shared.h
 ../config.h
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/../config.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/../config.h
 stdio.h
 -
 unistd.h
@@ -202,7 +202,7 @@ stdlib.h
 string.h
 -
 
-/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/linux/syscall.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/syscall.h
 
 configure.h
 

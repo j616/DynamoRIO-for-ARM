@@ -5,26 +5,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_ASM
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/arm.s" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/arm.s.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/x86.asm" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/x86.asm.o"
   )
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/arch.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/arch.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/decode.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/decode.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/decode_fast.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/decode_fast.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/decode_table.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/decode_table.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/disassemble.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/disassemble.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/emit_utils.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/emit_utils.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/encode.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/encode.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/instr.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/instr.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/instrument.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/instrument.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/interp.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/interp.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/mangle.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/mangle.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/optimize.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/optimize.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/proc.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/proc.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/retcheck.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/retcheck.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/sideline.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/sideline.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/steal_reg.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/steal_reg.c.o"
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/Arm/x86_code.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/Arm/x86_code.c.o"
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/buildmark.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/buildmark.c.o"
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/config.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/config.c.o"
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/dispatch.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/dispatch.c.o"
@@ -57,6 +40,23 @@ SET(CMAKE_DEPENDS_CHECK_C
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/synch.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/synch.c.o"
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/utils.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/utils.c.o"
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/vmareas.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/vmareas.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/arch.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/arch.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/decode.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/decode.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/decode_fast.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/decode_fast.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/decode_table.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/decode_table.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/disassemble.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/disassemble.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/emit_utils.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/emit_utils.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/encode.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/encode.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/instr.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/instr.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/instrument.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/instrument.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/interp.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/interp.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/mangle.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/mangle.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/optimize.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/optimize.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/proc.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/proc.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/retcheck.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/retcheck.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/sideline.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/sideline.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/steal_reg.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/steal_reg.c.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/x86/x86_code.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/CMakeFiles/dynamorio.dir/x86/x86_code.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

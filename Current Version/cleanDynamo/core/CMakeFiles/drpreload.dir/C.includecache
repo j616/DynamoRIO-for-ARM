@@ -240,10 +240,6 @@ string.h
 
 configure.h
 
-core/Arm/instr.h
-../link.h
-core/Arm/../link.h
-
 core/lib/dr_app.h
 
 core/lib/dr_stats.h
@@ -365,6 +361,8 @@ stdarg.h
 core/linux/../os_shared.h
 stdarg.h
 -
+
+core/x86/instr.h
 
 event_strings.h
 

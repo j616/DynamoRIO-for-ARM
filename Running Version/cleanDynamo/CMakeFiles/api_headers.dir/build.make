@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/code/Running Version/cleanDynamo"
+CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/james/Uni/summer11/code/Running Version/cleanDynamo"
+CMAKE_BINARY_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo"
 
 # Utility rule file for api_headers.
 
@@ -119,9 +119,9 @@ include/dr_app.h: libutil/parser.h
 include/dr_app.h: libutil/services.h
 include/dr_app.h: libutil/utils.h
 include/dr_app.h: core/hotpatch.c
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/code/Running Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating include/dr_app.h"
-	cd "/home/james/Uni/summer11/code/Running Version/cleanDynamo/core" && /usr/bin/perl "/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/lib/genapi.pl" -header "/home/james/Uni/summer11/code/Running Version/cleanDynamo/include" "-DLINUX -DARM -DCLIENT_INTERFACE -DAPP_EXPORTS -DKSTATS -DHAVE_FVISIBILITY -DDR_DO_NOT_DEFINE_uint -DDR_DO_NOT_DEFINE_ushort -DASSEMBLE_WITH_GAS -DHAVE_PROC_MAPS -DHAVE_SIGALTSTACK -DUSE_VISIBILITY_ATTRIBUTES -DDYNAMORIO_IR_EXPORTS -DCUSTOM_TRACES -DCLIENT_SIDELINE -DDR_APP_EXPORTS -DEXTERNAL_DRVIEW -DAPI_EXPORT_ONLY"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/perl "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/lib/genapi.pl" -header "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/include" "-DLINUX -DARM -DCLIENT_INTERFACE -DAPP_EXPORTS -DKSTATS -DHAVE_FVISIBILITY -DDR_DO_NOT_DEFINE_uint -DDR_DO_NOT_DEFINE_ushort -DASSEMBLE_WITH_GAS -DHAVE_PROC_MAPS -DHAVE_SIGALTSTACK -DUSE_VISIBILITY_ATTRIBUTES -DDYNAMORIO_IR_EXPORTS -DCUSTOM_TRACES -DCLIENT_SIDELINE -DDR_APP_EXPORTS -DEXTERNAL_DRVIEW -DAPI_EXPORT_ONLY"
 
 api_headers: CMakeFiles/api_headers
 api_headers: include/dr_app.h
@@ -137,6 +137,6 @@ CMakeFiles/api_headers.dir/clean:
 .PHONY : CMakeFiles/api_headers.dir/clean
 
 CMakeFiles/api_headers.dir/depend:
-	cd "/home/james/Uni/summer11/code/Running Version/cleanDynamo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/james/Uni/summer11/code/Running Version/cleanDynamo" "/home/james/Uni/summer11/code/Running Version/cleanDynamo" "/home/james/Uni/summer11/code/Running Version/cleanDynamo" "/home/james/Uni/summer11/code/Running Version/cleanDynamo" "/home/james/Uni/summer11/code/Running Version/cleanDynamo/CMakeFiles/api_headers.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles/api_headers.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/api_headers.dir/depend
 

@@ -1,3 +1,0 @@
-/home/bartons7/workspace/cleanDynamo/build/CMakeFiles/api_headers.dir
-/home/bartons7/workspace/cleanDynamo/build/core/CMakeFiles/drpreload.dir
-/home/bartons7/workspace/cleanDynamo/build/core/CMakeFiles/dynamorio.dir

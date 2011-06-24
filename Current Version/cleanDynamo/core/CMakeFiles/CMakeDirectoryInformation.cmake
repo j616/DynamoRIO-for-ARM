@@ -12,7 +12,7 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 SET(CMAKE_C_INCLUDE_PATH
   "core"
   "core/linux"
-  "core/Arm"
+  "core/x86"
   "core/lib"
   "."
   )

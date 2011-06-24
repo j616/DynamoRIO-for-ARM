@@ -51,7 +51,6 @@ core/CMakeFiles/drpreload.dir/linux/os.c.o
  /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/os_private.h
  /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/syscall.h
  configure.h
- core/Arm/instr.h
  core/lib/dr_app.h
  core/lib/dr_stats.h
  core/lib/globals_shared.h
@@ -61,6 +60,7 @@ core/CMakeFiles/drpreload.dir/linux/os.c.o
  core/linux/../os_shared.h
  core/linux/module.h
  core/linux/os_exports.h
+ core/x86/instr.h
  event_strings.h
 core/CMakeFiles/drpreload.dir/linux/preload.c.o
  /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../config.h

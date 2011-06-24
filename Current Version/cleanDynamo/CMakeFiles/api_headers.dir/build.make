@@ -133,7 +133,7 @@ include/dr_app.h: libutil/utils.h
 include/dr_app.h: core/hotpatch.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating include/dr_app.h"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core" && /usr/bin/perl "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/lib/genapi.pl" -header "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/include" "-DLINUX -DARM -DCLIENT_INTERFACE -DAPP_EXPORTS -DKSTATS -DHAVE_FVISIBILITY -DDR_DO_NOT_DEFINE_uint -DDR_DO_NOT_DEFINE_ushort -DASSEMBLE_WITH_GAS -DHAVE_PROC_MAPS -DHAVE_SIGALTSTACK -DUSE_VISIBILITY_ATTRIBUTES -DDYNAMORIO_IR_EXPORTS -DCUSTOM_TRACES -DCLIENT_SIDELINE -DDR_APP_EXPORTS -DEXTERNAL_DRVIEW -DAPI_EXPORT_ONLY"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core" && /usr/bin/perl "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/lib/genapi.pl" -header "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/include" "-DLINUX -DCLIENT_INTERFACE -DAPP_EXPORTS -DKSTATS -DHAVE_FVISIBILITY -DDR_DO_NOT_DEFINE_uint -DDR_DO_NOT_DEFINE_ushort -DX86 -DASSEMBLE_WITH_GAS -DHAVE_PROC_MAPS -DHAVE_TLS -DHAVE_SIGALTSTACK -DUSE_VISIBILITY_ATTRIBUTES -DDYNAMORIO_IR_EXPORTS -DCUSTOM_TRACES -DCLIENT_SIDELINE -DDR_APP_EXPORTS -DEXTERNAL_DRVIEW -DAPI_EXPORT_ONLY"
 
 api_headers: CMakeFiles/api_headers
 api_headers: include/dr_app.h

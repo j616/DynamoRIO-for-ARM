@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/code/Running Version/cleanDynamo"
+CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/james/Uni/summer11/code/Running Version/cleanDynamo"
+CMAKE_BINARY_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -111,7 +111,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/james/Uni/summer11/code/Running\ Version/cleanDynamo/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/james/Uni/summer11/DynamoRIO-for-ARM/Running\ Version/cleanDynamo/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -130,9 +130,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/james/Uni/summer11/code/Running Version/cleanDynamo/CMakeFiles" "/home/james/Uni/summer11/code/Running Version/cleanDynamo/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/james/Uni/summer11/code/Running Version/cleanDynamo/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -159,12 +159,52 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named api_headers
+
+# Build rule for target.
+api_headers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 api_headers
+.PHONY : api_headers
+
+# fast build rule for target.
+api_headers/fast:
+	$(MAKE) -f CMakeFiles/api_headers.dir/build.make CMakeFiles/api_headers.dir/build
+.PHONY : api_headers/fast
+
+#=============================================================================
+# Target rules for targets named drpreload
+
+# Build rule for target.
+drpreload: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drpreload
+.PHONY : drpreload
+
+# fast build rule for target.
+drpreload/fast:
+	$(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/build
+.PHONY : drpreload/fast
+
+#=============================================================================
+# Target rules for targets named dynamorio
+
+# Build rule for target.
+dynamorio: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamorio
+.PHONY : dynamorio
+
+# fast build rule for target.
+dynamorio/fast:
+	$(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/build
+.PHONY : dynamorio/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... api_headers"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -173,6 +213,8 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... drpreload"
+	@echo "... dynamorio"
 .PHONY : help
 
 

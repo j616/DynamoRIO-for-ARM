@@ -15,9 +15,6 @@ SET(CMAKE_IMPORT_FILE_VERSION 1)
 # Create imported target dynamorio
 ADD_LIBRARY(dynamorio SHARED IMPORTED)
 
-# Create imported target drcontainers
-ADD_LIBRARY(drcontainers STATIC IMPORTED)
-
 # Load information for each installed configuration.
 GET_FILENAME_COMPONENT(_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 FILE(GLOB CONFIG_FILES "${_DIR}/DynamoRIOTarget32-*.cmake")
