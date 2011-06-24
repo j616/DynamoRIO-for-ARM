@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/code/Current Version/cleanDynamo"
+CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/james/Uni/summer11/code/Current Version/cleanDynamo"
+CMAKE_BINARY_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
 
 # Include any dependencies generated for this target.
 include api/samples/CMakeFiles/memtrace.dir/depend.make
@@ -51,17 +51,17 @@ include api/samples/CMakeFiles/memtrace.dir/flags.make
 
 api/samples/CMakeFiles/memtrace.dir/memtrace.c.o: api/samples/CMakeFiles/memtrace.dir/flags.make
 api/samples/CMakeFiles/memtrace.dir/memtrace.c.o: api/samples/memtrace.c
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/code/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object api/samples/CMakeFiles/memtrace.dir/memtrace.c.o"
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/memtrace.dir/memtrace.c.o   -c "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples/memtrace.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/memtrace.dir/memtrace.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/memtrace.c"
 
 api/samples/CMakeFiles/memtrace.dir/memtrace.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/memtrace.dir/memtrace.c.i"
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples/memtrace.c" > CMakeFiles/memtrace.dir/memtrace.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/memtrace.c" > CMakeFiles/memtrace.dir/memtrace.c.i
 
 api/samples/CMakeFiles/memtrace.dir/memtrace.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/memtrace.dir/memtrace.c.s"
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples/memtrace.c" -o CMakeFiles/memtrace.dir/memtrace.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/memtrace.c" -o CMakeFiles/memtrace.dir/memtrace.c.s
 
 api/samples/CMakeFiles/memtrace.dir/memtrace.c.o.requires:
 .PHONY : api/samples/CMakeFiles/memtrace.dir/memtrace.c.o.requires
@@ -84,8 +84,8 @@ api/samples/bin/libmemtrace.so: lib/libdynamorio.so.2.0
 api/samples/bin/libmemtrace.so: api/samples/CMakeFiles/memtrace.dir/build.make
 api/samples/bin/libmemtrace.so: api/samples/CMakeFiles/memtrace.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library bin/libmemtrace.so"
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/memtrace.dir/link.txt --verbose=$(VERBOSE)
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples/bin/libmemtrace.so 0 \"\""
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/memtrace.dir/link.txt --verbose=$(VERBOSE)
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/bin/libmemtrace.so 0 \"\""
 
 # Rule to build all files generated by this target.
 api/samples/CMakeFiles/memtrace.dir/build: api/samples/bin/libmemtrace.so
@@ -95,10 +95,10 @@ api/samples/CMakeFiles/memtrace.dir/requires: api/samples/CMakeFiles/memtrace.di
 .PHONY : api/samples/CMakeFiles/memtrace.dir/requires
 
 api/samples/CMakeFiles/memtrace.dir/clean:
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" && $(CMAKE_COMMAND) -P CMakeFiles/memtrace.dir/cmake_clean.cmake
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && $(CMAKE_COMMAND) -P CMakeFiles/memtrace.dir/cmake_clean.cmake
 .PHONY : api/samples/CMakeFiles/memtrace.dir/clean
 
 api/samples/CMakeFiles/memtrace.dir/depend:
-	cd "/home/james/Uni/summer11/code/Current Version/cleanDynamo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/james/Uni/summer11/code/Current Version/cleanDynamo" "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" "/home/james/Uni/summer11/code/Current Version/cleanDynamo" "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples" "/home/james/Uni/summer11/code/Current Version/cleanDynamo/api/samples/CMakeFiles/memtrace.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/CMakeFiles/memtrace.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : api/samples/CMakeFiles/memtrace.dir/depend
 
