@@ -38,7 +38,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/dynamorio.dir/x86/steal_reg.c.o"
   "CMakeFiles/dynamorio.dir/x86/x86_code.c.o"
   "CMakeFiles/dynamorio.dir/x86/disassemble.c.o"
-  "CMakeFiles/dynamorio.dir/x86/arm.s.o"
+  "CMakeFiles/dynamorio.dir/x86/x86.asm.o"
   "CMakeFiles/dynamorio.dir/x86/decode_fast.c.o"
   "CMakeFiles/dynamorio.dir/x86/optimize.c.o"
   "CMakeFiles/dynamorio.dir/x86/sideline.c.o"

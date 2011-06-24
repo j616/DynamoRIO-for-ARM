@@ -15,10 +15,10 @@
 ########################
 
 //build for the ARM architecture
-ARM:BOOL=on
+ARM:BOOL=OFF
 
 //build for ARM using cross-compilation
-ARM_CROSS:BOOL=on
+ARM_CROSS:BOOL=OFF
 
 //build core library
 BUILD_CORE:BOOL=ON

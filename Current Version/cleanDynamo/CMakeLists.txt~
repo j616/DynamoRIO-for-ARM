@@ -430,10 +430,10 @@ if (UNIX)
   # warnings and pass -pedantic to main gcc
   set(BASE_CFLAGS "-std=gnu99")
   # disable strict aliasing opt in gcc 3.3.3 -- gives warnings and makes bad assumptions
-  set(BASE_CFLAGS "${BASE_CFLAGS} -fno-strict-aliasing")
+  set(BASE_CFLAGS "${BASE_CFLAGS} -include \"/usr/include/link.h\" -fno-strict-aliasing")
   if(ARM)
     set(ASM_FLAGS "--noexecstack -march=armv7-a")
-    set(BASE_CFLAGS "-I /usr/include -march=armv7-a")
+    set(BASE_CFLAGS "-march=armv7-a")
     set(LD_FLAGS "")
   else(ARM)
         set(ASM_FLAGS "-mmnemonic=intel -msyntax=intel -mnaked-reg --noexecstack")

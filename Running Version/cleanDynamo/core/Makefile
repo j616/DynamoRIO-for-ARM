@@ -1009,15 +1009,6 @@ x86/arch.c.s:
 	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/arch.c.s
 .PHONY : x86/arch.c.s
 
-x86/arm.o: x86/arm.s.o
-.PHONY : x86/arm.o
-
-# target to build an object file
-x86/arm.s.o:
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/x86/arm.s.o
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/arm.s.o
-.PHONY : x86/arm.s.o
-
 x86/decode.o: x86/decode.c.o
 .PHONY : x86/decode.o
 
@@ -1378,6 +1369,15 @@ x86/steal_reg.c.s:
 	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/steal_reg.c.s
 .PHONY : x86/steal_reg.c.s
 
+x86/x86.o: x86/x86.asm.o
+.PHONY : x86/x86.o
+
+# target to build an object file
+x86/x86.asm.o:
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/x86/x86.asm.o
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo" && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/x86.asm.o
+.PHONY : x86/x86.asm.o
+
 x86/x86_code.o: x86/x86_code.c.o
 .PHONY : x86/x86_code.o
 
@@ -1520,7 +1520,6 @@ help:
 	@echo "... x86/arch.o"
 	@echo "... x86/arch.i"
 	@echo "... x86/arch.s"
-	@echo "... x86/arm.o"
 	@echo "... x86/decode.o"
 	@echo "... x86/decode.i"
 	@echo "... x86/decode.s"
@@ -1566,6 +1565,7 @@ help:
 	@echo "... x86/steal_reg.o"
 	@echo "... x86/steal_reg.i"
 	@echo "... x86/steal_reg.s"
+	@echo "... x86/x86.o"
 	@echo "... x86/x86_code.o"
 	@echo "... x86/x86_code.i"
 	@echo "... x86/x86_code.s"

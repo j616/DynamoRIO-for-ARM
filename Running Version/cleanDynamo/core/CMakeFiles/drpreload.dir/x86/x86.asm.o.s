@@ -1,8 +1,8 @@
-# 1 "/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/x86/x86.asm"
+# 1 "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/x86.asm"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/x86/x86.asm"
-# 32 "/home/james/Uni/summer11/code/Running Version/cleanDynamo/core/x86/x86.asm"
+# 1 "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/x86.asm"
+# 32 "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/x86.asm"
 .text
 
 .align 0 

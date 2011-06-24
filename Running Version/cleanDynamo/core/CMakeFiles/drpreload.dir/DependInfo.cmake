@@ -5,7 +5,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_ASM
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/arm.s" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/CMakeFiles/drpreload.dir/x86/arm.s.o"
+  "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/x86.asm" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/CMakeFiles/drpreload.dir/x86/x86.asm.o"
   )
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/CMakeFiles/drpreload.dir/config.c.o"

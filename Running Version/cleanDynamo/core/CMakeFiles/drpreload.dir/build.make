@@ -53,15 +53,15 @@ core/CMakeFiles/drpreload.dir/linux/preload.c.o: core/CMakeFiles/drpreload.dir/f
 core/CMakeFiles/drpreload.dir/linux/preload.c.o: core/linux/preload.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/linux/preload.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -o CMakeFiles/drpreload.dir/linux/preload.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -o CMakeFiles/drpreload.dir/linux/preload.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c"
 
 core/CMakeFiles/drpreload.dir/linux/preload.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/linux/preload.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c" > CMakeFiles/drpreload.dir/linux/preload.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c" > CMakeFiles/drpreload.dir/linux/preload.c.i
 
 core/CMakeFiles/drpreload.dir/linux/preload.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/linux/preload.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c" -o CMakeFiles/drpreload.dir/linux/preload.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/preload.c" -o CMakeFiles/drpreload.dir/linux/preload.c.s
 
 core/CMakeFiles/drpreload.dir/linux/preload.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/linux/preload.c.o.requires
@@ -76,15 +76,15 @@ core/CMakeFiles/drpreload.dir/config.c.o: core/CMakeFiles/drpreload.dir/flags.ma
 core/CMakeFiles/drpreload.dir/config.c.o: core/config.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/config.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -o CMakeFiles/drpreload.dir/config.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -o CMakeFiles/drpreload.dir/config.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c"
 
 core/CMakeFiles/drpreload.dir/config.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/config.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c" > CMakeFiles/drpreload.dir/config.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c" > CMakeFiles/drpreload.dir/config.c.i
 
 core/CMakeFiles/drpreload.dir/config.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/config.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c" -o CMakeFiles/drpreload.dir/config.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/config.c" -o CMakeFiles/drpreload.dir/config.c.s
 
 core/CMakeFiles/drpreload.dir/config.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/config.c.o.requires
@@ -99,15 +99,15 @@ core/CMakeFiles/drpreload.dir/linux/os.c.o: core/CMakeFiles/drpreload.dir/flags.
 core/CMakeFiles/drpreload.dir/linux/os.c.o: core/linux/os.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/linux/os.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -o CMakeFiles/drpreload.dir/linux/os.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -o CMakeFiles/drpreload.dir/linux/os.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c"
 
 core/CMakeFiles/drpreload.dir/linux/os.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/linux/os.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c" > CMakeFiles/drpreload.dir/linux/os.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c" > CMakeFiles/drpreload.dir/linux/os.c.i
 
 core/CMakeFiles/drpreload.dir/linux/os.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/linux/os.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c" -o CMakeFiles/drpreload.dir/linux/os.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/linux/os.c" -o CMakeFiles/drpreload.dir/linux/os.c.s
 
 core/CMakeFiles/drpreload.dir/linux/os.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/linux/os.c.o.requires
@@ -118,22 +118,25 @@ core/CMakeFiles/drpreload.dir/linux/os.c.o.provides: core/CMakeFiles/drpreload.d
 
 core/CMakeFiles/drpreload.dir/linux/os.c.o.provides.build: core/CMakeFiles/drpreload.dir/linux/os.c.o
 
-core/CMakeFiles/drpreload.dir/x86/arm.s.o: core/CMakeFiles/drpreload.dir/flags.make
-core/CMakeFiles/drpreload.dir/x86/arm.s.o: core/x86/arm.s
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o: core/CMakeFiles/drpreload.dir/flags.make
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o: core/x86/x86.asm
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o: core/x86/asm_defines.asm
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o: make/CMake_asm.cmake
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o: configure.h
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building ASM object core/CMakeFiles/drpreload.dir/x86/arm.s.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/cpp  $(ASM_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD $(ASM_DEFINES) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/arm.s" -o CMakeFiles/drpreload.dir/x86/arm.s.o.s
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/cmake -Dfile=CMakeFiles/drpreload.dir/x86/arm.s.o.s -P "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/make/CMake_asm.cmake"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && arm-none-linux-gnueabi-as  --noexecstack -march=armv7-a -o CMakeFiles/drpreload.dir/x86/arm.s.o CMakeFiles/drpreload.dir/x86/arm.s.o.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building ASM object core/CMakeFiles/drpreload.dir/x86/x86.asm.o"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/cpp  $(ASM_FLAGS) -DNOT_DYNAMORIO_CORE_PROPER -DRC_IS_PRELOAD $(ASM_DEFINES) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core/x86/x86.asm" -o CMakeFiles/drpreload.dir/x86/x86.asm.o.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/cmake -Dfile=CMakeFiles/drpreload.dir/x86/x86.asm.o.s -P "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/make/CMake_asm.cmake"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Running Version/cleanDynamo/core" && /usr/bin/as  -mmnemonic=intel -msyntax=intel -mnaked-reg --noexecstack --32 -o CMakeFiles/drpreload.dir/x86/x86.asm.o CMakeFiles/drpreload.dir/x86/x86.asm.o.s
 
-core/CMakeFiles/drpreload.dir/x86/arm.s.o.requires:
-.PHONY : core/CMakeFiles/drpreload.dir/x86/arm.s.o.requires
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o.requires:
+.PHONY : core/CMakeFiles/drpreload.dir/x86/x86.asm.o.requires
 
-core/CMakeFiles/drpreload.dir/x86/arm.s.o.provides: core/CMakeFiles/drpreload.dir/x86/arm.s.o.requires
-	$(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/x86/arm.s.o.provides.build
-.PHONY : core/CMakeFiles/drpreload.dir/x86/arm.s.o.provides
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o.provides: core/CMakeFiles/drpreload.dir/x86/x86.asm.o.requires
+	$(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/x86/x86.asm.o.provides.build
+.PHONY : core/CMakeFiles/drpreload.dir/x86/x86.asm.o.provides
 
-core/CMakeFiles/drpreload.dir/x86/arm.s.o.provides.build: core/CMakeFiles/drpreload.dir/x86/arm.s.o
+core/CMakeFiles/drpreload.dir/x86/x86.asm.o.provides.build: core/CMakeFiles/drpreload.dir/x86/x86.asm.o
 
 event_strings.h: core/win32/events.mc
 event_strings.h: core/gen_event_strings.pl
@@ -146,7 +149,7 @@ drpreload_OBJECTS = \
 "CMakeFiles/drpreload.dir/linux/preload.c.o" \
 "CMakeFiles/drpreload.dir/config.c.o" \
 "CMakeFiles/drpreload.dir/linux/os.c.o" \
-"CMakeFiles/drpreload.dir/x86/arm.s.o"
+"CMakeFiles/drpreload.dir/x86/x86.asm.o"
 
 # External object files for target drpreload
 drpreload_EXTERNAL_OBJECTS =
@@ -154,7 +157,7 @@ drpreload_EXTERNAL_OBJECTS =
 lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/linux/preload.c.o
 lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/config.c.o
 lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/linux/os.c.o
-lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/x86/arm.s.o
+lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/x86/x86.asm.o
 lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/build.make
 lib/libdrpreload.so: core/CMakeFiles/drpreload.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../lib/libdrpreload.so"
@@ -168,7 +171,7 @@ core/CMakeFiles/drpreload.dir/build: lib/libdrpreload.so
 core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/linux/preload.c.o.requires
 core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/config.c.o.requires
 core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/linux/os.c.o.requires
-core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/x86/arm.s.o.requires
+core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/x86/x86.asm.o.requires
 .PHONY : core/CMakeFiles/drpreload.dir/requires
 
 core/CMakeFiles/drpreload.dir/clean:

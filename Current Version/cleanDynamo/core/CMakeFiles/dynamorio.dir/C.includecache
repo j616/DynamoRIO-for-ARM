@@ -16,20 +16,6 @@ proc.h
 
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../dispatch.h
 
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../fcache.h
-
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../fragment.h
-hashtable.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtable.h
-hashtablex.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtablex.h
-hashtablex.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtablex.h
-hashtablex.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtablex.h
-hashtablex.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtablex.h
-
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../globals.h
 configure.h
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../configure.h
@@ -64,15 +50,13 @@ dispatch.h
 dr_stats.h
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../dr_stats.h
 
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtable.h
-hashtablex.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtablex.h
-
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../hashtablex.h
-
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../heap.h
 
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../instrlist.h
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../module_shared.h
+module.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../module.h
 
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../options.h
 optionsx.h
@@ -104,11 +88,21 @@ events.h
 
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../vmareas.h
 
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/diagnost.c
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/module.c
 ../globals.h
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../globals.h
-
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/module.h
+../module_shared.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../module_shared.h
+os_private.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/os_private.h
+elf.h
+-
+string.h
+-
+stddef.h
+-
+link.h
+-
 
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/os_private.h
 signal.h
@@ -119,54 +113,6 @@ sys/time.h
 -
 vmkuw.h
 /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/vmkuw.h
-
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/pcprofile.c
-../globals.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../globals.h
-../utils.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../utils.h
-../fragment.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../fragment.h
-../fcache.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../fcache.h
-string.h
--
-instrument.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/instrument.h
-disassemble.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/disassemble.h
-sys/time.h
--
-symtab.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/symtab.h
-
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/stackdump.c
-stdio.h
--
-stdlib.h
--
-unistd.h
--
-fcntl.h
--
-sys/file.h
--
-sys/wait.h
--
-string.h
--
-sys/syscall.h
--
-execinfo.h
--
-stdio.h
--
-../globals.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/../globals.h
-os_private.h
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/os_private.h
-
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/core/linux/symtab.h
 
 configure.h
 
@@ -200,6 +146,8 @@ core/lib/kstatsx.h
 
 core/lib/statsx.h
 
+core/link.h
+
 core/linux/../os_shared.h
 
 core/linux/module.h
@@ -211,30 +159,6 @@ stdarg.h
 core/linux/../os_shared.h
 stdarg.h
 -
-
-core/x86/../module_shared.h
-module.h
-core/x86/../module.h
-
-core/x86/arch.h
-stddef.h
--
-instr.h
-core/x86/instr.h
-
-core/x86/disassemble.h
-
-core/x86/instr.h
-
-core/x86/instrument.h
-../globals.h
-core/x86/../globals.h
-../module_shared.h
-core/x86/../module_shared.h
-arch.h
-core/x86/arch.h
-instr.h
-core/x86/instr.h
 
 event_strings.h
 

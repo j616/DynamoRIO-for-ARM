@@ -3,7 +3,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/drpreload.dir/linux/preload.c.o"
   "CMakeFiles/drpreload.dir/config.c.o"
   "CMakeFiles/drpreload.dir/linux/os.c.o"
-  "CMakeFiles/drpreload.dir/x86/arm.s.o"
+  "CMakeFiles/drpreload.dir/x86/x86.asm.o"
   "../event_strings.h"
   "../lib/libdrpreload.pdb"
   "../lib/libdrpreload.so"

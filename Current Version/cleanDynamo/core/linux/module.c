@@ -33,10 +33,14 @@
 #include "../globals.h"
 #include "../module_shared.h"
 #include "os_private.h"
-#include <elf.h>		/* for ELF types */
+#include <elf.h>/* for ELF types */
 #include <string.h>
-#include <stddef.h>		/* offsetof */
-#include <link.h>		/* Elf_Symndx */
+#include <stddef.h>/* offsetof */
+#include <link.h>/* Elf_Symndx */
+
+#ifdef LINUX
+#include "/usr/include/link.h"
+#endif
 
 typedef union _elf_generic_header_t
 {
@@ -68,7 +72,6 @@ typedef union _elf_generic_header_t
  * backtrack some of them out from program headers which need to point to plt relocs
  * etc.
  */
-
 
 /* Is there an ELF header for a shared object at address 'base'? 
  * If size == 0 then checks for header readability else assumes that size bytes from
@@ -102,7 +105,7 @@ is_elf_so_header_common (app_pc base, size_t size, bool memory)
   else if (size == 0)
     {
       if (!safe_read (base, sizeof (ELF_HEADER_TYPE), &elf_header))
-	return false;
+return false;
     }
   else
     {
@@ -124,9 +127,9 @@ is_elf_so_header_common (app_pc base, size_t size, bool memory)
        * modules all of these should hold. */
       ASSERT_CURIOSITY (elf_header.e_version == 1);
       ASSERT_CURIOSITY (!memory
-			|| elf_header.e_ehsize == sizeof (ELF_HEADER_TYPE));
+|| elf_header.e_ehsize == sizeof (ELF_HEADER_TYPE));
       ASSERT_CURIOSITY (elf_header.e_ident[EI_OSABI] == ELFOSABI_SYSV
-			|| elf_header.e_ident[EI_OSABI] == ELFOSABI_LINUX);
+|| elf_header.e_ident[EI_OSABI] == ELFOSABI_LINUX);
 #ifdef X64
       ASSERT_CURIOSITY (!memory || elf_header.e_machine == EM_X86_64);
 #else
@@ -160,7 +163,7 @@ os_modules_exit (void)
 /* Returns absolute address of the ELF dynamic array DT_ target */
 static app_pc
 elf_dt_abs_addr (ELF_DYNAMIC_ENTRY_TYPE * dyn, app_pc base, size_t size,
-		 size_t view_size, ssize_t offset, bool at_map)
+ size_t view_size, ssize_t offset, bool at_map)
 {
   // COMPLETEDD #233 elf_dt_abs_addr
   /* FIXME - if at_map this needs to be adjusted if not in the first segment
@@ -219,9 +222,9 @@ module_segment_prot_to_osprot (ELF_PROGRAM_HEADER_TYPE * prog_hdr)
 /* Adds an entry for a segment to the out_data->segments array */
 static void
 module_add_segment_data (OUT os_module_data_t * out_data,
-			 ELF_HEADER_TYPE * elf_hdr,
-			 ssize_t load_offset,
-			 ELF_PROGRAM_HEADER_TYPE * prog_hdr)
+ ELF_HEADER_TYPE * elf_hdr,
+ ssize_t load_offset,
+ ELF_PROGRAM_HEADER_TYPE * prog_hdr)
 {
   // COMPLETEDD #232 module_add_segment_data
   uint seg, i;
@@ -244,16 +247,16 @@ module_add_segment_data (OUT os_module_data_t * out_data,
       /* over-allocate to avoid 2 passes to count PT_LOAD */
       out_data->alloc_segments = elf_hdr->e_phnum;
       out_data->segments = (module_segment_t *)
-	HEAP_ARRAY_ALLOC (GLOBAL_DCONTEXT, module_segment_t,
-			  out_data->alloc_segments, ACCT_OTHER, PROTECTED);
+HEAP_ARRAY_ALLOC (GLOBAL_DCONTEXT, module_segment_t,
+  out_data->alloc_segments, ACCT_OTHER, PROTECTED);
       out_data->contiguous = true;
     }
   /* Keep array sorted in addr order.  I'm assuming segments are disjoint! */
   for (i = 0; i < out_data->num_segments; i++)
     {
       if (out_data->segments[i].start >
-	  (app_pc) prog_hdr->p_vaddr + load_offset)
-	break;
+  (app_pc) prog_hdr->p_vaddr + load_offset)
+break;
     }
   seg = i;
   /* Shift remaining entries */
@@ -268,21 +271,21 @@ module_add_segment_data (OUT os_module_data_t * out_data,
     ALIGN_BACKWARD (prog_hdr->p_vaddr + load_offset, PAGE_SIZE);
   out_data->segments[seg].end = (app_pc)
     ALIGN_FORWARD (prog_hdr->p_vaddr + load_offset + prog_hdr->p_memsz,
-		   PAGE_SIZE);
+   PAGE_SIZE);
   out_data->segments[seg].prot = module_segment_prot_to_osprot (prog_hdr);
   if (seg > 0)
     {
       ASSERT (out_data->segments[seg].start >=
-	      out_data->segments[seg - 1].end);
+      out_data->segments[seg - 1].end);
       if (out_data->segments[seg].start > out_data->segments[seg - 1].end)
-	out_data->contiguous = false;
+out_data->contiguous = false;
     }
   if (seg < out_data->num_segments - 1)
     {
       ASSERT (out_data->segments[seg + 1].start >=
-	      out_data->segments[seg].end);
+      out_data->segments[seg].end);
       if (out_data->segments[seg + 1].start > out_data->segments[seg].end)
-	out_data->contiguous = false;
+out_data->contiguous = false;
     }
 }
 
@@ -295,17 +298,17 @@ module_add_segment_data (OUT os_module_data_t * out_data,
  */
 bool
 module_walk_program_headers (app_pc base, size_t view_size, bool at_map,
-			     OUT app_pc * out_base /* relative pc */ ,
-			     OUT app_pc * out_end /* relative pc */ ,
-			     OUT char **out_soname,
-			     OUT os_module_data_t * out_data)
+     OUT app_pc * out_base /* relative pc */ ,
+     OUT app_pc * out_end /* relative pc */ ,
+     OUT char **out_soname,
+     OUT os_module_data_t * out_data)
 {
   // COMPLETEDD #234 module_walk_program_headers
   app_pc mod_base = (app_pc) POINTER_MAX, mod_end = (app_pc) 0;
   char *soname = NULL;
   bool found_load = false;
   ELF_HEADER_TYPE *elf_hdr = (ELF_HEADER_TYPE *) base;
-  ssize_t offset;		/* offset loaded at relative to base */
+  ssize_t offset;/* offset loaded at relative to base */
   ASSERT (is_elf_so_header (base, view_size));
 
   /* On adjusting virtual address in the elf headers -
@@ -316,8 +319,8 @@ module_walk_program_headers (app_pc base, size_t view_size, bool at_map,
    * All virtual addresses are assuming the module is loaded at its
    * base address. */
   ASSERT_CURIOSITY (elf_hdr->e_phoff != 0 &&
-		    elf_hdr->e_phoff +
-		    elf_hdr->e_phnum * elf_hdr->e_phentsize <= view_size);
+    elf_hdr->e_phoff +
+    elf_hdr->e_phnum * elf_hdr->e_phentsize <= view_size);
   if (elf_hdr->e_phoff != 0
       && elf_hdr->e_phoff + elf_hdr->e_phnum * elf_hdr->e_phentsize <=
       view_size)
@@ -325,144 +328,144 @@ module_walk_program_headers (app_pc base, size_t view_size, bool at_map,
       /* walk the program headers */
       uint i;
       ASSERT_CURIOSITY (elf_hdr->e_phentsize ==
-			sizeof (ELF_PROGRAM_HEADER_TYPE));
+sizeof (ELF_PROGRAM_HEADER_TYPE));
       /* we need mod_base and mod_end to be fully computed for use in reading
        * out_soname, so we do a full segment walk up front
        */
       mod_base = module_vaddr_from_prog_header (base + elf_hdr->e_phoff,
-						elf_hdr->e_phnum, &mod_end);
+elf_hdr->e_phnum, &mod_end);
       offset = base - mod_base;
       /* now we do our own walk */
       for (i = 0; i < elf_hdr->e_phnum; i++)
-	{
-	  ELF_PROGRAM_HEADER_TYPE *prog_hdr = (ELF_PROGRAM_HEADER_TYPE *)
-	    (base + elf_hdr->e_phoff + i * elf_hdr->e_phentsize);
-	  if (prog_hdr->p_type == PT_LOAD)
-	    {
-	      if (out_data != NULL)
-		{
-		  module_add_segment_data (out_data, elf_hdr, offset,
-					   prog_hdr);
-		}
-	      found_load = true;
-	    }
-	  if ((out_soname != NULL || out_data != NULL) &&
-	      prog_hdr->p_type == PT_DYNAMIC)
-	    {
-	      /* if at_map use file offset as segments haven't been remapped yet and
-	       * the dynamic section isn't usually in the first segment (FIXME in
-	       * theory it's possible to construct a file where the dynamic section
-	       * isn't mapped in as part of the initial map because large parts of the
-	       * initial portion of the file aren't part of the in memory image which
-	       * is fixed up with a PT_LOAD).
-	       * 
-	       * If not at_map use virtual address adjusted for possible loading not
-	       * at base. */
-	      /* FIXME: somehow dl_iterate_phdr() implies that this offset can
-	       * be unsigned, but I don't trust that: probably only works b/c
-	       * of wraparound arithmetic
-	       */
-	      ELF_DYNAMIC_ENTRY_TYPE *dyn = (ELF_DYNAMIC_ENTRY_TYPE *)
-		(at_map ? base + prog_hdr->p_offset :
-		 (app_pc) prog_hdr->p_vaddr + offset);
-	      dcontext_t *dcontext = get_thread_private_dcontext ();
+{
+  ELF_PROGRAM_HEADER_TYPE *prog_hdr = (ELF_PROGRAM_HEADER_TYPE *)
+    (base + elf_hdr->e_phoff + i * elf_hdr->e_phentsize);
+  if (prog_hdr->p_type == PT_LOAD)
+    {
+      if (out_data != NULL)
+{
+  module_add_segment_data (out_data, elf_hdr, offset,
+   prog_hdr);
+}
+      found_load = true;
+    }
+  if ((out_soname != NULL || out_data != NULL) &&
+      prog_hdr->p_type == PT_DYNAMIC)
+    {
+      /* if at_map use file offset as segments haven't been remapped yet and
+       * the dynamic section isn't usually in the first segment (FIXME in
+       * theory it's possible to construct a file where the dynamic section
+       * isn't mapped in as part of the initial map because large parts of the
+       * initial portion of the file aren't part of the in memory image which
+       * is fixed up with a PT_LOAD).
+       * 
+       * If not at_map use virtual address adjusted for possible loading not
+       * at base. */
+      /* FIXME: somehow dl_iterate_phdr() implies that this offset can
+       * be unsigned, but I don't trust that: probably only works b/c
+       * of wraparound arithmetic
+       */
+      ELF_DYNAMIC_ENTRY_TYPE *dyn = (ELF_DYNAMIC_ENTRY_TYPE *)
+(at_map ? base + prog_hdr->p_offset :
+ (app_pc) prog_hdr->p_vaddr + offset);
+      dcontext_t *dcontext = get_thread_private_dcontext ();
 
-	      TRY_EXCEPT (dcontext,
-			  {
-			  int soname_index = -1;
-			  char *dynstr = NULL;
-			  size_t sz = mod_end - mod_base;
-			  while (dyn->d_tag != DT_NULL)
-			  {
-			  if (dyn->d_tag == DT_SONAME)
-			  {
-			  soname_index = dyn->d_un.d_val;
-			  if (dynstr != NULL) break;}
-			  else
-			  if (dyn->d_tag == DT_STRTAB)
-			  {
-			  dynstr = (char *) elf_dt_abs_addr (dyn, base, sz, view_size, offset, at_map); if (out_data != NULL) out_data->dynstr = (app_pc) dynstr; if (soname_index != -1 && out_data == NULL) break;	/* done w/ DT entries */
-			  }
-			  else
-			  if (out_data != NULL)
-			  {
-			  if (dyn->d_tag == DT_SYMTAB)
-			  {
-			  out_data->dynsym =
-			  elf_dt_abs_addr (dyn, base, sz, view_size, offset,
-					   at_map);}
-			  else
-			  if (dyn->d_tag == DT_HASH &&
-			      /* if has both .gnu.hash and .hash, prefer
-			       * .gnu.hash
-			       */
-			      !out_data->hash_is_gnu)
-			  {
-			  out_data->hashtab =
-			  elf_dt_abs_addr (dyn, base, sz, view_size, offset,
-					   at_map);
-			  out_data->hash_is_gnu = false;}
-			  else
-			  if (dyn->d_tag == DT_GNU_HASH)
-			  {
-			  out_data->hashtab =
-			  elf_dt_abs_addr (dyn, base, sz, view_size, offset,
-					   at_map);
-			  out_data->hash_is_gnu = true;}
-			  else
-			  if (dyn->d_tag == DT_STRSZ)
-			  {
-			  out_data->dynstr_size = (size_t) dyn->d_un.d_val;}
-			  else
-			  if (dyn->d_tag == DT_SYMENT)
-			  {
-			  out_data->symentry_size = (size_t) dyn->d_un.d_val;}
-			  else
-			  if (dyn->d_tag == DT_CHECKSUM)
-			  {
-			  out_data->checksum = (size_t) dyn->d_un.d_val;}
-			  else
-			  if (dyn->d_tag == DT_GNU_PRELINKED)
-			  {
-			  out_data->timestamp = (size_t) dyn->d_un.d_val;}
-			  }
-			  dyn++;}
-			  if (soname_index != -1 && dynstr != NULL)
-			  {
-			  soname = dynstr + soname_index;
-			  /* sanity check soname location */
-			  if ((app_pc) soname < base
-			      || (app_pc) soname > base + sz)
-			  {
-			  ASSERT_CURIOSITY (false && "soname not in module");
-			  soname = NULL;}
-			  else
-			  if (at_map && (app_pc) soname > base + view_size)
-			  {
-			  ASSERT_CURIOSITY (false
-					    && "soname not in initial map");
-			  soname = NULL;}
+      TRY_EXCEPT (dcontext,
+  {
+  int soname_index = -1;
+  char *dynstr = NULL;
+  size_t sz = mod_end - mod_base;
+  while (dyn->d_tag != DT_NULL)
+  {
+  if (dyn->d_tag == DT_SONAME)
+  {
+  soname_index = dyn->d_un.d_val;
+  if (dynstr != NULL) break;}
+  else
+  if (dyn->d_tag == DT_STRTAB)
+  {
+  dynstr = (char *) elf_dt_abs_addr (dyn, base, sz, view_size, offset, at_map); if (out_data != NULL) out_data->dynstr = (app_pc) dynstr; if (soname_index != -1 && out_data == NULL) break;/* done w/ DT entries */
+  }
+  else
+  if (out_data != NULL)
+  {
+  if (dyn->d_tag == DT_SYMTAB)
+  {
+  out_data->dynsym =
+  elf_dt_abs_addr (dyn, base, sz, view_size, offset,
+   at_map);}
+  else
+  if (dyn->d_tag == DT_HASH &&
+      /* if has both .gnu.hash and .hash, prefer
+       * .gnu.hash
+       */
+      !out_data->hash_is_gnu)
+  {
+  out_data->hashtab =
+  elf_dt_abs_addr (dyn, base, sz, view_size, offset,
+   at_map);
+  out_data->hash_is_gnu = false;}
+  else
+  if (dyn->d_tag == DT_GNU_HASH)
+  {
+  out_data->hashtab =
+  elf_dt_abs_addr (dyn, base, sz, view_size, offset,
+   at_map);
+  out_data->hash_is_gnu = true;}
+  else
+  if (dyn->d_tag == DT_STRSZ)
+  {
+  out_data->dynstr_size = (size_t) dyn->d_un.d_val;}
+  else
+  if (dyn->d_tag == DT_SYMENT)
+  {
+  out_data->symentry_size = (size_t) dyn->d_un.d_val;}
+  else
+  if (dyn->d_tag == DT_CHECKSUM)
+  {
+  out_data->checksum = (size_t) dyn->d_un.d_val;}
+  else
+  if (dyn->d_tag == DT_GNU_PRELINKED)
+  {
+  out_data->timestamp = (size_t) dyn->d_un.d_val;}
+  }
+  dyn++;}
+  if (soname_index != -1 && dynstr != NULL)
+  {
+  soname = dynstr + soname_index;
+  /* sanity check soname location */
+  if ((app_pc) soname < base
+      || (app_pc) soname > base + sz)
+  {
+  ASSERT_CURIOSITY (false && "soname not in module");
+  soname = NULL;}
+  else
+  if (at_map && (app_pc) soname > base + view_size)
+  {
+  ASSERT_CURIOSITY (false
+    && "soname not in initial map");
+  soname = NULL;}
 
-			  /* test string readability while still in try/except
-			   * in case we screwed up somewhere or module is
-			   * malformed/only partially mapped */
-			  if (soname != NULL && strlen (soname) == -1)
-			  {
-			  ASSERT_NOT_REACHED ();}
-			  }
-			  }
-			  ,
-			  {	/* EXCEPT */
-			  ASSERT_CURIOSITY (false
-					    &&
-					    "crashed while walking dynamic header");
-			  soname = NULL;}
-	      );
-	    }
-	}
+  /* test string readability while still in try/except
+   * in case we screwed up somewhere or module is
+   * malformed/only partially mapped */
+  if (soname != NULL && strlen (soname) == -1)
+  {
+  ASSERT_NOT_REACHED ();}
+  }
+  }
+  ,
+  {/* EXCEPT */
+  ASSERT_CURIOSITY (false
+    &&
+    "crashed while walking dynamic header");
+  soname = NULL;}
+      );
+    }
+}
     }
   ASSERT_CURIOSITY (found_load && mod_base != (app_pc) POINTER_MAX &&
-		    mod_end != (app_pc) 0);
+    mod_end != (app_pc) 0);
   ASSERT_CURIOSITY (mod_end > mod_base);
   if (out_base != NULL)
     *out_base = mod_base;
@@ -487,7 +490,7 @@ module_num_program_headers (app_pc base)
  */
 app_pc
 module_vaddr_from_prog_header (app_pc prog_header, uint num_segments,
-			       OUT app_pc * out_end)
+       OUT app_pc * out_end)
 {
   // COMPLETEDD #230 module_vaddr_from_prog_header
   uint i;
@@ -500,18 +503,18 @@ module_vaddr_from_prog_header (app_pc prog_header, uint num_segments,
        * bother to deliver the entry size.
        */
       ELF_PROGRAM_HEADER_TYPE *prog_hdr = (ELF_PROGRAM_HEADER_TYPE *)
-	(prog_header + i * sizeof (ELF_PROGRAM_HEADER_TYPE));
+(prog_header + i * sizeof (ELF_PROGRAM_HEADER_TYPE));
       if (prog_hdr->p_type == PT_LOAD)
-	{
-	  /* ELF requires p_vaddr to already be aligned to p_align */
-	  min_vaddr =
-	    MIN (min_vaddr,
-		 (app_pc) ALIGN_BACKWARD (prog_hdr->p_vaddr, PAGE_SIZE));
-	  mod_end =
-	    MAX (mod_end,
-		 (app_pc) ALIGN_FORWARD (prog_hdr->p_vaddr +
-					 prog_hdr->p_memsz, PAGE_SIZE));
-	}
+{
+  /* ELF requires p_vaddr to already be aligned to p_align */
+  min_vaddr =
+    MIN (min_vaddr,
+ (app_pc) ALIGN_BACKWARD (prog_hdr->p_vaddr, PAGE_SIZE));
+  mod_end =
+    MAX (mod_end,
+ (app_pc) ALIGN_FORWARD (prog_hdr->p_vaddr +
+ prog_hdr->p_memsz, PAGE_SIZE));
+}
     }
   if (out_end != NULL)
     *out_end = mod_end;
@@ -520,11 +523,11 @@ module_vaddr_from_prog_header (app_pc prog_header, uint num_segments,
 
 bool
 module_read_program_header (app_pc base,
-			    uint segment_num,
-			    OUT app_pc * segment_base /* relative pc */ ,
-			    OUT app_pc * segment_end /* relative pc */ ,
-			    OUT uint * segment_prot,
-			    OUT size_t * segment_align)
+    uint segment_num,
+    OUT app_pc * segment_base /* relative pc */ ,
+    OUT app_pc * segment_end /* relative pc */ ,
+    OUT uint * segment_prot,
+    OUT size_t * segment_align)
 {
   ELF_HEADER_TYPE *elf_hdr = (ELF_HEADER_TYPE *) base;
   ELF_PROGRAM_HEADER_TYPE *prog_hdr;
@@ -532,34 +535,34 @@ module_read_program_header (app_pc base,
   if (elf_hdr->e_phoff != 0)
     {
       ASSERT_CURIOSITY (elf_hdr->e_phentsize ==
-			sizeof (ELF_PROGRAM_HEADER_TYPE));
+sizeof (ELF_PROGRAM_HEADER_TYPE));
       prog_hdr =
-	(ELF_PROGRAM_HEADER_TYPE *) (base + elf_hdr->e_phoff +
-				     segment_num * elf_hdr->e_phentsize);
+(ELF_PROGRAM_HEADER_TYPE *) (base + elf_hdr->e_phoff +
+     segment_num * elf_hdr->e_phentsize);
       if (prog_hdr->p_type == PT_LOAD)
-	{
-	  /* ELF requires p_vaddr to already be aligned to p_align */
-	  if (segment_base != NULL)
-	    *segment_base = (app_pc) prog_hdr->p_vaddr;
-	  /* up to caller to align end if desired */
-	  if (segment_end != NULL)
-	    {
-	      *segment_end = (app_pc) (prog_hdr->p_vaddr + prog_hdr->p_memsz);
-	    }
-	  if (segment_prot != NULL)
-	    *segment_prot = module_segment_prot_to_osprot (prog_hdr);
-	  if (segment_align != NULL)
-	    *segment_align = prog_hdr->p_align;
-	  return true;
-	}
+{
+  /* ELF requires p_vaddr to already be aligned to p_align */
+  if (segment_base != NULL)
+    *segment_base = (app_pc) prog_hdr->p_vaddr;
+  /* up to caller to align end if desired */
+  if (segment_end != NULL)
+    {
+      *segment_end = (app_pc) (prog_hdr->p_vaddr + prog_hdr->p_memsz);
+    }
+  if (segment_prot != NULL)
+    *segment_prot = module_segment_prot_to_osprot (prog_hdr);
+  if (segment_align != NULL)
+    *segment_align = prog_hdr->p_align;
+  return true;
+}
     }
   return false;
 }
 
 void
 os_module_area_init (module_area_t * ma, app_pc base, size_t view_size,
-		     bool at_map, const char *filepath, uint64 inode
-		     HEAPACCT (which_heap_t which))
+     bool at_map, const char *filepath, uint64 inode
+     HEAPACCT (which_heap_t which))
 {
   app_pc mod_base, mod_end;
   int offset;
@@ -568,7 +571,7 @@ os_module_area_init (module_area_t * ma, app_pc base, size_t view_size,
   ASSERT (is_elf_so_header (base, view_size));
 
   module_walk_program_headers (base, view_size, at_map,
-			       &mod_base, &mod_end, &soname, &ma->os_data);
+       &mod_base, &mod_end, &soname, &ma->os_data);
   if (ma->os_data.contiguous)
     module_list_add_mapping (ma, base, base + view_size);
   else
@@ -583,25 +586,25 @@ os_module_area_init (module_area_t * ma, app_pc base, size_t view_size,
       ASSERT (ma->os_data.num_segments > 0 && ma->os_data.segments != NULL);
       seg_base = ma->os_data.segments[0].start;
       for (i = 1; i < ma->os_data.num_segments; i++)
-	{
-	  if (ma->os_data.segments[i].start > ma->os_data.segments[i - 1].end)
-	    {
-	      module_list_add_mapping (ma, seg_base,
-				       ma->os_data.segments[i - 1].end);
-	      seg_base = ma->os_data.segments[i].start;
-	    }
-	}
+{
+  if (ma->os_data.segments[i].start > ma->os_data.segments[i - 1].end)
+    {
+      module_list_add_mapping (ma, seg_base,
+       ma->os_data.segments[i - 1].end);
+      seg_base = ma->os_data.segments[i].start;
+    }
+}
       module_list_add_mapping (ma, seg_base, ma->os_data.segments[i - 1].end);
       DOLOG (2, LOG_VMAREAS,
-	     {
-	     LOG (GLOBAL, LOG_INTERP | LOG_VMAREAS, 2, "segment list\n");
-	     for (i = 0; i < ma->os_data.num_segments; i++)
-	     {
-	     LOG (GLOBAL, LOG_INTERP | LOG_VMAREAS, 2,
-		  "\tsegment %d: [" PFX "," PFX ") prot=%x\n", i,
-		  ma->os_data.segments[i].start, ma->os_data.segments[i].end,
-		  ma->os_data.segments[i].prot);}
-	     }
+     {
+     LOG (GLOBAL, LOG_INTERP | LOG_VMAREAS, 2, "segment list\n");
+     for (i = 0; i < ma->os_data.num_segments; i++)
+     {
+     LOG (GLOBAL, LOG_INTERP | LOG_VMAREAS, 2,
+  "\tsegment %d: [" PFX "," PFX ") prot=%x\n", i,
+  ma->os_data.segments[i].start, ma->os_data.segments[i].end,
+  ma->os_data.segments[i].prot);}
+     }
       );
     }
 
@@ -614,38 +617,38 @@ os_module_area_init (module_area_t * ma, app_pc base, size_t view_size,
     {
       /* set up symbol lookup fields */
       if (ma->os_data.hash_is_gnu)
-	{
-	  /* .gnu.hash format.  can't find good docs for it. */
-	  Elf32_Word symbias;
-	  Elf32_Word bitmask_nwords;
-	  Elf32_Word *htab = (Elf32_Word *) ma->os_data.hashtab;
-	  ma->os_data.num_buckets = (size_t) * htab++;
-	  symbias = *htab++;
-	  bitmask_nwords = *htab++;
-	  ma->os_data.gnu_bitidx = (ptr_uint_t) (bitmask_nwords - 1);
-	  ma->os_data.gnu_shift = (ptr_uint_t) * htab++;
-	  ma->os_data.gnu_bitmask = (app_pc) htab;
-	  htab += ELF_WORD_SIZE / 32 * bitmask_nwords;
-	  ma->os_data.buckets = (app_pc) htab;
-	  htab += ma->os_data.num_buckets;
-	  ma->os_data.chain = (app_pc) (htab - symbias);
-	}
+{
+  /* .gnu.hash format.  can't find good docs for it. */
+  Elf32_Word symbias;
+  Elf32_Word bitmask_nwords;
+  Elf32_Word *htab = (Elf32_Word *) ma->os_data.hashtab;
+  ma->os_data.num_buckets = (size_t) * htab++;
+  symbias = *htab++;
+  bitmask_nwords = *htab++;
+  ma->os_data.gnu_bitidx = (ptr_uint_t) (bitmask_nwords - 1);
+  ma->os_data.gnu_shift = (ptr_uint_t) * htab++;
+  ma->os_data.gnu_bitmask = (app_pc) htab;
+  htab += ELF_WORD_SIZE / 32 * bitmask_nwords;
+  ma->os_data.buckets = (app_pc) htab;
+  htab += ma->os_data.num_buckets;
+  ma->os_data.chain = (app_pc) (htab - symbias);
+}
       else
-	{
-	  /* sysv .hash format: nbuckets; nchain; buckets[]; chain[] */
-	  Elf_Symndx *htab = (Elf_Symndx *) ma->os_data.hashtab;
-	  ma->os_data.num_buckets = (size_t) * htab++;
-	  ma->os_data.num_chain = (size_t) * htab++;
-	  ma->os_data.buckets = (app_pc) htab;
-	  ma->os_data.chain = (app_pc) (htab + ma->os_data.num_buckets);
-	}
+{
+  /* sysv .hash format: nbuckets; nchain; buckets[]; chain[] */
+  Elf_Symndx *htab = (Elf_Symndx *) ma->os_data.hashtab;
+  ma->os_data.num_buckets = (size_t) * htab++;
+  ma->os_data.num_chain = (size_t) * htab++;
+  ma->os_data.buckets = (app_pc) htab;
+  ma->os_data.chain = (app_pc) (htab + ma->os_data.num_buckets);
+}
       ASSERT (ma->os_data.symentry_size == sizeof (ELF_SYM_TYPE));
     }
 
   /* expect to map whole module */
   /* XREF 307599 on rounding module end to the next PAGE boundary */
   ASSERT_CURIOSITY (mod_end - mod_base == at_map ?
-		    ALIGN_FORWARD (view_size, PAGE_SIZE) : view_size);
+    ALIGN_FORWARD (view_size, PAGE_SIZE) : view_size);
 
   ma->os_data.base_address = mod_base;
   offset = base - mod_base;
@@ -661,28 +664,28 @@ os_module_area_init (module_area_t * ma, app_pc base, size_t view_size,
       /* XXX: provide a targeted query to avoid full walk */
       void *iter = vmk_mmaps_iter_start ();
       if (iter != NULL)
-	{			/* backward compatibility: support lack of iter */
-	  byte *start;
-	  size_t length;
-	  char name[MAXIMUM_PATH];
-	  while (vmk_mmaps_iter_next (iter, &start, &length, NULL,
-				      name, BUFFER_SIZE_ELEMENTS (name)))
-	    {
-	      if (base == start)
-		{
-		  ma->names.file_name = dr_strdup (name HEAPACCT (which));
-		  break;
-		}
-	    }
-	  vmk_mmaps_iter_stop (iter);
-	}
+{/* backward compatibility: support lack of iter */
+  byte *start;
+  size_t length;
+  char name[MAXIMUM_PATH];
+  while (vmk_mmaps_iter_next (iter, &start, &length, NULL,
+      name, BUFFER_SIZE_ELEMENTS (name)))
+    {
+      if (base == start)
+{
+  ma->names.file_name = dr_strdup (name HEAPACCT (which));
+  break;
+}
+    }
+  vmk_mmaps_iter_stop (iter);
+}
 #endif
       ma->full_path = NULL;
     }
   else
     {
       ma->names.file_name =
-	dr_strdup (get_short_name (filepath) HEAPACCT (which));
+dr_strdup (get_short_name (filepath) HEAPACCT (which));
       /* We could share alloc w/ names.file_name but simpler to separate */
       ma->full_path = dr_strdup (filepath HEAPACCT (which));
     }
@@ -730,10 +733,10 @@ print_modules (file_t f, bool dump_xml)
   while (module_iterator_hasnext (mi))
     {
       module_area_t *ma = module_iterator_next (mi);
-      print_file (f, dump_xml ? "\t<so range=\"" PFX "-" PFX "\" " "entry=\"" PFX "\" base_address=" PFX "\n" "\tname=\"%s\" />\n" : "  " PFX "-" PFX " entry=" PFX " base_address=" PFX "\n" "\tname=\"%s\" \n", ma->start, ma->end - 1,	/* inclusive */
-		  ma->entry_point, ma->os_data.base_address,
-		  GET_MODULE_NAME (&ma->names) == NULL ?
-		  "(null)" : GET_MODULE_NAME (&ma->names));
+      print_file (f, dump_xml ? "\t<so range=\"" PFX "-" PFX "\" " "entry=\"" PFX "\" base_address=" PFX "\n" "\tname=\"%s\" />\n" : "  " PFX "-" PFX " entry=" PFX " base_address=" PFX "\n" "\tname=\"%s\" \n", ma->start, ma->end - 1,/* inclusive */
+  ma->entry_point, ma->os_data.base_address,
+  GET_MODULE_NAME (&ma->names) == NULL ?
+  "(null)" : GET_MODULE_NAME (&ma->names));
     }
   module_iterator_stop (mi);
 
@@ -756,19 +759,19 @@ os_module_area_reset (module_area_t * ma HEAPACCT (which_heap_t which))
       ASSERT (ma->os_data.num_segments > 0 && ma->os_data.segments != NULL);
       seg_base = ma->os_data.segments[0].start;
       for (i = 1; i < ma->os_data.num_segments; i++)
-	{
-	  if (ma->os_data.segments[i].start > ma->os_data.segments[i - 1].end)
-	    {
-	      module_list_remove_mapping (ma, seg_base,
-					  ma->os_data.segments[i - 1].end);
-	      seg_base = ma->os_data.segments[i].start;
-	    }
-	}
+{
+  if (ma->os_data.segments[i].start > ma->os_data.segments[i - 1].end)
+    {
       module_list_remove_mapping (ma, seg_base,
-				  ma->os_data.segments[i - 1].end);
+  ma->os_data.segments[i - 1].end);
+      seg_base = ma->os_data.segments[i].start;
+    }
+}
+      module_list_remove_mapping (ma, seg_base,
+  ma->os_data.segments[i - 1].end);
     }
   HEAP_ARRAY_FREE (GLOBAL_DCONTEXT, ma->os_data.segments, module_segment_t,
-		   ma->os_data.alloc_segments, ACCT_OTHER, PROTECTED);
+   ma->os_data.alloc_segments, ACCT_OTHER, PROTECTED);
   if (ma->full_path != NULL)
     dr_strfree (ma->full_path HEAPACCT (which));
 }
@@ -787,7 +790,7 @@ elf_hash (const char *name)
       h = (h << 4) + *name;
       g = h & 0xf0000000;
       if (g != 0)
-	h ^= g >> 24;
+h ^= g >> 24;
       h &= ~g;
       name++;
     }
@@ -805,7 +808,7 @@ elf_gnu_hash (const char *name)
 
 static bool
 elf_sym_matches (ELF_SYM_TYPE * sym, char *strtab, const char *name,
-		 bool * is_indirect_code OUT)
+ bool * is_indirect_code OUT)
 {
   /* i#248/PR 510905: FC12 libc strlen has this type */
   bool is_ifunc = (ELF_ST_TYPE (sym->st_info) == STT_GNU_IFUNC);
@@ -817,7 +820,7 @@ elf_sym_matches (ELF_SYM_TYPE * sym, char *strtab, const char *name,
       strncmp (strtab + sym->st_name, name, PAGE_SIZE) == 0)
     {
       if (is_indirect_code != NULL)
-	*is_indirect_code = is_ifunc;
+*is_indirect_code = is_ifunc;
       return true;
     }
   return false;
@@ -828,15 +831,15 @@ elf_sym_matches (ELF_SYM_TYPE * sym, char *strtab, const char *name,
  */
 static app_pc
 gnu_hash_lookup (const char *name,
-		 ssize_t offset,
-		 ELF_SYM_TYPE * symtab,
-		 char *strtab,
-		 Elf_Symndx * buckets,
-		 Elf_Symndx * chain,
-		 ELF_ADDR * bitmask,
-		 ptr_uint_t bitidx,
-		 ptr_uint_t shift,
-		 size_t num_buckets, bool * is_indirect_code)
+ ssize_t offset,
+ ELF_SYM_TYPE * symtab,
+ char *strtab,
+ Elf_Symndx * buckets,
+ Elf_Symndx * chain,
+ ELF_ADDR * bitmask,
+ ptr_uint_t bitidx,
+ ptr_uint_t shift,
+ size_t num_buckets, bool * is_indirect_code)
 {
   Elf_Symndx sidx;
   Elf_Symndx hidx;
@@ -853,23 +856,23 @@ gnu_hash_lookup (const char *name,
     {
       Elf32_Word bucket = buckets[hidx % num_buckets];
       if (bucket != 0)
-	{
-	  Elf32_Word *harray = &chain[bucket];
-	  do
-	    {
-	      if ((((*harray) ^ hidx) >> 1) == 0)
-		{
-		  sidx = harray - chain;
-		  if (elf_sym_matches
-		      (&symtab[sidx], strtab, name, is_indirect_code))
-		    {
-		      res = (app_pc) (symtab[sidx].st_value + offset);
-		      break;
-		    }
-		}
-	    }
-	  while (!TEST (1, *harray++));
-	}
+{
+  Elf32_Word *harray = &chain[bucket];
+  do
+    {
+      if ((((*harray) ^ hidx) >> 1) == 0)
+{
+  sidx = harray - chain;
+  if (elf_sym_matches
+      (&symtab[sidx], strtab, name, is_indirect_code))
+    {
+      res = (app_pc) (symtab[sidx].st_value + offset);
+      break;
+    }
+}
+    }
+  while (!TEST (1, *harray++));
+}
     }
   return res;
 }
@@ -879,13 +882,13 @@ gnu_hash_lookup (const char *name,
  */
 static app_pc
 elf_hash_lookup (const char *name,
-		 ssize_t offset,
-		 ELF_SYM_TYPE * symtab,
-		 char *strtab,
-		 Elf_Symndx * buckets,
-		 Elf_Symndx * chain,
-		 size_t num_buckets,
-		 size_t dynstr_size, bool * is_indirect_code)
+ ssize_t offset,
+ ELF_SYM_TYPE * symtab,
+ char *strtab,
+ Elf_Symndx * buckets,
+ Elf_Symndx * chain,
+ size_t num_buckets,
+ size_t dynstr_size, bool * is_indirect_code)
 {
   Elf_Symndx sidx;
   Elf_Symndx hidx;
@@ -898,14 +901,14 @@ elf_hash_lookup (const char *name,
     {
       sym = &symtab[sidx];
       if (sym->st_name >= dynstr_size)
-	{
-	  ASSERT (false && "malformed ELF symbol entry");
-	  continue;
-	}
+{
+  ASSERT (false && "malformed ELF symbol entry");
+  continue;
+}
       if (sym->st_value == 0 && ELF_ST_TYPE (sym->st_info) != STT_TLS)
-	continue;		/* no value */
+continue;/* no value */
       if (elf_sym_matches (sym, strtab, name, is_indirect_code))
-	break;
+break;
     }
   if (sidx != STN_UNDEF)
     res = (app_pc) (sym->st_value + offset);
@@ -919,7 +922,7 @@ elf_hash_lookup (const char *name,
  */
 generic_func_t
 get_proc_address_ex (module_handle_t lib, const char *name,
-		     bool * is_indirect_code OUT)
+     bool * is_indirect_code OUT)
 {
   app_pc res = NULL;
   module_area_t *ma;
@@ -934,21 +937,21 @@ get_proc_address_ex (module_handle_t lib, const char *name,
       size_t num_buckets = ma->os_data.num_buckets;
       ssize_t offset = ma->start - ma->os_data.base_address;
       if (ma->os_data.hash_is_gnu)
-	{
-	  /* The new GNU hash scheme */
-	  res = gnu_hash_lookup (name, offset, symtab, strtab, buckets, chain,
-				 (ELF_ADDR *) ma->os_data.gnu_bitmask,
-				 (ptr_uint_t) ma->os_data.gnu_bitidx,
-				 (ptr_uint_t) ma->os_data.gnu_shift,
-				 num_buckets, is_indirect_code);
-	}
+{
+  /* The new GNU hash scheme */
+  res = gnu_hash_lookup (name, offset, symtab, strtab, buckets, chain,
+ (ELF_ADDR *) ma->os_data.gnu_bitmask,
+ (ptr_uint_t) ma->os_data.gnu_bitidx,
+ (ptr_uint_t) ma->os_data.gnu_shift,
+ num_buckets, is_indirect_code);
+}
       else
-	{
-	  /* ELF hash scheme */
-	  res = elf_hash_lookup (name, offset, symtab, strtab, buckets, chain,
-				 num_buckets, ma->os_data.dynstr_size,
-				 is_indirect_code);
-	}
+{
+  /* ELF hash scheme */
+  res = elf_hash_lookup (name, offset, symtab, strtab, buckets, chain,
+ num_buckets, ma->os_data.dynstr_size,
+ is_indirect_code);
+}
     }
   os_get_module_info_unlock ();
   LOG (GLOBAL, LOG_SYMBOLS, 2, "%s: %s => " PFX "\n", __func__, name, res);
@@ -964,7 +967,7 @@ get_proc_address (module_handle_t lib, const char *name)
 /* Returns the bounds of the first section with matching name. */
 bool
 get_named_section_bounds (app_pc module_base, const char *name,
-			  app_pc * start /*OUT*/, app_pc * end /*OUT*/)
+  app_pc * start /*OUT*/, app_pc * end /*OUT*/)
 {
   // COMPLETEDD #223 get_named_section_bounds
   /* FIXME: not implemented */
@@ -1016,8 +1019,8 @@ get_module_base (app_pc pc)
 /* FIXME PR 212458: NYI, here so code origins policies aren't all ifdef WINDOWS */
 bool
 is_range_in_code_section (app_pc module_base, app_pc start_pc, app_pc end_pc,
-			  app_pc * sec_start /* OUT */ ,
-			  app_pc * sec_end /* OUT */ )
+  app_pc * sec_start /* OUT */ ,
+  app_pc * sec_end /* OUT */ )
 {
   ASSERT_NOT_IMPLEMENTED (false);
   return false;
@@ -1026,8 +1029,8 @@ is_range_in_code_section (app_pc module_base, app_pc start_pc, app_pc end_pc,
 /* FIXME PR 212458: NYI, here so code origins policies aren't all ifdef WINDOWS */
 bool
 is_in_code_section (app_pc module_base, app_pc addr,
-		    app_pc * sec_start /* OUT */ ,
-		    app_pc * sec_end /* OUT */ )
+    app_pc * sec_start /* OUT */ ,
+    app_pc * sec_end /* OUT */ )
 {
   ASSERT_NOT_IMPLEMENTED (false);
   return false;
@@ -1036,8 +1039,8 @@ is_in_code_section (app_pc module_base, app_pc addr,
 /* FIXME PR 212458: NYI, here so code origins policies aren't all ifdef WINDOWS */
 bool
 is_in_dot_data_section (app_pc module_base, app_pc addr,
-			app_pc * sec_start /* OUT */ ,
-			app_pc * sec_end /* OUT */ )
+app_pc * sec_start /* OUT */ ,
+app_pc * sec_end /* OUT */ )
 {
   return false;
   ASSERT_NOT_IMPLEMENTED (false);
@@ -1046,7 +1049,7 @@ is_in_dot_data_section (app_pc module_base, app_pc addr,
 /* FIXME PR 212458: NYI, here so code origins policies aren't all ifdef WINDOWS */
 bool
 is_in_any_section (app_pc module_base, app_pc addr,
-		   app_pc * sec_start /* OUT */ , app_pc * sec_end /* OUT */ )
+   app_pc * sec_start /* OUT */ , app_pc * sec_end /* OUT */ )
 {
   ASSERT_NOT_IMPLEMENTED (false);
   return false;
@@ -1077,8 +1080,8 @@ is_mapped_as_image (app_pc module_base)
  */
 bool
 os_get_module_info (const app_pc pc, uint * checksum, uint * timestamp,
-		    size_t * size, const char **name, size_t * code_size,
-		    uint64 * file_version)
+    size_t * size, const char **name, size_t * code_size,
+    uint64 * file_version)
 {
   module_area_t *ma;
   if (!is_module_list_initialized ())
@@ -1093,39 +1096,39 @@ os_get_module_info (const app_pc pc, uint * checksum, uint * timestamp,
   if (ma != NULL)
     {
       if (checksum != NULL)
-	*checksum = ma->os_data.checksum;
+*checksum = ma->os_data.checksum;
       if (timestamp != NULL)
-	*timestamp = ma->os_data.timestamp;
+*timestamp = ma->os_data.timestamp;
       if (size != NULL)
-	*size = ma->end - ma->start;
+*size = ma->end - ma->start;
       if (name != NULL)
-	*name = GET_MODULE_NAME (&ma->names);
+*name = GET_MODULE_NAME (&ma->names);
       if (code_size != NULL)
-	{
-	  /* Using rx segment size since don't want to impl section
-	   * iterator (i#76/PR 212458)
-	   */
-	  uint i;
-	  size_t rx_sz = 0;
-	  ASSERT (ma->os_data.num_segments > 0
-		  && ma->os_data.segments != NULL);
-	  for (i = 0; i < ma->os_data.num_segments; i++)
-	    {
-	      if (ma->os_data.segments[i].prot ==
-		  (MEMPROT_EXEC | MEMPROT_READ))
-		{
-		  rx_sz = ma->os_data.segments[i].end -
-		    ma->os_data.segments[i].start;
-		  break;
-		}
-	    }
-	  *code_size = rx_sz;
-	}
+{
+  /* Using rx segment size since don't want to impl section
+   * iterator (i#76/PR 212458)
+   */
+  uint i;
+  size_t rx_sz = 0;
+  ASSERT (ma->os_data.num_segments > 0
+  && ma->os_data.segments != NULL);
+  for (i = 0; i < ma->os_data.num_segments; i++)
+    {
+      if (ma->os_data.segments[i].prot ==
+  (MEMPROT_EXEC | MEMPROT_READ))
+{
+  rx_sz = ma->os_data.segments[i].end -
+    ma->os_data.segments[i].start;
+  break;
+}
+    }
+  *code_size = rx_sz;
+}
       if (file_version != NULL)
-	{
-	  /* FIXME: NYI: make windows-only everywhere if no good linux source */
-	  *file_version = 0;
-	}
+{
+  /* FIXME: NYI: make windows-only everywhere if no good linux source */
+  *file_version = 0;
+}
     }
 
   if (name == NULL)
@@ -1135,9 +1138,9 @@ os_get_module_info (const app_pc pc, uint * checksum, uint * timestamp,
 
 bool
 os_get_module_info_all_names (const app_pc pc, uint * checksum,
-			      uint * timestamp, size_t * size,
-			      module_names_t ** names, size_t * code_size,
-			      uint64 * file_version)
+      uint * timestamp, size_t * size,
+      module_names_t ** names, size_t * code_size,
+      uint64 * file_version)
 {
   ASSERT_NOT_IMPLEMENTED (false);
   return false;
@@ -1153,16 +1156,16 @@ os_module_get_rct_htable (app_pc pc, rct_type_t which)
   /* FIXME: until we have a module list we use global rct and rac tables */
   if (which == RCT_RCT)
     return &rct_global_table;
-  return NULL;			/* we use rac_non_module_table */
+  return NULL;/* we use rac_non_module_table */
 }
 #endif
 
 /* Returns true if the module has an nth segment, false otherwise. */
 bool
 module_get_nth_segment (app_pc module_base, uint n,
-			app_pc * start /*OPTIONAL OUT */ ,
-			app_pc * end /*OPTIONAL OUT */ ,
-			uint * chars /*OPTIONAL OUT */ )
+app_pc * start /*OPTIONAL OUT */ ,
+app_pc * end /*OPTIONAL OUT */ ,
+uint * chars /*OPTIONAL OUT */ )
 {
   module_area_t *ma;
   bool res = false;
@@ -1173,14 +1176,14 @@ module_get_nth_segment (app_pc module_base, uint n,
   if (ma != NULL && n < ma->os_data.num_segments)
     {
       LOG (GLOBAL, LOG_INTERP | LOG_VMAREAS, 3, "%s: [" PFX "-" PFX ") %x\n",
-	   __FUNCTION__, ma->os_data.segments[n].start,
-	   ma->os_data.segments[n].end, ma->os_data.segments[n].prot);
+   __FUNCTION__, ma->os_data.segments[n].start,
+   ma->os_data.segments[n].end, ma->os_data.segments[n].prot);
       if (start != NULL)
-	*start = ma->os_data.segments[n].start;
+*start = ma->os_data.segments[n].start;
       if (end != NULL)
-	*end = ma->os_data.segments[n].end;
+*end = ma->os_data.segments[n].end;
       if (chars != NULL)
-	*chars = ma->os_data.segments[n].prot;
+*chars = ma->os_data.segments[n].prot;
       res = true;
     }
   os_get_module_info_unlock ();
@@ -1194,7 +1197,7 @@ module_get_header_size (app_pc module_base)
   if (!is_elf_so_header_common (module_base, 0, true))
     return 0;
   ASSERT (offsetof (Elf64_Ehdr, e_machine) ==
-	  offsetof (Elf32_Ehdr, e_machine));
+  offsetof (Elf32_Ehdr, e_machine));
   if (elf_header->e_machine == EM_X86_64)
     return sizeof (Elf64_Ehdr);
   else
@@ -1213,7 +1216,7 @@ file_is_elf64 (file_t f)
       ((app_pc) & elf_header, sizeof (elf_header), false))
     return res;
   ASSERT (offsetof (Elf64_Ehdr, e_machine) ==
-	  offsetof (Elf32_Ehdr, e_machine));
+  offsetof (Elf32_Ehdr, e_machine));
   return (elf_header.elf64.e_machine == EM_X86_64);
 }
 
@@ -1230,7 +1233,7 @@ bool
 module_has_text_relocs (app_pc base)
 {
   app_pc mod_base;
-  ssize_t offset;		/* offset loaded at relative to base */
+  ssize_t offset;/* offset loaded at relative to base */
   uint i;
   ELF_HEADER_TYPE *elf_hdr = (ELF_HEADER_TYPE *) base;
   ELF_PROGRAM_HEADER_TYPE *prog_hdr;
@@ -1239,17 +1242,17 @@ module_has_text_relocs (app_pc base)
   ASSERT (is_elf_so_header (base, 0));
   /* walk program headers to get mod_base */
   mod_base = module_vaddr_from_prog_header (base + elf_hdr->e_phoff,
-					    elf_hdr->e_phnum, NULL);
+    elf_hdr->e_phnum, NULL);
   offset = base - mod_base;
   /* walk program headers to get dynamic section pointer */
   prog_hdr = (ELF_PROGRAM_HEADER_TYPE *) (base + elf_hdr->e_phoff);
   for (i = 0; i < elf_hdr->e_phnum; i++)
     {
       if (prog_hdr->p_type == PT_DYNAMIC)
-	{
-	  dyn = (ELF_DYNAMIC_ENTRY_TYPE *) (prog_hdr->p_vaddr + offset);
-	  break;
-	}
+{
+  dyn = (ELF_DYNAMIC_ENTRY_TYPE *) (prog_hdr->p_vaddr + offset);
+  break;
+}
       prog_hdr++;
     }
   if (dyn == NULL)
@@ -1258,13 +1261,13 @@ module_has_text_relocs (app_pc base)
     {
       /* Older binaries have a separate DT_TEXTREL entry */
       if (dyn->d_tag == DT_TEXTREL)
-	return true;
+return true;
       /* Newer binaries have a DF_TEXTREL flag in DT_FLAGS */
       if (dyn->d_tag == DT_FLAGS)
-	{
-	  if (TEST (DF_TEXTREL, dyn->d_un.d_val))
-	    return true;
-	}
+{
+  if (TEST (DF_TEXTREL, dyn->d_un.d_val))
+    return true;
+}
       dyn++;
     }
   return false;
