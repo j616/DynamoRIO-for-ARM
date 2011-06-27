@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../core/lib/globals_shared.h
+windows.h
+-
+winbase.h
+-
+stdio.h
+-
+stdlib.h
+-
+limits.h
+-
+sys/types.h
+-
+signal.h
+-
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+stddef.h
+-
+unistd.h
+-
+syscall.h
+-
+assert.h
+-
+configure.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/configure.h
+globals_shared.h
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/globals_shared.h
+
+configure.h
+

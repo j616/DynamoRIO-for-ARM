@@ -1,0 +1,399 @@
+Determining size of bool failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_bool.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_bool.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_bool.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_bool.c:19:12: error: ‘bool’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_bool.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_bool.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(bool))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of byte failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_byte.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_byte.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_byte.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_byte.c:19:12: error: ‘byte’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_byte.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_byte.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(byte))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of sbyte failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_sbyte.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_sbyte.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_sbyte.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_sbyte.c:19:12: error: ‘sbyte’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_sbyte.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_sbyte.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(sbyte))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint32 failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_uint32.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_uint32.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_uint32.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_uint32.c:19:12: error: ‘uint32’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_uint32.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_uint32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint64 failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_uint64.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_uint64.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_uint64.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_uint64.c:19:12: error: ‘uint64’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_uint64.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_uint64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int32 failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_int32.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_int32.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_int32.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_int32.c:19:12: error: ‘int32’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_int32.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_int32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int64 failed with the following output:
+Change Dir: /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_int64.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_int64.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_int64.c"
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_int64.c:19:12: error: ‘int64’ undeclared here (not in a function)
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/DR_DO_NOT_DEFINE_int64.c.o] Error 1
+make[1]: Leaving directory `/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/CheckTypeSize/DR_DO_NOT_DEFINE_int64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+

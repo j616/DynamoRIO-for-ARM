@@ -1,0 +1,1 @@
+arm-none-linux-gnueabi-gcc  -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3     CMakeFiles/run_in_bg.dir/run_in_bg.c.o  -o ../bin/run_in_bg -rdynamic 
