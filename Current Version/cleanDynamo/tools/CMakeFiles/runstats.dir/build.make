@@ -53,15 +53,15 @@ tools/CMakeFiles/runstats.dir/runstats.c.o: tools/CMakeFiles/runstats.dir/flags.
 tools/CMakeFiles/runstats.dir/runstats.c.o: tools/runstats.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/CMakeFiles/runstats.dir/runstats.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/runstats.dir/runstats.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/runstats.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/runstats.dir/runstats.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/runstats.c"
 
 tools/CMakeFiles/runstats.dir/runstats.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/runstats.dir/runstats.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/runstats.c" > CMakeFiles/runstats.dir/runstats.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/runstats.c" > CMakeFiles/runstats.dir/runstats.c.i
 
 tools/CMakeFiles/runstats.dir/runstats.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/runstats.dir/runstats.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/runstats.c" -o CMakeFiles/runstats.dir/runstats.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/runstats.c" -o CMakeFiles/runstats.dir/runstats.c.s
 
 tools/CMakeFiles/runstats.dir/runstats.c.o.requires:
 .PHONY : tools/CMakeFiles/runstats.dir/runstats.c.o.requires

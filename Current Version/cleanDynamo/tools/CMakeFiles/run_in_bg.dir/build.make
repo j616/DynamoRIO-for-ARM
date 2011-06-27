@@ -53,15 +53,15 @@ tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o: tools/CMakeFiles/run_in_bg.dir/fla
 tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o: tools/run_in_bg.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/run_in_bg.dir/run_in_bg.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/run_in_bg.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/run_in_bg.dir/run_in_bg.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/run_in_bg.c"
 
 tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/run_in_bg.dir/run_in_bg.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/run_in_bg.c" > CMakeFiles/run_in_bg.dir/run_in_bg.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/run_in_bg.c" > CMakeFiles/run_in_bg.dir/run_in_bg.c.i
 
 tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/run_in_bg.dir/run_in_bg.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/run_in_bg.c" -o CMakeFiles/run_in_bg.dir/run_in_bg.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/run_in_bg.c" -o CMakeFiles/run_in_bg.dir/run_in_bg.c.s
 
 tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o.requires:
 .PHONY : tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o.requires

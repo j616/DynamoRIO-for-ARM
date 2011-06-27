@@ -53,15 +53,15 @@ tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o: tools/CMakeFiles/nudgeunix.dir/fla
 tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o: tools/nudgeunix.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/nudgeunix.dir/nudgeunix.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/nudgeunix.dir/nudgeunix.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c"
 
 tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nudgeunix.dir/nudgeunix.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c" > CMakeFiles/nudgeunix.dir/nudgeunix.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c" > CMakeFiles/nudgeunix.dir/nudgeunix.c.i
 
 tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nudgeunix.dir/nudgeunix.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c" -o CMakeFiles/nudgeunix.dir/nudgeunix.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/tools/nudgeunix.c" -o CMakeFiles/nudgeunix.dir/nudgeunix.c.s
 
 tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o.requires:
 .PHONY : tools/CMakeFiles/nudgeunix.dir/nudgeunix.c.o.requires

@@ -49,7 +49,7 @@
 /* #undef MACOS */
 
 /* ARM CODE */
-/* #undef ARM */
+#define ARM
 
 /* set by high-level VMAP/VMSAFE/VPS configurations */
 /* #undef PROGRAM_SHEPHERDING */

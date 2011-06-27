@@ -159,91 +159,12 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named api_headers
-
-# Build rule for target.
-api_headers: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 api_headers
-.PHONY : api_headers
-
-# fast build rule for target.
-api_headers/fast:
-	$(MAKE) -f CMakeFiles/api_headers.dir/build.make CMakeFiles/api_headers.dir/build
-.PHONY : api_headers/fast
-
-#=============================================================================
-# Target rules for targets named drpreload
-
-# Build rule for target.
-drpreload: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drpreload
-.PHONY : drpreload
-
-# fast build rule for target.
-drpreload/fast:
-	$(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/build
-.PHONY : drpreload/fast
-
-#=============================================================================
-# Target rules for targets named dynamorio
-
-# Build rule for target.
-dynamorio: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamorio
-.PHONY : dynamorio
-
-# fast build rule for target.
-dynamorio/fast:
-	$(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/build
-.PHONY : dynamorio/fast
-
-#=============================================================================
-# Target rules for targets named nudgeunix
-
-# Build rule for target.
-nudgeunix: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nudgeunix
-.PHONY : nudgeunix
-
-# fast build rule for target.
-nudgeunix/fast:
-	$(MAKE) -f tools/CMakeFiles/nudgeunix.dir/build.make tools/CMakeFiles/nudgeunix.dir/build
-.PHONY : nudgeunix/fast
-
-#=============================================================================
-# Target rules for targets named run_in_bg
-
-# Build rule for target.
-run_in_bg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_in_bg
-.PHONY : run_in_bg
-
-# fast build rule for target.
-run_in_bg/fast:
-	$(MAKE) -f tools/CMakeFiles/run_in_bg.dir/build.make tools/CMakeFiles/run_in_bg.dir/build
-.PHONY : run_in_bg/fast
-
-#=============================================================================
-# Target rules for targets named runstats
-
-# Build rule for target.
-runstats: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runstats
-.PHONY : runstats
-
-# fast build rule for target.
-runstats/fast:
-	$(MAKE) -f tools/CMakeFiles/runstats.dir/build.make tools/CMakeFiles/runstats.dir/build
-.PHONY : runstats/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... api_headers"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -252,11 +173,6 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... drpreload"
-	@echo "... dynamorio"
-	@echo "... nudgeunix"
-	@echo "... run_in_bg"
-	@echo "... runstats"
 .PHONY : help
 
 
