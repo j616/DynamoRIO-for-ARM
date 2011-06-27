@@ -30,13 +30,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+RM = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" -E remove -f
 
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
@@ -49,8 +46,7 @@ CMAKE_BINARY_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/c
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@echo "Running interactive CMake command-line interface..."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -59,20 +55,17 @@ edit_cache/fast: edit_cache
 
 # Special rule for the target install
 install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
+	@echo "Install the project..."
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
+	@echo "Install the project..."
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	@echo "Installing only the local directory..."
 .PHONY : install/local
 
 # Special rule for the target install/local
@@ -81,8 +74,7 @@ install/local/fast: install/local
 
 # Special rule for the target install/strip
 install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	@echo "Installing the project stripped..."
 .PHONY : install/strip
 
 # Special rule for the target install/strip
@@ -91,7 +83,7 @@ install/strip/fast: install/strip
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@echo "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -100,8 +92,8 @@ list_install_components/fast: list_install_components
 
 # Special rule for the target package
 package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	/usr/bin/cpack --config ./CPackConfig.cmake
+	@echo "Run CPack packaging tool..."
+	/Release/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -110,8 +102,8 @@ package/fast: package
 
 # Special rule for the target package_source
 package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/james/Uni/summer11/DynamoRIO-for-ARM/Current\ Version/cleanDynamo/CPackSourceConfig.cmake
+	@echo "Run CPack packaging tool for source..."
+	/Release/cpack --config ./CPackSourceConfig.cmake /home/james/Uni/summer11/DynamoRIO-for-ARM/Current\ Version/cleanDynamo/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -120,8 +112,7 @@ package_source/fast: package_source
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@echo "Running CMake to regenerate build system..."
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -159,12 +150,96 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named api_headers
+
+# Build rule for target.
+api_headers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 api_headers
+.PHONY : api_headers
+
+# fast build rule for target.
+api_headers/fast:
+	$(MAKE) -f CMakeFiles/api_headers.dir/build.make CMakeFiles/api_headers.dir/build
+.PHONY : api_headers/fast
+
+#=============================================================================
+# Target rules for targets named drpreload
+
+# Build rule for target.
+drpreload: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drpreload
+.PHONY : drpreload
+
+# fast build rule for target.
+drpreload/fast:
+	$(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/build
+.PHONY : drpreload/fast
+
+#=============================================================================
+# Target rules for targets named dynamorio
+
+# Build rule for target.
+dynamorio: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamorio
+.PHONY : dynamorio
+
+# fast build rule for target.
+dynamorio/fast:
+	$(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/build
+.PHONY : dynamorio/fast
+
+# Manual pre-install relink rule for target.
+dynamorio/preinstall:
+	$(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/preinstall
+.PHONY : dynamorio/preinstall
+
+#=============================================================================
+# Target rules for targets named nudgeunix
+
+# Build rule for target.
+nudgeunix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nudgeunix
+.PHONY : nudgeunix
+
+# fast build rule for target.
+nudgeunix/fast:
+	$(MAKE) -f tools/CMakeFiles/nudgeunix.dir/build.make tools/CMakeFiles/nudgeunix.dir/build
+.PHONY : nudgeunix/fast
+
+#=============================================================================
+# Target rules for targets named run_in_bg
+
+# Build rule for target.
+run_in_bg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_in_bg
+.PHONY : run_in_bg
+
+# fast build rule for target.
+run_in_bg/fast:
+	$(MAKE) -f tools/CMakeFiles/run_in_bg.dir/build.make tools/CMakeFiles/run_in_bg.dir/build
+.PHONY : run_in_bg/fast
+
+#=============================================================================
+# Target rules for targets named runstats
+
+# Build rule for target.
+runstats: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runstats
+.PHONY : runstats
+
+# fast build rule for target.
+runstats/fast:
+	$(MAKE) -f tools/CMakeFiles/runstats.dir/build.make tools/CMakeFiles/runstats.dir/build
+.PHONY : runstats/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... api_headers"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -173,6 +248,11 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... drpreload"
+	@echo "... dynamorio"
+	@echo "... nudgeunix"
+	@echo "... run_in_bg"
+	@echo "... runstats"
 .PHONY : help
 
 

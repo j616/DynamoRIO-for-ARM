@@ -578,7 +578,7 @@ if (UNIX)
     message(FATAL_ERROR "*** ${CMAKE_ASM_COMPILER} failed: ***\n${asm_error}")
   endif (asm_result OR asm_error)
   
-  if (NOT ARM_CROSS)
+  if (NOT ARM)
   # turn the flags into a vector
   string(REGEX REPLACE " " ";" flags_needed "${ASM_FLAGS}")
   # we want "-mmnemonic=intel" to match "-mmnemonic=[att|intel]"
@@ -596,7 +596,7 @@ if (UNIX)
     message("${CMAKE_ASM_COMPILER} too old: using ${PROJECT_SOURCE_DIR}/make/as-2.18.50")
     set(CMAKE_ASM_COMPILER "${PROJECT_SOURCE_DIR}/make/as-2.18.50")
   endif (NOT flag_present)
-  endif (NOT ARM_CROSS)
+  endif (NOT ARM)
 
   # Check for -fvisibility
   include(CheckCCompilerFlag)
