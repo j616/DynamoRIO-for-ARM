@@ -136,13 +136,16 @@ endif (NOT DEFINED DynamoRIO_INCLUDE_DIRS)
 if (UNIX)
   # Wrapping for C++ clients
   # We export the flags as a variable in case client wants to use in custom way
+  
+  #strip extra whitespace from CMAKE_CXX_FLAGS
+  string(STRIP ${CMAKE_CXX_FLAGS} CMAKE_CXX_FLAGS)
   set(CXX_LIBS
     -print-file-name=libstdc++.a
     -print-file-name=libgcc.a
     -print-file-name=libgcc_eh.a)
   foreach (lib ${CXX_LIBS})  
     execute_process(COMMAND
-      ${CMAKE_CXX_COMPILER} ${CMAKE_CXX_FLAGS} ${lib} 
+      ${CMAKE_CXX_COMPILER} ${CMAKE_CXX_FLAGS} ${lib}
       RESULT_VARIABLE cxx_result
       ERROR_VARIABLE cxx_error
       OUTPUT_VARIABLE string)

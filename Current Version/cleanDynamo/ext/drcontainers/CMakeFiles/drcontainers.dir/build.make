@@ -32,7 +32,7 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
@@ -53,15 +53,15 @@ ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.o: ext/drcontainers/CMa
 ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.o: ext/drcontainers/hashtable.c
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -fPIC -o CMakeFiles/drcontainers.dir/hashtable.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers/hashtable.c"
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -fPIC -o CMakeFiles/drcontainers.dir/hashtable.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers/hashtable.c"
 
 ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drcontainers.dir/hashtable.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -fPIC -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers/hashtable.c" > CMakeFiles/drcontainers.dir/hashtable.c.i
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -fPIC -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers/hashtable.c" > CMakeFiles/drcontainers.dir/hashtable.c.i
 
 ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drcontainers.dir/hashtable.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -fPIC -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers/hashtable.c" -o CMakeFiles/drcontainers.dir/hashtable.c.s
+	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers" && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -fPIC -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/ext/drcontainers/hashtable.c" -o CMakeFiles/drcontainers.dir/hashtable.c.s
 
 ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.o.requires:
 .PHONY : ext/drcontainers/CMakeFiles/drcontainers.dir/hashtable.c.o.requires

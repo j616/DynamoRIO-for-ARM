@@ -12,8 +12,11 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeSystem.cmake"
+  "cmake/DynamoRIOConfig.cmake"
+  "cmake/DynamoRIOConfigVersion.cmake"
   "../core/CMakeLists.txt"
   "../core/lib/dr_api.h"
+  "../ext/CMakeLists.txt"
   "../make/CMake_events.cmake"
   "../make/DynamoRIOConfig.cmake.in"
   "../make/DynamoRIOConfigVersion.cmake.in"
@@ -27,7 +30,6 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeParseArguments.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake"
-  "/usr/share/cmake-2.8/Modules/CPack.cmake"
   "/usr/share/cmake-2.8/Modules/CheckCCompilerFlag.cmake"
   "/usr/share/cmake-2.8/Modules/CheckCSourceCompiles.cmake"
   "/usr/share/cmake-2.8/Modules/CheckIncludeFile.cmake"
@@ -45,7 +47,6 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/UnixPaths.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/gas.cmake"
-  "/usr/share/cmake-2.8/Templates/CPackConfig.cmake.in"
   )
 
 # The corresponding makefile is:
@@ -59,6 +60,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "core/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tools/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ext/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

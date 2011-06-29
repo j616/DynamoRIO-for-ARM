@@ -72,29 +72,11 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32.cmake")
-    FILE(DIFFERENT EXPORT_FILE_CHANGED FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32.cmake"
-         "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake")
-    IF(EXPORT_FILE_CHANGED)
-      FILE(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32-*.cmake")
-      IF(OLD_CONFIG_FILES)
-        MESSAGE(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
-        FILE(REMOVE ${OLD_CONFIG_FILES})
-      ENDIF(OLD_CONFIG_FILES)
-    ENDIF(EXPORT_FILE_CHANGED)
-  ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake")
-  IF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/Export/cmake/DynamoRIOTarget32-noconfig.cmake")
-  ENDIF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/core/cmake_install.cmake")
   INCLUDE("/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/tools/cmake_install.cmake")
+  INCLUDE("/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/ext/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
