@@ -1,1 +1,1 @@
-arm-none-linux-gnueabi-gcc  -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3     CMakeFiles/nudgeunix.dir/nudgeunix.c.o  -o ../bin/nudgeunix -rdynamic 
+arm-none-linux-gnueabi-gcc  -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3      CMakeFiles/nudgeunix.dir/nudgeunix.c.o  -o ../bin/nudgeunix -rdynamic 

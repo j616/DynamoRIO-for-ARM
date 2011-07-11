@@ -1,6 +1,0 @@
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/CMakeFiles/api_headers.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/core/CMakeFiles/drpreload.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/core/CMakeFiles/dynamorio.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/tools/CMakeFiles/nudgeunix.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/tools/CMakeFiles/run_in_bg.dir
-/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/build/tools/CMakeFiles/runstats.dir

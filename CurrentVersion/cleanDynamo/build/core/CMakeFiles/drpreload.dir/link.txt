@@ -1,1 +1,0 @@
-arm-none-linux-gnueabi-gcc  -fPIC -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3   -nostartfiles -shared -Wl,-soname,libdrpreload.so -o ../lib/libdrpreload.so CMakeFiles/drpreload.dir/linux/preload.c.o CMakeFiles/drpreload.dir/config.c.o CMakeFiles/drpreload.dir/linux/os.c.o CMakeFiles/drpreload.dir/Arm/arm.s.o 

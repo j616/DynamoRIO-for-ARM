@@ -1,4 +1,0 @@
-/usr/bin/gcc  -fPIC   -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector  -fPIC -shared -nostartfiles -nodefaultlibs -lgcc -shared -Wl,-soname,libprefetch.so -o bin/libprefetch.so CMakeFiles/prefetch.dir/prefetch.c.o ../../lib/libdynamorio.so.2.0 
-/usr/bin/objcopy --only-keep-debug bin/libprefetch.so bin/libprefetch.so.debug
-/usr/bin/objcopy --add-gnu-debuglink=bin/libprefetch.so.debug bin/libprefetch.so
-/usr/bin/strip -g -x -p bin/libprefetch.so
