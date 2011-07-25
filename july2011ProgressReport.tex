@@ -27,7 +27,7 @@ port to the ARM architecture from the original x86 code carried out
 originally 
 by Stephen Barton as a final year computer science project in the year 
 prior to 
-this report. I aim to provide a means to get to my current possition as 
+this report. I aim to provide a means to get to my current position as 
 quickly
 as possible by showing how to get the code cross compiling on an x86 
 Linux
@@ -39,7 +39,7 @@ completed in the port at this point in time. In addition to this, I will
 provide
 any advice I can on working with the current code base and I will 
 provide
-recomendations on how to progress from here.
+recommendations on how to progress from here.
 \end{abstract}
 \newpage
 
@@ -62,7 +62,7 @@ that's a bit nicer when it comes to things such as merging than systems
 like
 SVN. GitHub is just a hosting website for Git repositories that provides 
 a nice
-web interface with some occasionally usefull features such as graphing 
+web interface with some occasionally useful features such as graphing 
 of
 contribution and programming languages along with the usual browser 
 based
@@ -112,7 +112,7 @@ the client libraries.
                 \item[x86] The (mainly) x86 specific files. More on this 
 later.
         \end{description}
-        \item[ext] Extentions. I believe this is needed for the actual 
+        \item[ext] Extensions. I believe this is needed for the actual 
 use of clients in
         Dynamo-RIO.
         \item[include] The basic header files you will use when 
@@ -125,25 +125,25 @@ these.
 Dynamo-RIO devs. This
         hasn't and probably shouldn't be used in the ARM build at least 
 while it remains
-        a seperate project.
+        a separate project.
         \item[tools] Again, a large number of development tools. These 
 again look mainly
         related to the main version of Dynamo-RIO and to x86. Some may 
 be adaptable
-        though for debuging and testing.
+        though for debugging and testing.
         \end{description}
 \item[Decoder] A standalone ARM machine code decoder. This will be 
 explained
 more later.
 \item[MiscCode] Samples of ARM assembly, x86 assembly, very simple test 
 C
-programs for running Dynamo-RIO on and cMake script examples.
+programs for running Dynamo-RIO on and CMake script examples.
 \begin{description}
         \item[ArmAssembly] Some small test programs in C and ARM 
 assembly. More on
         this later.
         \item[Assembly] Some small test programs in x86 assembly.
-        \item[cMakeExamples] Some small example scripts for cMake.
+        \item[cMakeExamples] Some small example scripts for CMake.
 \end{description}
 \item[RunningVersion] A copy of the source containing mainly x86 
 specific code.
@@ -284,14 +284,14 @@ core/options.c:synchronize_dynamic_options(
 \section{Working With the Code}
 \subsection{Platform Specific Settings and Tools}
 \subsubsection{Native ARM Compilation}
-While it should be theoretically possible to compile nativly on an ARM device,
+While it should be theoretically possible to compile natively on an ARM device,
 problems are present in that assembly takes quite a large amount of memory. So
 when trying to compile on the Tegra 250, I found memory usage goes up and up
 until it gives up an the process dies. This would probably be solved by having
 swap space. If you want to try, run CMake with the ARM option on and the
 cross-compile option off. The difference with cross-compile being the build
 commands used. The advantage of this is you can build on the machine under test
-and thus use specific Linux kernal modules rather than generic ones. As stated
+and thus use specific Linux kernel modules rather than generic ones. As stated
 earlier, ARM support is only for Linux.
 
 \subsubsection{Cross-Compiling from x86}
@@ -300,7 +300,7 @@ You can get this from
 \url{http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite}.
 You want the GNU/Linux version as this contains all the generic cross-compiled
 headers required by Dynamo-RIO. Once you've got this, install it with the nice
-GUI provided and all should be blue skys and roses with any luck. You want to
+GUI provided and all should be blue skies and roses with any luck. You want to
 run CMake with both the ARM and cross-compile options on. 
 
 \subsection{Compilation}
@@ -308,12 +308,12 @@ A couple of more notes on CMake settings. To get to the options, use the
 \texttt{cmake -i} command. This gives you an interactive prompt. Running
 \texttt{cmake} on it's own will create make scripts using the last settings
 used. You shouldn't need the advanced options. One big note is that you won't be
-able to build the extentions library or samples. The extentions library has a
+able to build the extensions library or samples. The extensions library has a
 problem when cmake runs core/lib/genapi.pl which seems to then be copying
-various header files into a combines extention library source several times
+various header files into a combines extension library source several times
 over. So you end up with the same source repeated several times over in the same
-file. The samples won't build without the extentions. While obviously a big
-problem, this isn't stricktly needed by us at the moment as we can test as far
+file. The samples won't build without the extensions. While obviously a big
+problem, this isn't strictly needed by us at the moment as we can test as far
 as getting Dynamo-RIO running without them.
 
 Once you have changed any CMake settings you need, just run \texttt{make} to
@@ -330,7 +330,7 @@ performed visual checks of the code to try and see which source files are
 finished, in process, and yet to be started. This took into account any comments
 on the state of functions, whether code contained \texttt{ifdef ARM} which would
 indicate the code had at least been started to be adapted, if the code contained
-empty or dummy functions and the general look of the code. Thise resulted in the
+empty or dummy functions and the general look of the code. This resulted in the
 following:
 \begin{description}
 \item[core]
@@ -410,14 +410,14 @@ From reading Stephen Barton's project report Dynamo-RIO: Process Virtualisation
 for ARM, I managed to gather the following information about the current state
 of the project.
 \begin{itemize}
-\item An ARM instruction decoder has been written and incorperated, in part,
+\item An ARM instruction decoder has been written and incorporated, in part,
 into Dynamo-RIO.
 \item An ARM instruction encoder was also written but was only produced as a
 standalone program. This was not in the code I was provided.
 \item Not all ARM instructions have been supported. For example, those that
 update the CPSR with the format \texttt{<instr>S}.
 \item The re-implementation of the x86 functions has been partially done.
-\item It would also seem that an aproach was taken to remove all the x86
+\item It would also seem that an approach was taken to remove all the x86
 functions and re-instate them as they were re-implemented for ARM to provide a
 side-by-side comparison.
 \end{itemize}
@@ -428,17 +428,17 @@ Other notes worth mentioning follow.
 \begin{itemize}
 \item \texttt{read\_instruction} in core/Arm/decode.c is listed as done but seems to have
 a large amount of place-holders.
-\item The entry point at which Dynamo-RIO latches onto a process isn't imediatly
+\item The entry point at which Dynamo-RIO latches onto a process isn't immediately
 obvious. Initialization begins with the \texttt{\_init} function in core/dynamo.c
-from where specific intialization routines are called. The \texttt{\_init}
+from where specific initialization routines are called. The \texttt{\_init}
 function is called from the dynamic library which contains Dynamo-RIO just
 before the code under test is started. It is because of this that only dynamic
-code can be controled by Dynamo-RIO.
+code can be controlled by Dynamo-RIO.
 \item There are some basic programs for testing in the top level MiscCode
 folder. Only the C programs will work as those assembled from ARM assembly are
 not dynamic. I have not yet found a way to make them dynamic but the easy
 (though rather ugly) way to do it would be to embed it in a C program. The
-embeding and compiling of this should be pretty strait forward. The non-dynamic
+embedding and compiling of this should be pretty strait forward. The non-dynamic
 nature of the assembly programs is the reason for their running without problem
 and without any trace of Dynamo-RIO. Dynamo-RIO, in it's current state, should
 output a very large amount of debugging information if it runs.
