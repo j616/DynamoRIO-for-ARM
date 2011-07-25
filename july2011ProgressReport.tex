@@ -1,11 +1,12 @@
 \documentclass[a4paper]{article}
-\title{A Progress Report of the Manchester University ARM Port of Dynamo-RIO}
+\title{A Progress Report of the Manchester University ARM Port of 
+Dynamo-RIO}
 \author{James Sandford\\
 School of Computer Science,\\
 The University of Manchester,\\
 Oxford Road,\\
 Manchester,\\
-M13 9PL
+M13 9PL\\
 \texttt{sandfoj9@cs.man.ac.uk}}
 \date{\today}
 
@@ -20,15 +21,24 @@ M13 9PL
 
 \begin{abstract}
 This report has been put together following several weeks of trying to
-understand the Dynamo-RIO software project and the current progress made in it's
-port to the ARM architecture from the original x86 code carried out originally 
-by Stephen Barton as a final year computer science project in the year prior to 
-this report. I aim to provide a means to get to my current possition as quickly
-as possible by showing how to get the code cross compiling on an x86 Linux
-system, pitfalls I fell down when going through this process and others, an
-overview of the code structure and an overview of what has and has not been
-completed in the port at this point in time. In addition to this, I will provide
-any advice I can on working with the current code base and I will provide
+understand the Dynamo-RIO software project and the current progress made 
+in it's
+port to the ARM architecture from the original x86 code carried out 
+originally 
+by Stephen Barton as a final year computer science project in the year 
+prior to 
+this report. I aim to provide a means to get to my current possition as 
+quickly
+as possible by showing how to get the code cross compiling on an x86 
+Linux
+system, pitfalls I fell down when going through this process and others, 
+an
+overview of the code structure and an overview of what has and has not 
+been
+completed in the port at this point in time. In addition to this, I will 
+provide
+any advice I can on working with the current code base and I will 
+provide
 recomendations on how to progress from here.
 \end{abstract}
 \newpage
@@ -40,74 +50,402 @@ recomendations on how to progress from here.
 
 \section{The code base}
 \subsection{Git and GitHub}
-The code for the ARM port is currently available on GitHub and can be found at
-\url{http://github.com/j616/DynamoRIO-for-ARM/}. I shalln't go into any detail
-on how to use Git or GitHub here but you can find all you need to know at
-\url{http://help.github.com/}. But Git is basically a version control system
-that's a bit nicer when it comes to things such as merging than systems like
-SVN. GitHub is just a hosting website for Git repositories that provides a nice
-web interface with some occasionally usefull features such as graphing of
-contribution and programming languages along with the usual browser based
+The code for the ARM port is currently available on GitHub and can be 
+found at
+\url{http://github.com/j616/DynamoRIO-for-ARM/}. I shalln't go into any 
+detail
+on how to use Git or GitHub here but you can find all you need to know 
+at
+\url{http://help.github.com/}. But Git is basically a version control 
+system
+that's a bit nicer when it comes to things such as merging than systems 
+like
+SVN. GitHub is just a hosting website for Git repositories that provides 
+a nice
+web interface with some occasionally usefull features such as graphing 
+of
+contribution and programming languages along with the usual browser 
+based
 viewing and editing of files.
 
 \subsection{The Folder Structure}
 The folder structure consists of the following:
 \begin{description}
 \item[Clients] Several example clients.
-\item[CurrentVersion] The copy of the source being worked on. This is our main
+\item[CurrentVersion] The copy of the source being worked on. This is 
+our main
 focus.
-	\begin{description}
-	\item[api] Strangely named as it contains the standard Dynamo-RIO sample clients
-	such as bbcount.
-	\item[bin] The shell scripts to run Dynamo-RIO. For information on these, look
-	at the README in the CurrentVersion folder.
-	\item[clients] A couple of clients. These are Windows specific so I haven't
-	looked at them. I should note here that the ARM port is currently Linux specific
-	as Windows doesn't currently support ARM. Though I believe this will change with
-	Windows 8.
-	\item[cmake] CMake configuration files. Don't really need touching but hold
-	things like the version number to give your build.
-	\item[core] The place where things get interesting. This is Dynamo-RIO itself in
-	many ways. This is the code that manages everything else. Importantly, this is
-	where we maintain control of the software we are working on along with the
-	decoding, modification and encoding of instructions. Most (all?) of the ARM
-	specific code will be in here.
-	\begin{description}
-		\item[Arm] The (mainly) ARM specific files. More on this later.
-		\item[lib] The header files and generation scripts for the client libraries.
-		\item[linux] The Linux specific files.
-		\item[win32] The Windows specific files (not just 32bit).
-		\item[x86] The (mainly) x86 specific files. More on this later.
-	\end{description}
-	\item[ext] Extentions. I believe this is needed for the actual use of clients in
-	Dynamo-RIO.
-	\item[include] The basic header files you will use when constructing clients.
-	There is a major problem here that will be discussed later.
-	\item[libutil] General libraries. I haven't needed to touch these.
-	\item[make] Auto-generated make files.
-	\item[suite] A suite of development tools for the main Dynamo-RIO devs. This
-	hasn't and probably shouldn't be used in the ARM build at least while it remains
-	a seperate project.
-	\item[tools] Again, a large number of development tools. These again look mainly
-	related to the main version of Dynamo-RIO and to x86. Some may be adaptable
-	though for debuging and testing.
-	\end{description}
-\item[Decoder] A standalone ARM machine code decoder. This will be explained
+        \begin{description}
+        \item[api] Strangely named as it contains the standard 
+Dynamo-RIO sample clients
+        such as bbcount.
+        \item[bin] The shell scripts to run Dynamo-RIO. For information 
+on these, look
+        at the README in the CurrentVersion folder.
+        \item[clients] A couple of clients. These are Windows specific 
+so I haven't
+        looked at them. I should note here that the ARM port is 
+currently Linux specific
+        as Windows doesn't currently support ARM. Though I believe this 
+will change with
+        Windows 8.
+        \item[cmake] CMake configuration files. Don't really need 
+touching but hold
+        things like the version number to give your build.
+        \item[core] The place where things get interesting. This is 
+Dynamo-RIO itself in
+        many ways. This is the code that manages everything else. 
+Importantly, this is
+        where we maintain control of the software we are working on 
+along with the
+        decoding, modification and encoding of instructions. Most (all?) 
+of the ARM
+        specific code will be in here.
+        \begin{description}
+                \item[Arm] The (mainly) ARM specific files. More on this 
+later.
+                \item[lib] The header files and generation scripts for 
+the client libraries.
+                \item[linux] The Linux specific files.
+                \item[win32] The Windows specific files (not just 
+32bit).
+                \item[x86] The (mainly) x86 specific files. More on this 
+later.
+        \end{description}
+        \item[ext] Extentions. I believe this is needed for the actual 
+use of clients in
+        Dynamo-RIO.
+        \item[include] The basic header files you will use when 
+constructing clients.
+        There is a major problem here that will be discussed later.
+        \item[libutil] General libraries. I haven't needed to touch 
+these.
+        \item[make] Auto-generated make files.
+        \item[suite] A suite of development tools for the main 
+Dynamo-RIO devs. This
+        hasn't and probably shouldn't be used in the ARM build at least 
+while it remains
+        a seperate project.
+        \item[tools] Again, a large number of development tools. These 
+again look mainly
+        related to the main version of Dynamo-RIO and to x86. Some may 
+be adaptable
+        though for debuging and testing.
+        \end{description}
+\item[Decoder] A standalone ARM machine code decoder. This will be 
+explained
 more later.
-\item[MiscCode] Samples of ARM assembly, x86 assembly, very simple test C
+\item[MiscCode] Samples of ARM assembly, x86 assembly, very simple test 
+C
 programs for running Dynamo-RIO on and cMake script examples.
 \begin{description}
-	\item[ArmAssembly] Some small test programs in C and ARM assembly. More on
-	this later.
-	\item[Assembly] Some small test programs in x86 assembly.
-	\item[cMakeExamples] Some small example scripts for cMake.
+        \item[ArmAssembly] Some small test programs in C and ARM 
+assembly. More on
+        this later.
+        \item[Assembly] Some small test programs in x86 assembly.
+        \item[cMakeExamples] Some small example scripts for cMake.
 \end{description}
-\item[RunningVersion] A copy of the source containing mainly x86 specific code.
-This has remained largely un-used by myself and thus I won't go into any detail.
+\item[RunningVersion] A copy of the source containing mainly x86 
+specific code.
+This has remained largely un-used by myself and thus I won't go into any 
+detail.
 Best sticking with CurrentVersion.
 \end{description}
 
+\subsection{Notation}
+My predecessor employed the following notation to keep track of his work:
+\begin{description}
+\item[COMPLETEDD] This function has been finished and fully tested. Note the
+capitals and the extra 'D'.
+\item[INPROCESSS] This function is currently being worked on and has not been
+fully tested. Note the capitals and the extra 'S'.
+\item[ADDME] Major functionality needs adding or adapting here. Note the
+capitals.
+\end{description}
+In addition to this, there is a healthy spread of 'fixme' comments. At least
+some of these are from the main Dynamo-RIO project though some may be from the
+ARM port.
 
+\subsubsection{INPROCESSS Tree}
+Below is a tree I have constructed of the INPROCESSS functions and their
+connected usage. This is based on a simple grep of the INPROCESSS functions and
+is by no means a complete list of what needs doing.
+\begin{verbatim}
+core/linux/preload.c:_init(
+ core/dynamo.c:Dynamorio_app_init(
+  core/dynamo.c:dynamo_thread_init(
+   core/dynamo.c:is_thread_initialized(
+   )
+   core/fcache.c:fcache_reset_all_caches_proactivly(
+    core/synch.c:synch_with_all_threads(
+     core/synch.c:synch_with_thread(
+      core/dynamo.c:dynamo_other_thread_exit(
+       core/dynamo.c:dynamo_thread_exit_common(
+        core/fragment.c:enter_threadexit(
+         core/fragment.c:check_flush_queue(
+          core/vmareas.c:vm_area_flush_fragments(
+           core/fragment.c:fragment_delete(
+            core/fragment.c:fragment_output(
+            )
+            core/monitor.c:monitor_remove_fragment(
+             core/monitor.c:trace_abort(
+              core/monitor.c:internal_restore_last(
+               core/link.c:link_fragment_outgoing(
+                core/link.c:is_linkable(
+                 core/monitor.c:monitor_is_linkable(
+                  core/monitor.c:should_be_trace_head(
+                   core/monitor.c:should_be_trace_head_internal(
+                   )
+                  )
+                 )
+                )
+               )
+              )
+             )
+            )
+           )
+          )
+         )
+        )
+       )
+      )
+     )
+    )
+   )
+  )
+ )
+)
+core/link.c:unlink_fragment_incoming(
+ core/link.c:unlink_branch(
+ )
+)
+core/linux/os.c:dr_syscall_invoke_another(
+)
+core/linux/signal.c:thread_set_self_context(
+)
+core/utils.h:FATAL_USAGE_ERROR(
+)
+core/configc.c:config_reread(
+)
+core/Arm/emit_utils.c:emit_fcache_enter_shared(
+ core/Arm/emit_utils.c:emit_fcache_enter_common(
+ )
+)
+core/Arm/emit_utils.c:coarse_exit_prefix_size(
+)
+core/Arm/emit_utils.c:patch_branch(
+)
+core/Arm/emit_utils.c:coarse_is_entrance_stub(
+)
+core/Arm/emit_utils.c:emit_fcache_enter(
+ core/Arm/emit_utils.c:emit_fcache_enter_common(
+ )
+)
+core/Arm/instrument.c:instrument_init(
+)
+core/Arm/decode.c:decode_operand(
+)
+core/Arm/mangle.c:remangle_short_rewrite(
+)
+core/Arm/mangle.c:sandbox_top_of_bb(
+)
+core/Arm/arch.c:arch_thread_init(
+ core/Arm/mangle.c:set_selfmod_sandbox_offsets(
+ )
+)
+core/Arm/instr.c:instr_get_branch_target_pc(
+)
+core/Arm/instr.c:instr_is_syscall(
+)
+core/Arm/instr.c:instr_is_cti_short_rewrite(
+)
+core/Arm/arch.c:shared_gencode_init(
+ core/Arm/emit_utils.c:emit_fcache_enter_shared(
+ ****SEE ABOVE TRACE****
+ )
+)
+core/Arm/arch.c:recreate_app_state(
+ core/Arm/arch.c:recreate_app_state_internal(
+ )
+)
+core/Arm/disassemble.c:instr_disassemble(
+)
+core/Arm/disassemble.c:dump_dr_callstack(
+)
+core/fragment.c:update_lookable_tls(
+)
+core/fragment.c:fragment_recreate_with_linkstubs(
+)
+core/options.c:synchronize_dynamic_options(
+)
+\end{verbatim}
+
+
+\section{Working With the Code}
+\subsection{Platform Specific Settings and Tools}
+\subsubsection{Native ARM Compilation}
+While it should be theoretically possible to compile nativly on an ARM device,
+problems are present in that assembly takes quite a large amount of memory. So
+when trying to compile on the Tegra 250, I found memory usage goes up and up
+until it gives up an the process dies. This would probably be solved by having
+swap space. If you want to try, run CMake with the ARM option on and the
+cross-compile option off. The difference with cross-compile being the build
+commands used. The advantage of this is you can build on the machine under test
+and thus use specific Linux kernal modules rather than generic ones. As stated
+earlier, ARM support is only for Linux.
+
+\subsubsection{Cross-Compiling from x86}
+The main tool you'll need to cross-compile is the CodeSourcery Lite toolchain.
+You can get this from
+\url{http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite}.
+You want the GNU/Linux version as this contains all the generic cross-compiled
+headers required by Dynamo-RIO. Once you've got this, install it with the nice
+GUI provided and all should be blue skys and roses with any luck. You want to
+run CMake with both the ARM and cross-compile options on. 
+
+\subsection{Compilation}
+A couple of more notes on CMake settings. To get to the options, use the
+\texttt{cmake -i} command. This gives you an interactive prompt. Running
+\texttt{cmake} on it's own will create make scripts using the last settings
+used. You shouldn't need the advanced options. One big note is that you won't be
+able to build the extentions library or samples. The extentions library has a
+problem when cmake runs core/lib/genapi.pl which seems to then be copying
+various header files into a combines extention library source several times
+over. So you end up with the same source repeated several times over in the same
+file. The samples won't build without the extentions. While obviously a big
+problem, this isn't stricktly needed by us at the moment as we can test as far
+as getting Dynamo-RIO running without them.
+
+Once you have changed any CMake settings you need, just run \texttt{make} to
+build Dynamo-RIO.
+
+\subsection{Running Dynamo-RIO}
+See README.
+
+
+\section{Current Project State}
+\subsection{Visual Inspection of Code}
+In addition to the tree of INPROCESSS functions I created above, I have also
+performed visual checks of the code to try and see which source files are
+finished, in process, and yet to be started. This took into account any comments
+on the state of functions, whether code contained \texttt{ifdef ARM} which would
+indicate the code had at least been started to be adapted, if the code contained
+empty or dummy functions and the general look of the code. Thise resulted in the
+following:
+\begin{description}
+\item[core]
+ \begin{description}
+ \item[Arm] Along with those specifically stated are several empty files.
+  \begin{description}
+  \item[arch.c] needs converting
+  \item[arch.h] needs converting
+  \item[arch\_exports.h] Some dummy functions. Some x86.asm references?
+  \item[arm.s] doesn't look finished
+  \item[decode.c] contains both ARM and x86 in the same file. looks unfinished.
+  \item[decode.h] as above
+  \item[decode\_fast.c] as above
+  \item[decode\_fast.h] as above
+  \item[decode\_table.c] done?
+  \item[disassemble.c] not started
+  \item[emit\_utils.c] not finished. not started?
+  \item[encode.c] not started
+  \item[instr.c] done?
+  \item[instr\_create.h] not started
+  \item[instrument.c] not finished?
+  \item[instrument.h] done?
+  \item[interp.c] not finished
+  \item[mangle.c] not finished
+  \item[proc.c] not finished
+  \item[proc.h] not started
+  \end{description}
+ \item[lib]
+  \begin{description}
+  \item[dr\_config.h] may need some editing
+  \item[genapi.pl] needs ARM integration
+  \item[globals\_shared.h] needs ARM integration
+  \item[hotpatch\_interface.h] needs ARM integration
+  \end{description}
+ \item[linux]
+  \begin{description}
+  \item[os.c] may need ARM integration
+  \item[os\_exports.h] may need ARM integration
+  \item[signal.c] needs ARM integration
+  \item[syscall.h] not finished?
+  \end{description}
+ \end{description}
+\end{description}
+
+On top of this, I also have the following list in my notebook under the title
+"changed files". A list of files that show signs of having been altered. I can't
+quite remember why I didn't give them the same treatment as the files above but
+the list will probably still be of some use.
+\begin{description}
+\item[CMakeLists.txt] Note: I have modified this myself somewhat to allow for
+both native and cross compilation.
+\item[configure\_defines.h]
+\item[configure.h]
+\item[configure\_temp.h]
+\item[core]
+ \begin{description}
+ \item[ldscript]
+ \item[CMakeLists.txt]
+ \item[globals.h]
+ \item[hotpatch.c]
+ \item[module\_list.c]
+ \item[utils.c]
+ \item[vmareas.c]
+ \end{description}
+\item[lib]
+ \begin{description}
+ \item[libdrpreload.so]
+ \end{description}
+\item[make]
+ \begin{description}
+ \item[DynamoRIOConfig.cmake.in]
+ \end{description}
+\end{description}
+
+\subsection{Stephen Barton's Project Report}
+From reading Stephen Barton's project report Dynamo-RIO: Process Virtualisation
+for ARM, I managed to gather the following information about the current state
+of the project.
+\begin{itemize}
+\item An ARM instruction decoder has been written and incorperated, in part,
+into Dynamo-RIO.
+\item An ARM instruction encoder was also written but was only produced as a
+standalone program. This was not in the code I was provided.
+\item Not all ARM instructions have been supported. For example, those that
+update the CPSR with the format \texttt{<instr>S}.
+\item The re-implementation of the x86 functions has been partially done.
+\item It would also seem that an aproach was taken to remove all the x86
+functions and re-instate them as they were re-implemented for ARM to provide a
+side-by-side comparison.
+\end{itemize}
+
+
+\section{Other Notes}
+Other notes worth mentioning follow.
+\begin{itemize}
+\item \texttt{read\_instruction} in core/Arm/decode.c is listed as done but seems to have
+a large amount of place-holders.
+\item The entry point at which Dynamo-RIO latches onto a process isn't imediatly
+obvious. Initialization begins with the \texttt{\_init} function in core/dynamo.c
+from where specific intialization routines are called. The \texttt{\_init}
+function is called from the dynamic library which contains Dynamo-RIO just
+before the code under test is started. It is because of this that only dynamic
+code can be controled by Dynamo-RIO.
+\item There are some basic programs for testing in the top level MiscCode
+folder. Only the C programs will work as those assembled from ARM assembly are
+not dynamic. I have not yet found a way to make them dynamic but the easy
+(though rather ugly) way to do it would be to embed it in a C program. The
+embeding and compiling of this should be pretty strait forward. The non-dynamic
+nature of the assembly programs is the reason for their running without problem
+and without any trace of Dynamo-RIO. Dynamo-RIO, in it's current state, should
+output a very large amount of debugging information if it runs.
+\item The jobs that need doing are not just those listed as INPROCESSS or ADDME.
+But those that are listed are a good starting place and will lead you to most,
+if not all, the other jobs needed to complete the project.
+\end{itemize}
 
 
 
