@@ -1,0 +1,114 @@
+\documentclass[a4paper]{article}
+\title{A Progress Report of the Manchester University ARM Port of Dynamo-RIO}
+\author{James Sandford\\
+School of Computer Science,\\
+The University of Manchester,\\
+Oxford Road,\\
+Manchester,\\
+M13 9PL
+\texttt{sandfoj9@cs.man.ac.uk}}
+\date{\today}
+
+\usepackage{url}
+
+\begin{document}
+
+
+\maketitle
+\newpage
+
+
+\begin{abstract}
+This report has been put together following several weeks of trying to
+understand the Dynamo-RIO software project and the current progress made in it's
+port to the ARM architecture from the original x86 code carried out originally 
+by Stephen Barton as a final year computer science project in the year prior to 
+this report. I aim to provide a means to get to my current possition as quickly
+as possible by showing how to get the code cross compiling on an x86 Linux
+system, pitfalls I fell down when going through this process and others, an
+overview of the code structure and an overview of what has and has not been
+completed in the port at this point in time. In addition to this, I will provide
+any advice I can on working with the current code base and I will provide
+recomendations on how to progress from here.
+\end{abstract}
+\newpage
+
+
+\tableofcontents
+\newpage
+
+
+\section{The code base}
+\subsection{Git and GitHub}
+The code for the ARM port is currently available on GitHub and can be found at
+\url{http://github.com/j616/DynamoRIO-for-ARM/}. I shalln't go into any detail
+on how to use Git or GitHub here but you can find all you need to know at
+\url{http://help.github.com/}. But Git is basically a version control system
+that's a bit nicer when it comes to things such as merging than systems like
+SVN. GitHub is just a hosting website for Git repositories that provides a nice
+web interface with some occasionally usefull features such as graphing of
+contribution and programming languages along with the usual browser based
+viewing and editing of files.
+
+\subsection{The Folder Structure}
+The folder structure consists of the following:
+\begin{description}
+\item[Clients] Several example clients.
+\item[CurrentVersion] The copy of the source being worked on. This is our main
+focus.
+	\begin{description}
+	\item[api] Strangely named as it contains the standard Dynamo-RIO sample clients
+	such as bbcount.
+	\item[bin] The shell scripts to run Dynamo-RIO. For information on these, look
+	at the README in the CurrentVersion folder.
+	\item[clients] A couple of clients. These are Windows specific so I haven't
+	looked at them. I should note here that the ARM port is currently Linux specific
+	as Windows doesn't currently support ARM. Though I believe this will change with
+	Windows 8.
+	\item[cmake] CMake configuration files. Don't really need touching but hold
+	things like the version number to give your build.
+	\item[core] The place where things get interesting. This is Dynamo-RIO itself in
+	many ways. This is the code that manages everything else. Importantly, this is
+	where we maintain control of the software we are working on along with the
+	decoding, modification and encoding of instructions. Most (all?) of the ARM
+	specific code will be in here.
+	\begin{description}
+		\item[Arm] The (mainly) ARM specific files. More on this later.
+		\item[lib] The header files and generation scripts for the client libraries.
+		\item[linux] The Linux specific files.
+		\item[win32] The Windows specific files (not just 32bit).
+		\item[x86] The (mainly) x86 specific files. More on this later.
+	\end{description}
+	\item[ext] Extentions. I believe this is needed for the actual use of clients in
+	Dynamo-RIO.
+	\item[include] The basic header files you will use when constructing clients.
+	There is a major problem here that will be discussed later.
+	\item[libutil] General libraries. I haven't needed to touch these.
+	\item[make] Auto-generated make files.
+	\item[suite] A suite of development tools for the main Dynamo-RIO devs. This
+	hasn't and probably shouldn't be used in the ARM build at least while it remains
+	a seperate project.
+	\item[tools] Again, a large number of development tools. These again look mainly
+	related to the main version of Dynamo-RIO and to x86. Some may be adaptable
+	though for debuging and testing.
+	\end{description}
+\item[Decoder] A standalone ARM machine code decoder. This will be explained
+more later.
+\item[MiscCode] Samples of ARM assembly, x86 assembly, very simple test C
+programs for running Dynamo-RIO on and cMake script examples.
+\begin{description}
+	\item[ArmAssembly] Some small test programs in C and ARM assembly. More on
+	this later.
+	\item[Assembly] Some small test programs in x86 assembly.
+	\item[cMakeExamples] Some small example scripts for cMake.
+\end{description}
+\item[RunningVersion] A copy of the source containing mainly x86 specific code.
+This has remained largely un-used by myself and thus I won't go into any detail.
+Best sticking with CurrentVersion.
+\end{description}
+
+
+
+
+
+\end{document}
