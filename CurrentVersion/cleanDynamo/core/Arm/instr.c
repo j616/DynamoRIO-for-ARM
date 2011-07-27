@@ -345,12 +345,40 @@ instr_get_src(instr_t *instr, uint pos)
         return instr->srcs[pos-1];
 }
 
+bool
+opnd_is_instr(opnd_t opnd)
+{
+//INPROCESSS opnd_is_instr
+	return 0;
+}
+
 /* return the note field of instr */
 void *
 instr_get_note(instr_t *instr)
 {
 	// COMPLETEDD #573 instr_get_note
     return instr->note;
+}
+
+instr_t *
+opnd_get_instr(opnd_t opnd)
+{
+//INPROCESSS opnd_get_instr
+	return 0;
+}
+
+bool
+opnd_is_far_instr(opnd_t opnd)
+{
+//INPROCESSS opnd_is_far_instr
+	return 0;
+}
+
+ushort
+opnd_get_segment_selector(opnd_t opnd)
+{
+//INPROCESSS opnd_get_segment_selector
+	return 0;
 }
 
 /****************************************************************************/
@@ -367,6 +395,21 @@ loginst(dcontext_t *dcontext, uint level, instr_t *instr, char *string)
     });
 }
 
+opnd_t
+opnd_create_far_instr(ushort seg_selector, instr_t *instr)
+{
+//INPROCESSS opnd_create_far_instr
+	opnd_t returnValue;
+	return returnValue;
+}
+
+opnd_t
+opnd_create_instr(instr_t *instr)
+{
+//INPROCESSS opnd_create_instr
+	opnd_t returnValue;
+	return returnValue;
+}
 
 /* Frees all dynamically allocated storage that was allocated by instr,
  * except for allocated raw bits.
