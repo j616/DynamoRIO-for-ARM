@@ -660,7 +660,7 @@ static inline bool atomic_compare_exchange_int(volatile int *var,
 #else
   unsigned int c;
 #endif
-    ATOMIC_COMPARE_EXCHANGE(*var, compare, exchange);
+    ATOMIC_COMPARE_EXCHANGE(var, compare, exchange);
     /* ZF is set if matched, all other flags are as if a normal compare happened */
     /* we convert ZF value back to C */
 #ifdef ARM

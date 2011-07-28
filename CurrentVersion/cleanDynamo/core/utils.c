@@ -837,7 +837,7 @@ mutex_lock(mutex_t *lock)
         spinmutex_lock((spin_mutex_t *)lock);
         return;
     } 
-//    printf("Mutex_Lock2\n");
+    //printf("Mutex_Lock2\n");
 //    printf("spinlock_count %d \n", spinlock_count);
     /* we may want to first spin the lock for a while if we are on a multiprocessor machine */
     /* option is external only so that we can set it to 0 on a uniprocessor */
@@ -853,7 +853,6 @@ mutex_lock(mutex_t *lock)
         do {
             /* hint we are spinning */
             SPINLOCK_PAUSE();
-
             /* We spin only while lock_requests == 0 which means that exactly one thread
                holds the lock, while the current one (and possibly a few others) are
                contending on who will grab it next.  It doesn't make much sense to spin
@@ -884,7 +883,7 @@ mutex_lock(mutex_t *lock)
             lock->max_contended_requests = (uint)lock->lock_requests;
 #       endif
     }
-//    printf("Finishing mutex_lock()\n");
+    printf("Finishing mutex_lock()\n");
 }
 
 /* try once to grab the lock, return whether or not successful */
@@ -894,11 +893,10 @@ mutex_trylock(mutex_t *lock)
 	// COMPLETEDD #437  mutex_trylock
     bool acquired;
 
-//    printf("WARNING Atomic_compare_");
+    //printf("WARNING Atomic_compare_\n");
     if (INTERNAL_OPTION(spin_yield_mutex)) {
         return spinmutex_trylock((spin_mutex_t *)lock);
     }
-    
     /* preserve old value in case not LOCK_FREE_STATE */
     acquired = atomic_compare_exchange(&lock->lock_requests, 
                                        LOCK_FREE_STATE, LOCK_SET_STATE);
