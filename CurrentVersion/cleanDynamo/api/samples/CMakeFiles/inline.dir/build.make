@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
+CMAKE_SOURCE_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo"
+CMAKE_BINARY_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # Include any dependencies generated for this target.
 include api/samples/CMakeFiles/inline.dir/depend.make
@@ -51,17 +51,17 @@ include api/samples/CMakeFiles/inline.dir/flags.make
 
 api/samples/CMakeFiles/inline.dir/inline.c.o: api/samples/CMakeFiles/inline.dir/flags.make
 api/samples/CMakeFiles/inline.dir/inline.c.o: api/samples/inline.c
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object api/samples/CMakeFiles/inline.dir/inline.c.o"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/inline.dir/inline.c.o   -c "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/inline.c"
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/inline.dir/inline.c.o   -c /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/inline.c
 
 api/samples/CMakeFiles/inline.dir/inline.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/inline.dir/inline.c.i"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/inline.c" > CMakeFiles/inline.dir/inline.c.i
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/inline.c > CMakeFiles/inline.dir/inline.c.i
 
 api/samples/CMakeFiles/inline.dir/inline.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/inline.dir/inline.c.s"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/inline.c" -o CMakeFiles/inline.dir/inline.c.s
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/inline.c -o CMakeFiles/inline.dir/inline.c.s
 
 api/samples/CMakeFiles/inline.dir/inline.c.o.requires:
 .PHONY : api/samples/CMakeFiles/inline.dir/inline.c.o.requires
@@ -84,8 +84,8 @@ api/samples/bin/libinline.so: lib/libdynamorio.so.2.0
 api/samples/bin/libinline.so: api/samples/CMakeFiles/inline.dir/build.make
 api/samples/bin/libinline.so: api/samples/CMakeFiles/inline.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library bin/libinline.so"
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/inline.dir/link.txt --verbose=$(VERBOSE)
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/bin/libinline.so 0 \"\""
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/inline.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bin/libinline.so 0 \"\""
 
 # Rule to build all files generated by this target.
 api/samples/CMakeFiles/inline.dir/build: api/samples/bin/libinline.so
@@ -95,10 +95,10 @@ api/samples/CMakeFiles/inline.dir/requires: api/samples/CMakeFiles/inline.dir/in
 .PHONY : api/samples/CMakeFiles/inline.dir/requires
 
 api/samples/CMakeFiles/inline.dir/clean:
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" && $(CMAKE_COMMAND) -P CMakeFiles/inline.dir/cmake_clean.cmake
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/inline.dir/cmake_clean.cmake
 .PHONY : api/samples/CMakeFiles/inline.dir/clean
 
 api/samples/CMakeFiles/inline.dir/depend:
-	cd "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples" "/home/james/Uni/summer11/DynamoRIO-for-ARM/Current Version/cleanDynamo/api/samples/CMakeFiles/inline.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/inline.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : api/samples/CMakeFiles/inline.dir/depend
 

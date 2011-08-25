@@ -155,27 +155,35 @@ if ($header) {
 # look nicer than others, so we have an explicit list here:
 # Also, we now send output to multiple files, and their names are indicated
 # by comments in the header files.
+$arch = 'x86';
+print stderr "$defines{'X86'}\n";
+if (defined($defines{"ARM"})){
+    $arch = 'Arm';
+}
+
 @headers = 
     (
-     './instrlist.h',
-     './lib/globals_shared.h', # defs
-     './globals.h',
-     './x86/arch_exports.h', # encode routines
-     './x86/proc.h',
-     './os_shared.h',        # before instrument.h
-     './module_shared.h',    # before instrument.h
-     './x86/instrument.h',
-     './x86/instr.h',
-     './x86/instr_create.h',
-     './x86/decode.h',       # OPSZ_ consts, decode routines
-     './x86/decode_fast.h',  # decode routines
-     './x86/disassemble.h',  # disassemble routines
-     './fragment.h',         # binary tracedump format
-     './win32/os_private.h', # rsrc section walking
-     './hotpatch.c',         # probe api
-     './lib/dr_config.h',
-     './lib/dr_inject.h',
+     "./instrlist.h",
+     "./lib/globals_shared.h", # defs
+     "./globals.h",
+     "./$arch/arch_exports.h", # encode routines
+     "./$arch/proc.h",
+     "./os_shared.h",        # before instrument.h
+     "./module_shared.h",    # before instrument.h
+     "./$arch/instrument.h",
+     "./$arch/instr.h",
+     "./$arch/instr_create.h",
+     "./$arch/decode.h",       # OPSZ_ consts, decode routines
+     "./$arch/decode_fast.h",  # decode routines
+     "./$arch/disassemble.h",  # disassemble routines
+     "./fragment.h",         # binary tracedump format
+     "./win32/os_private.h", # rsrc section walking
+     "./hotpatch.c",         # probe api
+     "./lib/dr_config.h",
+     "./lib/dr_inject.h",
      );
+     
+     print stderr "@headers\n";
 
 # PR 214947: VMware retroactively holds the copyright.
 $copyright = q+/* **********************************************************
@@ -227,7 +235,8 @@ sub keep_define($)
 {
     my ($def) = @_;
     return ($def eq "WINDOWS" || $def eq "LINUX" || $def eq "X64" ||
-            $def eq "X86_64" || $def eq "USE_VISIBILITY_ATTRIBUTES");
+            $def eq "X86_64" || $def eq "USE_VISIBILITY_ATTRIBUTES" ||
+            $def eq "ARM");
 }
 
 foreach $file (@headers) {

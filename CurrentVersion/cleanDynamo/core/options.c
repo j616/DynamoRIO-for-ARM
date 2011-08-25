@@ -1965,18 +1965,18 @@ synchronize_dynamic_options()
     /* get options */
     retval = get_parameter_ex(PARAM_STR(DYNAMORIO_VAR_OPTIONS), new_option_string,
                               sizeof(new_option_string), true/*ignore cache*/);
-//    if (IS_GET_PARAMETER_FAILURE(retval)) {
-//        STATS_INC(option_synchronizations_nop);
-//        write_unlock(&options_lock);
-//        return 0;
-//    }
-//
-//    if (strcmp(option_string, new_option_string) == 0) {
-//        STATS_INC(option_synchronizations_nop);
-//        write_unlock(&options_lock);
-//        return 0;
-//    }
-//
+    if (IS_GET_PARAMETER_FAILURE(retval)) {
+        STATS_INC(option_synchronizations_nop);
+        write_unlock(&options_lock);
+        return 0;
+    }
+
+    if (strcmp(option_string, new_option_string) == 0) {
+        STATS_INC(option_synchronizations_nop);
+        write_unlock(&options_lock);
+        return 0;
+    }
+
 //    SELF_UNPROTECT_OPTIONS();
 //    set_dynamo_options_defaults(&temp_options);
 //    set_dynamo_options(&temp_options, new_option_string);

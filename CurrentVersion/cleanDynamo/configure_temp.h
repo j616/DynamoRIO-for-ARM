@@ -50,8 +50,7 @@
 /* #undef MACOS */
 
 /* ARM CODE */
-#define ARM
--DARM
+/* #undef ARM */
 
 /* set by high-level VMAP/VMSAFE/VPS configurations */
 /* #undef PROGRAM_SHEPHERDING */

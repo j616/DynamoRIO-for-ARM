@@ -237,6 +237,214 @@ runstats/fast:
 	$(MAKE) -f tools/CMakeFiles/runstats.dir/build.make tools/CMakeFiles/runstats.dir/build
 .PHONY : runstats/fast
 
+#=============================================================================
+# Target rules for targets named drcontainers
+
+# Build rule for target.
+drcontainers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drcontainers
+.PHONY : drcontainers
+
+# fast build rule for target.
+drcontainers/fast:
+	$(MAKE) -f ext/drcontainers/CMakeFiles/drcontainers.dir/build.make ext/drcontainers/CMakeFiles/drcontainers.dir/build
+.PHONY : drcontainers/fast
+
+#=============================================================================
+# Target rules for targets named bbcount
+
+# Build rule for target.
+bbcount: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bbcount
+.PHONY : bbcount
+
+# fast build rule for target.
+bbcount/fast:
+	$(MAKE) -f api/samples/CMakeFiles/bbcount.dir/build.make api/samples/CMakeFiles/bbcount.dir/build
+.PHONY : bbcount/fast
+
+#=============================================================================
+# Target rules for targets named bbsize
+
+# Build rule for target.
+bbsize: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bbsize
+.PHONY : bbsize
+
+# fast build rule for target.
+bbsize/fast:
+	$(MAKE) -f api/samples/CMakeFiles/bbsize.dir/build.make api/samples/CMakeFiles/bbsize.dir/build
+.PHONY : bbsize/fast
+
+#=============================================================================
+# Target rules for targets named cbr
+
+# Build rule for target.
+cbr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cbr
+.PHONY : cbr
+
+# fast build rule for target.
+cbr/fast:
+	$(MAKE) -f api/samples/CMakeFiles/cbr.dir/build.make api/samples/CMakeFiles/cbr.dir/build
+.PHONY : cbr/fast
+
+#=============================================================================
+# Target rules for targets named countcalls
+
+# Build rule for target.
+countcalls: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 countcalls
+.PHONY : countcalls
+
+# fast build rule for target.
+countcalls/fast:
+	$(MAKE) -f api/samples/CMakeFiles/countcalls.dir/build.make api/samples/CMakeFiles/countcalls.dir/build
+.PHONY : countcalls/fast
+
+#=============================================================================
+# Target rules for targets named div
+
+# Build rule for target.
+div: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 div
+.PHONY : div
+
+# fast build rule for target.
+div/fast:
+	$(MAKE) -f api/samples/CMakeFiles/div.dir/build.make api/samples/CMakeFiles/div.dir/build
+.PHONY : div/fast
+
+#=============================================================================
+# Target rules for targets named empty
+
+# Build rule for target.
+empty: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 empty
+.PHONY : empty
+
+# fast build rule for target.
+empty/fast:
+	$(MAKE) -f api/samples/CMakeFiles/empty.dir/build.make api/samples/CMakeFiles/empty.dir/build
+.PHONY : empty/fast
+
+#=============================================================================
+# Target rules for targets named inc2add
+
+# Build rule for target.
+inc2add: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inc2add
+.PHONY : inc2add
+
+# fast build rule for target.
+inc2add/fast:
+	$(MAKE) -f api/samples/CMakeFiles/inc2add.dir/build.make api/samples/CMakeFiles/inc2add.dir/build
+.PHONY : inc2add/fast
+
+#=============================================================================
+# Target rules for targets named inline
+
+# Build rule for target.
+inline: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inline
+.PHONY : inline
+
+# fast build rule for target.
+inline/fast:
+	$(MAKE) -f api/samples/CMakeFiles/inline.dir/build.make api/samples/CMakeFiles/inline.dir/build
+.PHONY : inline/fast
+
+#=============================================================================
+# Target rules for targets named instrcalls
+
+# Build rule for target.
+instrcalls: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 instrcalls
+.PHONY : instrcalls
+
+# fast build rule for target.
+instrcalls/fast:
+	$(MAKE) -f api/samples/CMakeFiles/instrcalls.dir/build.make api/samples/CMakeFiles/instrcalls.dir/build
+.PHONY : instrcalls/fast
+
+#=============================================================================
+# Target rules for targets named memtrace
+
+# Build rule for target.
+memtrace: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 memtrace
+.PHONY : memtrace
+
+# fast build rule for target.
+memtrace/fast:
+	$(MAKE) -f api/samples/CMakeFiles/memtrace.dir/build.make api/samples/CMakeFiles/memtrace.dir/build
+.PHONY : memtrace/fast
+
+#=============================================================================
+# Target rules for targets named prefetch
+
+# Build rule for target.
+prefetch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 prefetch
+.PHONY : prefetch
+
+# fast build rule for target.
+prefetch/fast:
+	$(MAKE) -f api/samples/CMakeFiles/prefetch.dir/build.make api/samples/CMakeFiles/prefetch.dir/build
+.PHONY : prefetch/fast
+
+#=============================================================================
+# Target rules for targets named signal
+
+# Build rule for target.
+signal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 signal
+.PHONY : signal
+
+# fast build rule for target.
+signal/fast:
+	$(MAKE) -f api/samples/CMakeFiles/signal.dir/build.make api/samples/CMakeFiles/signal.dir/build
+.PHONY : signal/fast
+
+#=============================================================================
+# Target rules for targets named stl_test
+
+# Build rule for target.
+stl_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stl_test
+.PHONY : stl_test
+
+# fast build rule for target.
+stl_test/fast:
+	$(MAKE) -f api/samples/CMakeFiles/stl_test.dir/build.make api/samples/CMakeFiles/stl_test.dir/build
+.PHONY : stl_test/fast
+
+#=============================================================================
+# Target rules for targets named strace
+
+# Build rule for target.
+strace: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 strace
+.PHONY : strace
+
+# fast build rule for target.
+strace/fast:
+	$(MAKE) -f api/samples/CMakeFiles/strace.dir/build.make api/samples/CMakeFiles/strace.dir/build
+.PHONY : strace/fast
+
+#=============================================================================
+# Target rules for targets named tracedump
+
+# Build rule for target.
+tracedump: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tracedump
+.PHONY : tracedump
+
+# fast build rule for target.
+tracedump/fast:
+	$(MAKE) -f api/samples/CMakeFiles/tracedump.dir/build.make api/samples/CMakeFiles/tracedump.dir/build
+.PHONY : tracedump/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -257,6 +465,22 @@ help:
 	@echo "... nudgeunix"
 	@echo "... run_in_bg"
 	@echo "... runstats"
+	@echo "... drcontainers"
+	@echo "... bbcount"
+	@echo "... bbsize"
+	@echo "... cbr"
+	@echo "... countcalls"
+	@echo "... div"
+	@echo "... empty"
+	@echo "... inc2add"
+	@echo "... inline"
+	@echo "... instrcalls"
+	@echo "... memtrace"
+	@echo "... prefetch"
+	@echo "... signal"
+	@echo "... stl_test"
+	@echo "... strace"
+	@echo "... tracedump"
 .PHONY : help
 
 

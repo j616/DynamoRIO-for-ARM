@@ -437,7 +437,6 @@ if (UNIX)
     set(LD_FLAGS "${LD_FLAGS}")
     if(ARM_CROSS)
 			set(BASE_CFLAGS "${BASE_CFLAGS}")
-			#set(BASE_CXXFLAGS "${BASE_CXXFLAGS} -v")
 		endif(ARM_CROSS)
   else(ARM)
         set(ASM_FLAGS "-mmnemonic=intel -msyntax=intel -mnaked-reg --noexecstack")
@@ -1063,7 +1062,7 @@ install(FILES
   ${PROJECT_BINARY_DIR}/cmake/DynamoRIOConfigVersion.cmake
   DESTINATION ${INSTALL_CMAKE}
 )
-
+message(${CMAKE_C_COMPILER})
 # Extensions (i#277/PR 540817)
 if (BUILD_EXT)
   add_subdirectory(ext)
@@ -1153,3 +1152,5 @@ set(CPACK_PACKAGE_INSTALL_DIRECTORY "dynamorio")
 set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "DynamoRIO")
 set(CPACK_PACKAGE_RELOCATABLE "true")
 include(CPack)
+message(${CMAKE_C_FLAGS})
+message(${CMAKE_CXX_FLAGS})

@@ -319,6 +319,8 @@ typedef union _dr_xmm_t {
 /**
  * Machine context structure.
  */
+#ifndef ARM
+typedef struct _dr_mcontext_t {
     union {
         reg_t xdi; /**< platform-independent name for full rdi/edi register */
         reg_t IF_X64_ELSE(rdi, edi); /**< platform-dependent name for rdi/edi register */

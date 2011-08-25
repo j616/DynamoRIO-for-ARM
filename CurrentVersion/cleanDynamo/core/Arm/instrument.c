@@ -235,8 +235,8 @@ add_client_lib(char *path, char *id_str, char *options)
   }
 
   LOG(GLOBAL, LOG_INTERP, 4, "about to load client library %s\n", path);
-
   client_lib = load_shared_library(path);
+  printf("%i\n", client_lib);
   if (client_lib == NULL) {
       char msg[MAXIMUM_PATH*4];
       char err[MAXIMUM_PATH*2];
