@@ -1,0 +1,8 @@
+#! /bin/bash
+echo -e '\e[0;102mBuilding project\e[0m'
+make
+echo -e '\e[0;102mCopying files to test machine\e[0m'
+scp -r ./lib rightarm:~/cleanDynamo/
+echo -e '\e[0;102mRunning tests on rightarm\e[0m'
+ssh -tq rightarm 'cd ~/cleanDynamo && bin/drrun -v -debug -logdir ./logs -client ../Clients/libExam1/libExam1.so 0x1 "" ../MiscCode/ArmAssembly/Source/Hello' | tee ./logs/runLog
+
