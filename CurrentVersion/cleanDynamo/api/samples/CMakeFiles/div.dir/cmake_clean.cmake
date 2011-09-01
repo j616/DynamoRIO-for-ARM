@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/div.dir/div.c.o"
-  "bin/libdiv.pdb"
-  "bin/libdiv.so"
+  "../../lib/libdiv.pdb"
+  "../../lib/libdiv.so"
 )
 
 # Per-language clean rules from dependency scanning.

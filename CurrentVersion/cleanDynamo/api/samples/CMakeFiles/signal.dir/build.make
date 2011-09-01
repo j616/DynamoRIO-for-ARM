@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
+CMAKE_SOURCE_DIR = /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
+CMAKE_BINARY_DIR = /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # Include any dependencies generated for this target.
 include api/samples/CMakeFiles/signal.dir/depend.make
@@ -51,17 +51,17 @@ include api/samples/CMakeFiles/signal.dir/flags.make
 
 api/samples/CMakeFiles/signal.dir/signal.c.o: api/samples/CMakeFiles/signal.dir/flags.make
 api/samples/CMakeFiles/signal.dir/signal.c.o: api/samples/signal.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object api/samples/CMakeFiles/signal.dir/signal.c.o"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/signal.dir/signal.c.o   -c /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/signal.c
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/signal.dir/signal.c.o   -c /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/signal.c
 
 api/samples/CMakeFiles/signal.dir/signal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/signal.dir/signal.c.i"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/signal.c > CMakeFiles/signal.dir/signal.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/signal.c > CMakeFiles/signal.dir/signal.c.i
 
 api/samples/CMakeFiles/signal.dir/signal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/signal.dir/signal.c.s"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/signal.c -o CMakeFiles/signal.dir/signal.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/signal.c -o CMakeFiles/signal.dir/signal.c.s
 
 api/samples/CMakeFiles/signal.dir/signal.c.o.requires:
 .PHONY : api/samples/CMakeFiles/signal.dir/signal.c.o.requires
@@ -79,26 +79,26 @@ signal_OBJECTS = \
 # External object files for target signal
 signal_EXTERNAL_OBJECTS =
 
-api/samples/bin/libsignal.so: api/samples/CMakeFiles/signal.dir/signal.c.o
-api/samples/bin/libsignal.so: lib/libdynamorio.so.2.0
-api/samples/bin/libsignal.so: api/samples/CMakeFiles/signal.dir/build.make
-api/samples/bin/libsignal.so: api/samples/CMakeFiles/signal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library bin/libsignal.so"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/signal.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bin/libsignal.so 0 \"\""
+lib/libsignal.so: api/samples/CMakeFiles/signal.dir/signal.c.o
+lib/libsignal.so: lib/libdynamorio.so.2.0
+lib/libsignal.so: api/samples/CMakeFiles/signal.dir/build.make
+lib/libsignal.so: api/samples/CMakeFiles/signal.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../../lib/libsignal.so"
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/signal.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/lib/libsignal.so 0 \"\""
 
 # Rule to build all files generated by this target.
-api/samples/CMakeFiles/signal.dir/build: api/samples/bin/libsignal.so
+api/samples/CMakeFiles/signal.dir/build: lib/libsignal.so
 .PHONY : api/samples/CMakeFiles/signal.dir/build
 
 api/samples/CMakeFiles/signal.dir/requires: api/samples/CMakeFiles/signal.dir/signal.c.o.requires
 .PHONY : api/samples/CMakeFiles/signal.dir/requires
 
 api/samples/CMakeFiles/signal.dir/clean:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/signal.dir/cmake_clean.cmake
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/signal.dir/cmake_clean.cmake
 .PHONY : api/samples/CMakeFiles/signal.dir/clean
 
 api/samples/CMakeFiles/signal.dir/depend:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/signal.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/signal.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : api/samples/CMakeFiles/signal.dir/depend
 

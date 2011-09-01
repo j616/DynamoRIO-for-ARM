@@ -1,8 +1,8 @@
-# Install script for directory: /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/drcontainers
+# Install script for directory: /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/drcontainers
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/exports")
+  SET(CMAKE_INSTALL_PREFIX "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/exports")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,10 +33,10 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/lib32/release" TYPE STATIC_LIBRARY FILES "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/lib/libdrcontainers.a")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/lib32/release" TYPE STATIC_LIBRARY FILES "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/lib/libdrcontainers.a")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/include" TYPE FILE FILES "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/drcontainers/hashtable.h")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/include" TYPE FILE FILES "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/drcontainers/hashtable.h")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

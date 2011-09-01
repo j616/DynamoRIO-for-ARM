@@ -18,7 +18,7 @@ ADD_LIBRARY(dynamorio SHARED IMPORTED)
 # Import target "dynamorio" for configuration ""
 SET_PROPERTY(TARGET dynamorio APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 SET_TARGET_PROPERTIES(dynamorio PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/lib/libdynamorio.so.2.0"
+  IMPORTED_LOCATION_NOCONFIG "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/lib/libdynamorio.so.2.0"
   IMPORTED_SONAME_NOCONFIG "libdynamorio.so.2.0"
   )
 
@@ -47,7 +47,7 @@ SET_PROPERTY(TARGET drcontainers APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFI
 SET_TARGET_PROPERTIES(drcontainers PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "C"
   IMPORTED_LINK_INTERFACE_LIBRARIES_NOCONFIG "dynamorio"
-  IMPORTED_LOCATION_NOCONFIG "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/lib/libdrcontainers.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/ext/lib/libdrcontainers.a"
   )
 
 # Commands beyond this point should not need to know the version.

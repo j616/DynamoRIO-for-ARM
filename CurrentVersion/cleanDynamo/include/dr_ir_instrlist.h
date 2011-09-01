@@ -153,6 +153,14 @@ instr_has_allocated_bits(instr_t *instr);
 void
 instr_set_opcode(instr_t *instr, int opcode);
 
+/** Sets \p instr's raw bits to be valid if \p valid is true, invalid otherwise. */
+void
+instr_set_raw_bits_valid(instr_t *instr, bool valid);
+
+/** Sets \p instr's operands to be valid if \p valid is true, invalid otherwise. */
+void
+instr_set_operands_valid(instr_t *instr, bool valid);
+
 
 /**
  * Decodes the instruction at address \p pc into \p instr, filling in the

@@ -30,7 +30,7 @@
 
 ###########################################################################
 # sources and targets
-
+message(STATUS "Running core/CMakeLists.txt: " ${ARM_CROSS})
 set(CORE_SRCS
   options.c
   dynamo.c
@@ -102,7 +102,7 @@ set(ARCH_SRCS
   if (ARM_CROSS)
     set(CMAKE_ASM_COMPILER arm-none-linux-gnueabi-as)
   endif(ARM_CROSS)
-    set(ASM_FLAGS "--noexecstack -march=armv7-a")
+  set(ASM_FLAGS "--noexecstack -march=armv7-a")
 else(ARM)
 set(ARCH_SRCS
   x86/arch.c
@@ -574,4 +574,3 @@ else (UNIX)
   install(TARGETS drearlyhelp1 RUNTIME DESTINATION ${INSTALL_LIB_BASE})
   install(TARGETS drearlyhelp2 RUNTIME DESTINATION ${INSTALL_LIB_BASE})
 endif (UNIX)
-

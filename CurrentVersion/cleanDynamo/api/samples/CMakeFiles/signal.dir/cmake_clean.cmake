@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/signal.dir/signal.c.o"
-  "bin/libsignal.pdb"
-  "bin/libsignal.so"
+  "../../lib/libsignal.pdb"
+  "../../lib/libsignal.so"
 )
 
 # Per-language clean rules from dependency scanning.

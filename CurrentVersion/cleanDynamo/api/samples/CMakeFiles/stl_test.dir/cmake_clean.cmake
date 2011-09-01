@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/stl_test.dir/stl_test.cpp.o"
-  "bin/libstl_test.pdb"
-  "bin/libstl_test.so"
+  "../../lib/libstl_test.pdb"
+  "../../lib/libstl_test.so"
 )
 
 # Per-language clean rules from dependency scanning.

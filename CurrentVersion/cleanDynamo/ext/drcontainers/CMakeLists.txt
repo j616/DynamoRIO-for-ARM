@@ -27,9 +27,8 @@
 # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 # DAMAGE.
-
 cmake_minimum_required(VERSION 2.6)
-
+message(STATUS "Running ext/drcontainers/CMakeLists.txt")
 # library of container utilities in C that use DR API for memory allocation
 # and synchronization
 add_library(drcontainers STATIC

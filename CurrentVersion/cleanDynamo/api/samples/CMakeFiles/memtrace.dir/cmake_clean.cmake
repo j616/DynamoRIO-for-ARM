@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/memtrace.dir/memtrace.c.o"
-  "bin/libmemtrace.pdb"
-  "bin/libmemtrace.so"
+  "../../lib/libmemtrace.pdb"
+  "../../lib/libmemtrace.so"
 )
 
 # Per-language clean rules from dependency scanning.

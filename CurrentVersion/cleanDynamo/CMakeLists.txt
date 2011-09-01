@@ -46,7 +46,7 @@
 # * move info like "build core solely from DDK" from make/compiler.mk into
 #   HowToBuild.wiki
 ###########################################################################
-
+message(STATUS "Running CMakeLists.txt")
 cmake_minimum_required(VERSION 2.6)
 set(cmake_ver_string
   "${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_RELEASE_VERSION}")
@@ -121,8 +121,8 @@ endif (WIN32)
 # have to also set CXXFLAGS (CMAKE_SIZEOF_VOID_P happens
 # to come from CXXFLAGS).  (CMAKE_C_SIZEOF_DATA_PTR can be relied on
 # to be set in all CMake versions we support.)
-
 # ARM for the moment doesn't accept 64 bit so no need to do this.
+
 if (ARM)
 	if(ARM_CROSS)
   set(CMAKE_C_COMPILER arm-none-linux-gnueabi-gcc)

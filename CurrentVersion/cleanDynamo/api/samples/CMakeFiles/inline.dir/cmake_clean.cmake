@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/inline.dir/inline.c.o"
-  "bin/libinline.pdb"
-  "bin/libinline.so"
+  "../../lib/libinline.pdb"
+  "../../lib/libinline.so"
 )
 
 # Per-language clean rules from dependency scanning.

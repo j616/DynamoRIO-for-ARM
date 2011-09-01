@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/countcalls.dir/countcalls.c.o"
-  "bin/libcountcalls.pdb"
-  "bin/libcountcalls.so"
+  "../../lib/libcountcalls.pdb"
+  "../../lib/libcountcalls.so"
 )
 
 # Per-language clean rules from dependency scanning.

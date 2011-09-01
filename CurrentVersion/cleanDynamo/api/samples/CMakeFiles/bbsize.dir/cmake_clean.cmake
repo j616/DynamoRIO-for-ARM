@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/bbsize.dir/bbsize.c.o"
-  "bin/libbbsize.pdb"
-  "bin/libbbsize.so"
+  "../../lib/libbbsize.pdb"
+  "../../lib/libbbsize.so"
 )
 
 # Per-language clean rules from dependency scanning.

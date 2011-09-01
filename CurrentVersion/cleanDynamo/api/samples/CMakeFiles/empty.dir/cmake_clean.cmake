@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/empty.dir/empty.c.o"
-  "bin/libempty.pdb"
-  "bin/libempty.so"
+  "../../lib/libempty.pdb"
+  "../../lib/libempty.so"
 )
 
 # Per-language clean rules from dependency scanning.

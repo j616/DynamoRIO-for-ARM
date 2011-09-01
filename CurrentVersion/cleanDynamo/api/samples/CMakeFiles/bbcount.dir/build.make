@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
+CMAKE_SOURCE_DIR = /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
+CMAKE_BINARY_DIR = /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # Include any dependencies generated for this target.
 include api/samples/CMakeFiles/bbcount.dir/depend.make
@@ -51,17 +51,17 @@ include api/samples/CMakeFiles/bbcount.dir/flags.make
 
 api/samples/CMakeFiles/bbcount.dir/bbcount.c.o: api/samples/CMakeFiles/bbcount.dir/flags.make
 api/samples/CMakeFiles/bbcount.dir/bbcount.c.o: api/samples/bbcount.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object api/samples/CMakeFiles/bbcount.dir/bbcount.c.o"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/bbcount.dir/bbcount.c.o   -c /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bbcount.c
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -o CMakeFiles/bbcount.dir/bbcount.c.o   -c /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bbcount.c
 
 api/samples/CMakeFiles/bbcount.dir/bbcount.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bbcount.dir/bbcount.c.i"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bbcount.c > CMakeFiles/bbcount.dir/bbcount.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -E /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bbcount.c > CMakeFiles/bbcount.dir/bbcount.c.i
 
 api/samples/CMakeFiles/bbcount.dir/bbcount.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bbcount.dir/bbcount.c.s"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bbcount.c -o CMakeFiles/bbcount.dir/bbcount.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && arm-none-linux-gnueabi-gcc  $(C_DEFINES) $(C_FLAGS) -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector -S /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bbcount.c -o CMakeFiles/bbcount.dir/bbcount.c.s
 
 api/samples/CMakeFiles/bbcount.dir/bbcount.c.o.requires:
 .PHONY : api/samples/CMakeFiles/bbcount.dir/bbcount.c.o.requires
@@ -79,26 +79,26 @@ bbcount_OBJECTS = \
 # External object files for target bbcount
 bbcount_EXTERNAL_OBJECTS =
 
-api/samples/bin/libbbcount.so: api/samples/CMakeFiles/bbcount.dir/bbcount.c.o
-api/samples/bin/libbbcount.so: lib/libdynamorio.so.2.0
-api/samples/bin/libbbcount.so: api/samples/CMakeFiles/bbcount.dir/build.make
-api/samples/bin/libbbcount.so: api/samples/CMakeFiles/bbcount.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library bin/libbbcount.so"
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bbcount.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/bin/libbbcount.so 0 \"\""
+lib/libbbcount.so: api/samples/CMakeFiles/bbcount.dir/bbcount.c.o
+lib/libbbcount.so: lib/libdynamorio.so.2.0
+lib/libbbcount.so: api/samples/CMakeFiles/bbcount.dir/build.make
+lib/libbbcount.so: api/samples/CMakeFiles/bbcount.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../../lib/libbbcount.so"
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bbcount.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -client /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/lib/libbbcount.so 0 \"\""
 
 # Rule to build all files generated by this target.
-api/samples/CMakeFiles/bbcount.dir/build: api/samples/bin/libbbcount.so
+api/samples/CMakeFiles/bbcount.dir/build: lib/libbbcount.so
 .PHONY : api/samples/CMakeFiles/bbcount.dir/build
 
 api/samples/CMakeFiles/bbcount.dir/requires: api/samples/CMakeFiles/bbcount.dir/bbcount.c.o.requires
 .PHONY : api/samples/CMakeFiles/bbcount.dir/requires
 
 api/samples/CMakeFiles/bbcount.dir/clean:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/bbcount.dir/cmake_clean.cmake
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/bbcount.dir/cmake_clean.cmake
 .PHONY : api/samples/CMakeFiles/bbcount.dir/clean
 
 api/samples/CMakeFiles/bbcount.dir/depend:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/bbcount.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/bbcount.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : api/samples/CMakeFiles/bbcount.dir/depend
 

@@ -28,14 +28,24 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 # DAMAGE.
 
+if (ARM_CROSS)
+ set(CMAKE_C_COMPILER arm-none-linux-gnueabi-gcc)
+ set(CMAKE_CXX_COMPILER arm-none-linux-gnueabi-g++)
+ set(CMAKE_OBJCOPY arm-none-linux-gnueabi-objcopy)
+ set(CMAKE_STRIP arm-none-linux-gnueabi-strip)
+ set(CMAKE_ASM_COMPILER arm-none-linux-gnueabi-as)
+ set(CMAKE_LINKER arm-none-linux-gnueabi-ld)
+endif(ARM_CROSS)
+
 cmake_minimum_required(VERSION 2.6)
+if (NOT DEFINED CMAKE_PROJECT_NAME)
+ project(DynamoRIO_samples)
+ set(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
+ set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
+endif (NOT DEFINED CMAKE_PROJECT_NAME)
 
-project(DynamoRIO_samples)
 
-set(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
-set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
-
-message(STATUS "C compiler: " ${CMAKE_C_COMPILER})
+message(STATUS "Running api/samples/CMakeLists.txt :" ${CMAKE_C_COMPILER})
 
 option(SHOW_RESULTS
   "Display client results in pop-up (Windows) or console message (Linux)"
@@ -177,5 +187,3 @@ install(DIRECTORY ${LIBRARY_OUTPUT_PATH}/
   PATTERN "*.debug"
   PATTERN "*.pdb"
   )
-
-message(STATUS "C compiler 2: " ${CMAKE_C_COMPILER})

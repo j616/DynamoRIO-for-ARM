@@ -27,9 +27,8 @@
 # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 # DAMAGE.
-
+message(STATUS "Running ext/CMakeLists.txt :" ${CMAKE_C_COMPILER})
 # i#277/PR 540817: DynamoRIO Extensions support
-
 cmake_minimum_required(VERSION 2.6)
 
 set(DynamoRIO_INTERNAL ON) # do not import dynamorio lib target
@@ -87,4 +86,3 @@ if (bin_files)
     PATTERN "*.pdb"
     )
 endif (bin_files)
-

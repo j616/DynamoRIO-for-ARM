@@ -135,6 +135,29 @@ typedef struct _module_names_t {
 
 
 /**
+ * Initialize a new module iterator.  The returned module iterator contains a snapshot
+ * of the modules loaded at the time it was created.  Use dr_module_iterator_hasnext()
+ * and dr_module_iterator_next() to walk the loaded modules.  Call
+ * dr_module_iterator_stop() when finished to release the iterator. \note The iterator
+ * does not prevent modules from being loaded or unloaded while the iterator is being
+ * walked.
+ */
+dr_module_iterator_t *
+dr_module_iterator_start(void);
+
+/**
+ * Returns true if there is another loaded module in the iterator.
+ */
+bool
+dr_module_iterator_hasnext(dr_module_iterator_t *mi);
+
+/**
+ * User should call this routine to free the module iterator.
+ */
+void
+dr_module_iterator_stop(dr_module_iterator_t *mi);
+
+/**
  * Frees a module_data_t returned by dr_module_iterator_next(), dr_lookup_module(),
  * dr_lookup_module_by_name(), or dr_copy_module_data(). \note Should NOT be used with
  * a module_data_t obtained as part of a module load or unload event.
@@ -156,12 +179,50 @@ disassemble_with_info(void *drcontext, byte *pc, file_t outfile,
                       bool show_pc, bool show_bytes);
 
 
+/** Returns true iff \p instr's operands are up to date. */
+bool
+instr_operands_valid(instr_t *instr);
+
+/** Returns an immediate float operand with value \p f. */
+opnd_t
+opnd_create_immed_float(float f);
+
+/**
+ * Assumes that \p reg is a REG_ 32-bit register constant.
+ * Returns the 16-bit version of \p reg.
+ */
+reg_id_t
+reg_32_to_16(reg_id_t reg);
+
+/** Returns an empty operand. */
+opnd_t
+opnd_create_null(void);
+
+/** Returns a register operand (\p r must be a REG_ constant). */
+opnd_t
+opnd_create_reg(reg_id_t r);
+
+/**
+ * Returns an immediate integer operand with value \p i and size
+ * \p data_size; \p data_size must be a OPSZ_ constant.
+ */
+opnd_t
+opnd_create_immed_int(ptr_int_t i, opnd_size_t data_size);
+
 /**
  * Returns true iff \p instr is a conditional branch: OP_jcc, OP_jcc_short,
  * OP_loop*, or OP_jecxz.
  */
 bool
 instr_is_cbr(instr_t *instr);
+
+/**
+ * Assumes that \p instr has been initialized but does not have any
+ * operands yet.  Allocates storage for \p num_srcs source operands
+ * and \p num_dsts destination operands.
+ */
+void
+instr_set_num_opnds(void *drcontext, instr_t *instr, int num_dsts, int num_srcs);
 
 /**
  * Sets the translation pointer for \p instr, used to recreate the

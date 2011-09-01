@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/cbr.dir/cbr.c.o"
-  "bin/libcbr.pdb"
-  "bin/libcbr.so"
+  "../../lib/libcbr.pdb"
+  "../../lib/libcbr.so"
 )
 
 # Per-language clean rules from dependency scanning.

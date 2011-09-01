@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
+CMAKE_SOURCE_DIR = /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
+CMAKE_BINARY_DIR = /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -101,7 +101,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +111,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CPackSourceConfig.cmake
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -130,14 +130,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_progress_start /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/core/CMakeFiles/progress.marks
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles 0
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -E cmake_progress_start /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/core/CMakeFiles/progress.marks
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/clean
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/clean
 .PHONY : clean
 
 # The main clean target
@@ -146,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 core/CMakeFiles/drpreload.dir/rule:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/CMakeFiles/drpreload.dir/rule
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/CMakeFiles/drpreload.dir/rule
 .PHONY : core/CMakeFiles/drpreload.dir/rule
 
 # Convenience name for target.
@@ -170,12 +170,12 @@ drpreload: core/CMakeFiles/drpreload.dir/rule
 
 # fast build rule for target.
 drpreload/fast:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/build
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/build
 .PHONY : drpreload/fast
 
 # Convenience name for target.
 core/CMakeFiles/dynamorio.dir/rule:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/CMakeFiles/dynamorio.dir/rule
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f CMakeFiles/Makefile2 core/CMakeFiles/dynamorio.dir/rule
 .PHONY : core/CMakeFiles/dynamorio.dir/rule
 
 # Convenience name for target.
@@ -184,15 +184,432 @@ dynamorio: core/CMakeFiles/dynamorio.dir/rule
 
 # fast build rule for target.
 dynamorio/fast:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/build
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/build
 .PHONY : dynamorio/fast
+
+Arm/arch.o: Arm/arch.c.o
+.PHONY : Arm/arch.o
+
+# target to build an object file
+Arm/arch.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/arch.c.o
+.PHONY : Arm/arch.c.o
+
+Arm/arch.i: Arm/arch.c.i
+.PHONY : Arm/arch.i
+
+# target to preprocess a source file
+Arm/arch.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/arch.c.i
+.PHONY : Arm/arch.c.i
+
+Arm/arch.s: Arm/arch.c.s
+.PHONY : Arm/arch.s
+
+# target to generate assembly for a file
+Arm/arch.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/arch.c.s
+.PHONY : Arm/arch.c.s
+
+Arm/arm.o: Arm/arm.s.o
+.PHONY : Arm/arm.o
+
+# target to build an object file
+Arm/arm.s.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/Arm/arm.s.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/arm.s.o
+.PHONY : Arm/arm.s.o
+
+Arm/decode.o: Arm/decode.c.o
+.PHONY : Arm/decode.o
+
+# target to build an object file
+Arm/decode.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode.c.o
+.PHONY : Arm/decode.c.o
+
+Arm/decode.i: Arm/decode.c.i
+.PHONY : Arm/decode.i
+
+# target to preprocess a source file
+Arm/decode.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode.c.i
+.PHONY : Arm/decode.c.i
+
+Arm/decode.s: Arm/decode.c.s
+.PHONY : Arm/decode.s
+
+# target to generate assembly for a file
+Arm/decode.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode.c.s
+.PHONY : Arm/decode.c.s
+
+Arm/decode_fast.o: Arm/decode_fast.c.o
+.PHONY : Arm/decode_fast.o
+
+# target to build an object file
+Arm/decode_fast.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode_fast.c.o
+.PHONY : Arm/decode_fast.c.o
+
+Arm/decode_fast.i: Arm/decode_fast.c.i
+.PHONY : Arm/decode_fast.i
+
+# target to preprocess a source file
+Arm/decode_fast.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode_fast.c.i
+.PHONY : Arm/decode_fast.c.i
+
+Arm/decode_fast.s: Arm/decode_fast.c.s
+.PHONY : Arm/decode_fast.s
+
+# target to generate assembly for a file
+Arm/decode_fast.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode_fast.c.s
+.PHONY : Arm/decode_fast.c.s
+
+Arm/decode_table.o: Arm/decode_table.c.o
+.PHONY : Arm/decode_table.o
+
+# target to build an object file
+Arm/decode_table.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode_table.c.o
+.PHONY : Arm/decode_table.c.o
+
+Arm/decode_table.i: Arm/decode_table.c.i
+.PHONY : Arm/decode_table.i
+
+# target to preprocess a source file
+Arm/decode_table.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode_table.c.i
+.PHONY : Arm/decode_table.c.i
+
+Arm/decode_table.s: Arm/decode_table.c.s
+.PHONY : Arm/decode_table.s
+
+# target to generate assembly for a file
+Arm/decode_table.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/decode_table.c.s
+.PHONY : Arm/decode_table.c.s
+
+Arm/disassemble.o: Arm/disassemble.c.o
+.PHONY : Arm/disassemble.o
+
+# target to build an object file
+Arm/disassemble.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/disassemble.c.o
+.PHONY : Arm/disassemble.c.o
+
+Arm/disassemble.i: Arm/disassemble.c.i
+.PHONY : Arm/disassemble.i
+
+# target to preprocess a source file
+Arm/disassemble.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/disassemble.c.i
+.PHONY : Arm/disassemble.c.i
+
+Arm/disassemble.s: Arm/disassemble.c.s
+.PHONY : Arm/disassemble.s
+
+# target to generate assembly for a file
+Arm/disassemble.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/disassemble.c.s
+.PHONY : Arm/disassemble.c.s
+
+Arm/emit_utils.o: Arm/emit_utils.c.o
+.PHONY : Arm/emit_utils.o
+
+# target to build an object file
+Arm/emit_utils.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/emit_utils.c.o
+.PHONY : Arm/emit_utils.c.o
+
+Arm/emit_utils.i: Arm/emit_utils.c.i
+.PHONY : Arm/emit_utils.i
+
+# target to preprocess a source file
+Arm/emit_utils.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/emit_utils.c.i
+.PHONY : Arm/emit_utils.c.i
+
+Arm/emit_utils.s: Arm/emit_utils.c.s
+.PHONY : Arm/emit_utils.s
+
+# target to generate assembly for a file
+Arm/emit_utils.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/emit_utils.c.s
+.PHONY : Arm/emit_utils.c.s
+
+Arm/encode.o: Arm/encode.c.o
+.PHONY : Arm/encode.o
+
+# target to build an object file
+Arm/encode.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/encode.c.o
+.PHONY : Arm/encode.c.o
+
+Arm/encode.i: Arm/encode.c.i
+.PHONY : Arm/encode.i
+
+# target to preprocess a source file
+Arm/encode.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/encode.c.i
+.PHONY : Arm/encode.c.i
+
+Arm/encode.s: Arm/encode.c.s
+.PHONY : Arm/encode.s
+
+# target to generate assembly for a file
+Arm/encode.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/encode.c.s
+.PHONY : Arm/encode.c.s
+
+Arm/instr.o: Arm/instr.c.o
+.PHONY : Arm/instr.o
+
+# target to build an object file
+Arm/instr.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/instr.c.o
+.PHONY : Arm/instr.c.o
+
+Arm/instr.i: Arm/instr.c.i
+.PHONY : Arm/instr.i
+
+# target to preprocess a source file
+Arm/instr.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/instr.c.i
+.PHONY : Arm/instr.c.i
+
+Arm/instr.s: Arm/instr.c.s
+.PHONY : Arm/instr.s
+
+# target to generate assembly for a file
+Arm/instr.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/instr.c.s
+.PHONY : Arm/instr.c.s
+
+Arm/instrument.o: Arm/instrument.c.o
+.PHONY : Arm/instrument.o
+
+# target to build an object file
+Arm/instrument.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/instrument.c.o
+.PHONY : Arm/instrument.c.o
+
+Arm/instrument.i: Arm/instrument.c.i
+.PHONY : Arm/instrument.i
+
+# target to preprocess a source file
+Arm/instrument.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/instrument.c.i
+.PHONY : Arm/instrument.c.i
+
+Arm/instrument.s: Arm/instrument.c.s
+.PHONY : Arm/instrument.s
+
+# target to generate assembly for a file
+Arm/instrument.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/instrument.c.s
+.PHONY : Arm/instrument.c.s
+
+Arm/interp.o: Arm/interp.c.o
+.PHONY : Arm/interp.o
+
+# target to build an object file
+Arm/interp.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/interp.c.o
+.PHONY : Arm/interp.c.o
+
+Arm/interp.i: Arm/interp.c.i
+.PHONY : Arm/interp.i
+
+# target to preprocess a source file
+Arm/interp.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/interp.c.i
+.PHONY : Arm/interp.c.i
+
+Arm/interp.s: Arm/interp.c.s
+.PHONY : Arm/interp.s
+
+# target to generate assembly for a file
+Arm/interp.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/interp.c.s
+.PHONY : Arm/interp.c.s
+
+Arm/mangle.o: Arm/mangle.c.o
+.PHONY : Arm/mangle.o
+
+# target to build an object file
+Arm/mangle.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/mangle.c.o
+.PHONY : Arm/mangle.c.o
+
+Arm/mangle.i: Arm/mangle.c.i
+.PHONY : Arm/mangle.i
+
+# target to preprocess a source file
+Arm/mangle.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/mangle.c.i
+.PHONY : Arm/mangle.c.i
+
+Arm/mangle.s: Arm/mangle.c.s
+.PHONY : Arm/mangle.s
+
+# target to generate assembly for a file
+Arm/mangle.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/mangle.c.s
+.PHONY : Arm/mangle.c.s
+
+Arm/optimize.o: Arm/optimize.c.o
+.PHONY : Arm/optimize.o
+
+# target to build an object file
+Arm/optimize.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/optimize.c.o
+.PHONY : Arm/optimize.c.o
+
+Arm/optimize.i: Arm/optimize.c.i
+.PHONY : Arm/optimize.i
+
+# target to preprocess a source file
+Arm/optimize.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/optimize.c.i
+.PHONY : Arm/optimize.c.i
+
+Arm/optimize.s: Arm/optimize.c.s
+.PHONY : Arm/optimize.s
+
+# target to generate assembly for a file
+Arm/optimize.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/optimize.c.s
+.PHONY : Arm/optimize.c.s
+
+Arm/proc.o: Arm/proc.c.o
+.PHONY : Arm/proc.o
+
+# target to build an object file
+Arm/proc.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/proc.c.o
+.PHONY : Arm/proc.c.o
+
+Arm/proc.i: Arm/proc.c.i
+.PHONY : Arm/proc.i
+
+# target to preprocess a source file
+Arm/proc.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/proc.c.i
+.PHONY : Arm/proc.c.i
+
+Arm/proc.s: Arm/proc.c.s
+.PHONY : Arm/proc.s
+
+# target to generate assembly for a file
+Arm/proc.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/proc.c.s
+.PHONY : Arm/proc.c.s
+
+Arm/retcheck.o: Arm/retcheck.c.o
+.PHONY : Arm/retcheck.o
+
+# target to build an object file
+Arm/retcheck.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/retcheck.c.o
+.PHONY : Arm/retcheck.c.o
+
+Arm/retcheck.i: Arm/retcheck.c.i
+.PHONY : Arm/retcheck.i
+
+# target to preprocess a source file
+Arm/retcheck.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/retcheck.c.i
+.PHONY : Arm/retcheck.c.i
+
+Arm/retcheck.s: Arm/retcheck.c.s
+.PHONY : Arm/retcheck.s
+
+# target to generate assembly for a file
+Arm/retcheck.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/retcheck.c.s
+.PHONY : Arm/retcheck.c.s
+
+Arm/sideline.o: Arm/sideline.c.o
+.PHONY : Arm/sideline.o
+
+# target to build an object file
+Arm/sideline.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/sideline.c.o
+.PHONY : Arm/sideline.c.o
+
+Arm/sideline.i: Arm/sideline.c.i
+.PHONY : Arm/sideline.i
+
+# target to preprocess a source file
+Arm/sideline.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/sideline.c.i
+.PHONY : Arm/sideline.c.i
+
+Arm/sideline.s: Arm/sideline.c.s
+.PHONY : Arm/sideline.s
+
+# target to generate assembly for a file
+Arm/sideline.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/sideline.c.s
+.PHONY : Arm/sideline.c.s
+
+Arm/steal_reg.o: Arm/steal_reg.c.o
+.PHONY : Arm/steal_reg.o
+
+# target to build an object file
+Arm/steal_reg.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/steal_reg.c.o
+.PHONY : Arm/steal_reg.c.o
+
+Arm/steal_reg.i: Arm/steal_reg.c.i
+.PHONY : Arm/steal_reg.i
+
+# target to preprocess a source file
+Arm/steal_reg.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/steal_reg.c.i
+.PHONY : Arm/steal_reg.c.i
+
+Arm/steal_reg.s: Arm/steal_reg.c.s
+.PHONY : Arm/steal_reg.s
+
+# target to generate assembly for a file
+Arm/steal_reg.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/steal_reg.c.s
+.PHONY : Arm/steal_reg.c.s
+
+Arm/x86_code.o: Arm/x86_code.c.o
+.PHONY : Arm/x86_code.o
+
+# target to build an object file
+Arm/x86_code.c.o:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/x86_code.c.o
+.PHONY : Arm/x86_code.c.o
+
+Arm/x86_code.i: Arm/x86_code.c.i
+.PHONY : Arm/x86_code.i
+
+# target to preprocess a source file
+Arm/x86_code.c.i:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/x86_code.c.i
+.PHONY : Arm/x86_code.c.i
+
+Arm/x86_code.s: Arm/x86_code.c.s
+.PHONY : Arm/x86_code.s
+
+# target to generate assembly for a file
+Arm/x86_code.c.s:
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/Arm/x86_code.c.s
+.PHONY : Arm/x86_code.c.s
 
 buildmark.o: buildmark.c.o
 .PHONY : buildmark.o
 
 # target to build an object file
 buildmark.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/buildmark.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/buildmark.c.o
 .PHONY : buildmark.c.o
 
 buildmark.i: buildmark.c.i
@@ -200,7 +617,7 @@ buildmark.i: buildmark.c.i
 
 # target to preprocess a source file
 buildmark.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/buildmark.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/buildmark.c.i
 .PHONY : buildmark.c.i
 
 buildmark.s: buildmark.c.s
@@ -208,7 +625,7 @@ buildmark.s: buildmark.c.s
 
 # target to generate assembly for a file
 buildmark.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/buildmark.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/buildmark.c.s
 .PHONY : buildmark.c.s
 
 config.o: config.c.o
@@ -216,8 +633,8 @@ config.o: config.c.o
 
 # target to build an object file
 config.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/config.c.o
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/config.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/config.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/config.c.o
 .PHONY : config.c.o
 
 config.i: config.c.i
@@ -225,8 +642,8 @@ config.i: config.c.i
 
 # target to preprocess a source file
 config.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/config.c.i
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/config.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/config.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/config.c.i
 .PHONY : config.c.i
 
 config.s: config.c.s
@@ -234,8 +651,8 @@ config.s: config.c.s
 
 # target to generate assembly for a file
 config.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/config.c.s
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/config.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/config.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/config.c.s
 .PHONY : config.c.s
 
 dispatch.o: dispatch.c.o
@@ -243,7 +660,7 @@ dispatch.o: dispatch.c.o
 
 # target to build an object file
 dispatch.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dispatch.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dispatch.c.o
 .PHONY : dispatch.c.o
 
 dispatch.i: dispatch.c.i
@@ -251,7 +668,7 @@ dispatch.i: dispatch.c.i
 
 # target to preprocess a source file
 dispatch.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dispatch.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dispatch.c.i
 .PHONY : dispatch.c.i
 
 dispatch.s: dispatch.c.s
@@ -259,7 +676,7 @@ dispatch.s: dispatch.c.s
 
 # target to generate assembly for a file
 dispatch.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dispatch.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dispatch.c.s
 .PHONY : dispatch.c.s
 
 dynamo.o: dynamo.c.o
@@ -267,7 +684,7 @@ dynamo.o: dynamo.c.o
 
 # target to build an object file
 dynamo.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dynamo.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dynamo.c.o
 .PHONY : dynamo.c.o
 
 dynamo.i: dynamo.c.i
@@ -275,7 +692,7 @@ dynamo.i: dynamo.c.i
 
 # target to preprocess a source file
 dynamo.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dynamo.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dynamo.c.i
 .PHONY : dynamo.c.i
 
 dynamo.s: dynamo.c.s
@@ -283,7 +700,7 @@ dynamo.s: dynamo.c.s
 
 # target to generate assembly for a file
 dynamo.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dynamo.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/dynamo.c.s
 .PHONY : dynamo.c.s
 
 emit.o: emit.c.o
@@ -291,7 +708,7 @@ emit.o: emit.c.o
 
 # target to build an object file
 emit.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/emit.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/emit.c.o
 .PHONY : emit.c.o
 
 emit.i: emit.c.i
@@ -299,7 +716,7 @@ emit.i: emit.c.i
 
 # target to preprocess a source file
 emit.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/emit.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/emit.c.i
 .PHONY : emit.c.i
 
 emit.s: emit.c.s
@@ -307,7 +724,7 @@ emit.s: emit.c.s
 
 # target to generate assembly for a file
 emit.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/emit.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/emit.c.s
 .PHONY : emit.c.s
 
 fcache.o: fcache.c.o
@@ -315,7 +732,7 @@ fcache.o: fcache.c.o
 
 # target to build an object file
 fcache.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fcache.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fcache.c.o
 .PHONY : fcache.c.o
 
 fcache.i: fcache.c.i
@@ -323,7 +740,7 @@ fcache.i: fcache.c.i
 
 # target to preprocess a source file
 fcache.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fcache.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fcache.c.i
 .PHONY : fcache.c.i
 
 fcache.s: fcache.c.s
@@ -331,7 +748,7 @@ fcache.s: fcache.c.s
 
 # target to generate assembly for a file
 fcache.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fcache.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fcache.c.s
 .PHONY : fcache.c.s
 
 fragment.o: fragment.c.o
@@ -339,7 +756,7 @@ fragment.o: fragment.c.o
 
 # target to build an object file
 fragment.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fragment.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fragment.c.o
 .PHONY : fragment.c.o
 
 fragment.i: fragment.c.i
@@ -347,7 +764,7 @@ fragment.i: fragment.c.i
 
 # target to preprocess a source file
 fragment.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fragment.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fragment.c.i
 .PHONY : fragment.c.i
 
 fragment.s: fragment.c.s
@@ -355,7 +772,7 @@ fragment.s: fragment.c.s
 
 # target to generate assembly for a file
 fragment.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fragment.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/fragment.c.s
 .PHONY : fragment.c.s
 
 hashtable.o: hashtable.c.o
@@ -363,7 +780,7 @@ hashtable.o: hashtable.c.o
 
 # target to build an object file
 hashtable.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hashtable.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hashtable.c.o
 .PHONY : hashtable.c.o
 
 hashtable.i: hashtable.c.i
@@ -371,7 +788,7 @@ hashtable.i: hashtable.c.i
 
 # target to preprocess a source file
 hashtable.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hashtable.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hashtable.c.i
 .PHONY : hashtable.c.i
 
 hashtable.s: hashtable.c.s
@@ -379,7 +796,7 @@ hashtable.s: hashtable.c.s
 
 # target to generate assembly for a file
 hashtable.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hashtable.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hashtable.c.s
 .PHONY : hashtable.c.s
 
 heap.o: heap.c.o
@@ -387,7 +804,7 @@ heap.o: heap.c.o
 
 # target to build an object file
 heap.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/heap.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/heap.c.o
 .PHONY : heap.c.o
 
 heap.i: heap.c.i
@@ -395,7 +812,7 @@ heap.i: heap.c.i
 
 # target to preprocess a source file
 heap.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/heap.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/heap.c.i
 .PHONY : heap.c.i
 
 heap.s: heap.c.s
@@ -403,7 +820,7 @@ heap.s: heap.c.s
 
 # target to generate assembly for a file
 heap.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/heap.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/heap.c.s
 .PHONY : heap.c.s
 
 hotpatch.o: hotpatch.c.o
@@ -411,7 +828,7 @@ hotpatch.o: hotpatch.c.o
 
 # target to build an object file
 hotpatch.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hotpatch.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hotpatch.c.o
 .PHONY : hotpatch.c.o
 
 hotpatch.i: hotpatch.c.i
@@ -419,7 +836,7 @@ hotpatch.i: hotpatch.c.i
 
 # target to preprocess a source file
 hotpatch.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hotpatch.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hotpatch.c.i
 .PHONY : hotpatch.c.i
 
 hotpatch.s: hotpatch.c.s
@@ -427,7 +844,7 @@ hotpatch.s: hotpatch.c.s
 
 # target to generate assembly for a file
 hotpatch.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hotpatch.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/hotpatch.c.s
 .PHONY : hotpatch.c.s
 
 instrlist.o: instrlist.c.o
@@ -435,7 +852,7 @@ instrlist.o: instrlist.c.o
 
 # target to build an object file
 instrlist.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/instrlist.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/instrlist.c.o
 .PHONY : instrlist.c.o
 
 instrlist.i: instrlist.c.i
@@ -443,7 +860,7 @@ instrlist.i: instrlist.c.i
 
 # target to preprocess a source file
 instrlist.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/instrlist.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/instrlist.c.i
 .PHONY : instrlist.c.i
 
 instrlist.s: instrlist.c.s
@@ -451,7 +868,7 @@ instrlist.s: instrlist.c.s
 
 # target to generate assembly for a file
 instrlist.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/instrlist.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/instrlist.c.s
 .PHONY : instrlist.c.s
 
 io.o: io.c.o
@@ -459,7 +876,7 @@ io.o: io.c.o
 
 # target to build an object file
 io.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/io.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/io.c.o
 .PHONY : io.c.o
 
 io.i: io.c.i
@@ -467,7 +884,7 @@ io.i: io.c.i
 
 # target to preprocess a source file
 io.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/io.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/io.c.i
 .PHONY : io.c.i
 
 io.s: io.c.s
@@ -475,7 +892,7 @@ io.s: io.c.s
 
 # target to generate assembly for a file
 io.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/io.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/io.c.s
 .PHONY : io.c.s
 
 link.o: link.c.o
@@ -483,7 +900,7 @@ link.o: link.c.o
 
 # target to build an object file
 link.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/link.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/link.c.o
 .PHONY : link.c.o
 
 link.i: link.c.i
@@ -491,7 +908,7 @@ link.i: link.c.i
 
 # target to preprocess a source file
 link.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/link.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/link.c.i
 .PHONY : link.c.i
 
 link.s: link.c.s
@@ -499,7 +916,7 @@ link.s: link.c.s
 
 # target to generate assembly for a file
 link.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/link.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/link.c.s
 .PHONY : link.c.s
 
 linux/diagnost.o: linux/diagnost.c.o
@@ -507,7 +924,7 @@ linux/diagnost.o: linux/diagnost.c.o
 
 # target to build an object file
 linux/diagnost.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/diagnost.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/diagnost.c.o
 .PHONY : linux/diagnost.c.o
 
 linux/diagnost.i: linux/diagnost.c.i
@@ -515,7 +932,7 @@ linux/diagnost.i: linux/diagnost.c.i
 
 # target to preprocess a source file
 linux/diagnost.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/diagnost.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/diagnost.c.i
 .PHONY : linux/diagnost.c.i
 
 linux/diagnost.s: linux/diagnost.c.s
@@ -523,7 +940,7 @@ linux/diagnost.s: linux/diagnost.c.s
 
 # target to generate assembly for a file
 linux/diagnost.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/diagnost.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/diagnost.c.s
 .PHONY : linux/diagnost.c.s
 
 linux/module.o: linux/module.c.o
@@ -531,7 +948,7 @@ linux/module.o: linux/module.c.o
 
 # target to build an object file
 linux/module.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/module.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/module.c.o
 .PHONY : linux/module.c.o
 
 linux/module.i: linux/module.c.i
@@ -539,7 +956,7 @@ linux/module.i: linux/module.c.i
 
 # target to preprocess a source file
 linux/module.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/module.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/module.c.i
 .PHONY : linux/module.c.i
 
 linux/module.s: linux/module.c.s
@@ -547,7 +964,7 @@ linux/module.s: linux/module.c.s
 
 # target to generate assembly for a file
 linux/module.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/module.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/module.c.s
 .PHONY : linux/module.c.s
 
 linux/os.o: linux/os.c.o
@@ -555,8 +972,8 @@ linux/os.o: linux/os.c.o
 
 # target to build an object file
 linux/os.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/os.c.o
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/os.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/os.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/os.c.o
 .PHONY : linux/os.c.o
 
 linux/os.i: linux/os.c.i
@@ -564,8 +981,8 @@ linux/os.i: linux/os.c.i
 
 # target to preprocess a source file
 linux/os.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/os.c.i
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/os.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/os.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/os.c.i
 .PHONY : linux/os.c.i
 
 linux/os.s: linux/os.c.s
@@ -573,8 +990,8 @@ linux/os.s: linux/os.c.s
 
 # target to generate assembly for a file
 linux/os.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/os.c.s
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/os.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/os.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/os.c.s
 .PHONY : linux/os.c.s
 
 linux/pcprofile.o: linux/pcprofile.c.o
@@ -582,7 +999,7 @@ linux/pcprofile.o: linux/pcprofile.c.o
 
 # target to build an object file
 linux/pcprofile.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.o
 .PHONY : linux/pcprofile.c.o
 
 linux/pcprofile.i: linux/pcprofile.c.i
@@ -590,7 +1007,7 @@ linux/pcprofile.i: linux/pcprofile.c.i
 
 # target to preprocess a source file
 linux/pcprofile.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.i
 .PHONY : linux/pcprofile.c.i
 
 linux/pcprofile.s: linux/pcprofile.c.s
@@ -598,7 +1015,7 @@ linux/pcprofile.s: linux/pcprofile.c.s
 
 # target to generate assembly for a file
 linux/pcprofile.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/pcprofile.c.s
 .PHONY : linux/pcprofile.c.s
 
 linux/preload.o: linux/preload.c.o
@@ -606,7 +1023,7 @@ linux/preload.o: linux/preload.c.o
 
 # target to build an object file
 linux/preload.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/preload.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/preload.c.o
 .PHONY : linux/preload.c.o
 
 linux/preload.i: linux/preload.c.i
@@ -614,7 +1031,7 @@ linux/preload.i: linux/preload.c.i
 
 # target to preprocess a source file
 linux/preload.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/preload.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/preload.c.i
 .PHONY : linux/preload.c.i
 
 linux/preload.s: linux/preload.c.s
@@ -622,7 +1039,7 @@ linux/preload.s: linux/preload.c.s
 
 # target to generate assembly for a file
 linux/preload.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/preload.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/linux/preload.c.s
 .PHONY : linux/preload.c.s
 
 linux/signal.o: linux/signal.c.o
@@ -630,7 +1047,7 @@ linux/signal.o: linux/signal.c.o
 
 # target to build an object file
 linux/signal.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/signal.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/signal.c.o
 .PHONY : linux/signal.c.o
 
 linux/signal.i: linux/signal.c.i
@@ -638,7 +1055,7 @@ linux/signal.i: linux/signal.c.i
 
 # target to preprocess a source file
 linux/signal.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/signal.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/signal.c.i
 .PHONY : linux/signal.c.i
 
 linux/signal.s: linux/signal.c.s
@@ -646,7 +1063,7 @@ linux/signal.s: linux/signal.c.s
 
 # target to generate assembly for a file
 linux/signal.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/signal.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/signal.c.s
 .PHONY : linux/signal.c.s
 
 linux/stackdump.o: linux/stackdump.c.o
@@ -654,7 +1071,7 @@ linux/stackdump.o: linux/stackdump.c.o
 
 # target to build an object file
 linux/stackdump.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/stackdump.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/stackdump.c.o
 .PHONY : linux/stackdump.c.o
 
 linux/stackdump.i: linux/stackdump.c.i
@@ -662,7 +1079,7 @@ linux/stackdump.i: linux/stackdump.c.i
 
 # target to preprocess a source file
 linux/stackdump.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/stackdump.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/stackdump.c.i
 .PHONY : linux/stackdump.c.i
 
 linux/stackdump.s: linux/stackdump.c.s
@@ -670,7 +1087,7 @@ linux/stackdump.s: linux/stackdump.c.s
 
 # target to generate assembly for a file
 linux/stackdump.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/stackdump.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/linux/stackdump.c.s
 .PHONY : linux/stackdump.c.s
 
 loader_shared.o: loader_shared.c.o
@@ -678,7 +1095,7 @@ loader_shared.o: loader_shared.c.o
 
 # target to build an object file
 loader_shared.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/loader_shared.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/loader_shared.c.o
 .PHONY : loader_shared.c.o
 
 loader_shared.i: loader_shared.c.i
@@ -686,7 +1103,7 @@ loader_shared.i: loader_shared.c.i
 
 # target to preprocess a source file
 loader_shared.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/loader_shared.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/loader_shared.c.i
 .PHONY : loader_shared.c.i
 
 loader_shared.s: loader_shared.c.s
@@ -694,7 +1111,7 @@ loader_shared.s: loader_shared.c.s
 
 # target to generate assembly for a file
 loader_shared.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/loader_shared.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/loader_shared.c.s
 .PHONY : loader_shared.c.s
 
 module_list.o: module_list.c.o
@@ -702,7 +1119,7 @@ module_list.o: module_list.c.o
 
 # target to build an object file
 module_list.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/module_list.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/module_list.c.o
 .PHONY : module_list.c.o
 
 module_list.i: module_list.c.i
@@ -710,7 +1127,7 @@ module_list.i: module_list.c.i
 
 # target to preprocess a source file
 module_list.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/module_list.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/module_list.c.i
 .PHONY : module_list.c.i
 
 module_list.s: module_list.c.s
@@ -718,7 +1135,7 @@ module_list.s: module_list.c.s
 
 # target to generate assembly for a file
 module_list.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/module_list.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/module_list.c.s
 .PHONY : module_list.c.s
 
 moduledb.o: moduledb.c.o
@@ -726,7 +1143,7 @@ moduledb.o: moduledb.c.o
 
 # target to build an object file
 moduledb.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/moduledb.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/moduledb.c.o
 .PHONY : moduledb.c.o
 
 moduledb.i: moduledb.c.i
@@ -734,7 +1151,7 @@ moduledb.i: moduledb.c.i
 
 # target to preprocess a source file
 moduledb.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/moduledb.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/moduledb.c.i
 .PHONY : moduledb.c.i
 
 moduledb.s: moduledb.c.s
@@ -742,7 +1159,7 @@ moduledb.s: moduledb.c.s
 
 # target to generate assembly for a file
 moduledb.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/moduledb.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/moduledb.c.s
 .PHONY : moduledb.c.s
 
 monitor.o: monitor.c.o
@@ -750,7 +1167,7 @@ monitor.o: monitor.c.o
 
 # target to build an object file
 monitor.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/monitor.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/monitor.c.o
 .PHONY : monitor.c.o
 
 monitor.i: monitor.c.i
@@ -758,7 +1175,7 @@ monitor.i: monitor.c.i
 
 # target to preprocess a source file
 monitor.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/monitor.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/monitor.c.i
 .PHONY : monitor.c.i
 
 monitor.s: monitor.c.s
@@ -766,7 +1183,7 @@ monitor.s: monitor.c.s
 
 # target to generate assembly for a file
 monitor.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/monitor.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/monitor.c.s
 .PHONY : monitor.c.s
 
 nudge.o: nudge.c.o
@@ -774,7 +1191,7 @@ nudge.o: nudge.c.o
 
 # target to build an object file
 nudge.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/nudge.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/nudge.c.o
 .PHONY : nudge.c.o
 
 nudge.i: nudge.c.i
@@ -782,7 +1199,7 @@ nudge.i: nudge.c.i
 
 # target to preprocess a source file
 nudge.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/nudge.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/nudge.c.i
 .PHONY : nudge.c.i
 
 nudge.s: nudge.c.s
@@ -790,7 +1207,7 @@ nudge.s: nudge.c.s
 
 # target to generate assembly for a file
 nudge.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/nudge.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/nudge.c.s
 .PHONY : nudge.c.s
 
 options.o: options.c.o
@@ -798,7 +1215,7 @@ options.o: options.c.o
 
 # target to build an object file
 options.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/options.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/options.c.o
 .PHONY : options.c.o
 
 options.i: options.c.i
@@ -806,7 +1223,7 @@ options.i: options.c.i
 
 # target to preprocess a source file
 options.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/options.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/options.c.i
 .PHONY : options.c.i
 
 options.s: options.c.s
@@ -814,7 +1231,7 @@ options.s: options.c.s
 
 # target to generate assembly for a file
 options.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/options.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/options.c.s
 .PHONY : options.c.s
 
 perfctr.o: perfctr.c.o
@@ -822,7 +1239,7 @@ perfctr.o: perfctr.c.o
 
 # target to build an object file
 perfctr.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perfctr.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perfctr.c.o
 .PHONY : perfctr.c.o
 
 perfctr.i: perfctr.c.i
@@ -830,7 +1247,7 @@ perfctr.i: perfctr.c.i
 
 # target to preprocess a source file
 perfctr.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perfctr.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perfctr.c.i
 .PHONY : perfctr.c.i
 
 perfctr.s: perfctr.c.s
@@ -838,7 +1255,7 @@ perfctr.s: perfctr.c.s
 
 # target to generate assembly for a file
 perfctr.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perfctr.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perfctr.c.s
 .PHONY : perfctr.c.s
 
 perscache.o: perscache.c.o
@@ -846,7 +1263,7 @@ perscache.o: perscache.c.o
 
 # target to build an object file
 perscache.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perscache.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perscache.c.o
 .PHONY : perscache.c.o
 
 perscache.i: perscache.c.i
@@ -854,7 +1271,7 @@ perscache.i: perscache.c.i
 
 # target to preprocess a source file
 perscache.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perscache.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perscache.c.i
 .PHONY : perscache.c.i
 
 perscache.s: perscache.c.s
@@ -862,7 +1279,7 @@ perscache.s: perscache.c.s
 
 # target to generate assembly for a file
 perscache.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perscache.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/perscache.c.s
 .PHONY : perscache.c.s
 
 rct.o: rct.c.o
@@ -870,7 +1287,7 @@ rct.o: rct.c.o
 
 # target to build an object file
 rct.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/rct.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/rct.c.o
 .PHONY : rct.c.o
 
 rct.i: rct.c.i
@@ -878,7 +1295,7 @@ rct.i: rct.c.i
 
 # target to preprocess a source file
 rct.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/rct.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/rct.c.i
 .PHONY : rct.c.i
 
 rct.s: rct.c.s
@@ -886,7 +1303,7 @@ rct.s: rct.c.s
 
 # target to generate assembly for a file
 rct.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/rct.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/rct.c.s
 .PHONY : rct.c.s
 
 stats.o: stats.c.o
@@ -894,7 +1311,7 @@ stats.o: stats.c.o
 
 # target to build an object file
 stats.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/stats.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/stats.c.o
 .PHONY : stats.c.o
 
 stats.i: stats.c.i
@@ -902,7 +1319,7 @@ stats.i: stats.c.i
 
 # target to preprocess a source file
 stats.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/stats.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/stats.c.i
 .PHONY : stats.c.i
 
 stats.s: stats.c.s
@@ -910,7 +1327,7 @@ stats.s: stats.c.s
 
 # target to generate assembly for a file
 stats.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/stats.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/stats.c.s
 .PHONY : stats.c.s
 
 synch.o: synch.c.o
@@ -918,7 +1335,7 @@ synch.o: synch.c.o
 
 # target to build an object file
 synch.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/synch.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/synch.c.o
 .PHONY : synch.c.o
 
 synch.i: synch.c.i
@@ -926,7 +1343,7 @@ synch.i: synch.c.i
 
 # target to preprocess a source file
 synch.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/synch.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/synch.c.i
 .PHONY : synch.c.i
 
 synch.s: synch.c.s
@@ -934,7 +1351,7 @@ synch.s: synch.c.s
 
 # target to generate assembly for a file
 synch.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/synch.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/synch.c.s
 .PHONY : synch.c.s
 
 utils.o: utils.c.o
@@ -942,7 +1359,7 @@ utils.o: utils.c.o
 
 # target to build an object file
 utils.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/utils.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/utils.c.o
 .PHONY : utils.c.o
 
 utils.i: utils.c.i
@@ -950,7 +1367,7 @@ utils.i: utils.c.i
 
 # target to preprocess a source file
 utils.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/utils.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/utils.c.i
 .PHONY : utils.c.i
 
 utils.s: utils.c.s
@@ -958,7 +1375,7 @@ utils.s: utils.c.s
 
 # target to generate assembly for a file
 utils.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/utils.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/utils.c.s
 .PHONY : utils.c.s
 
 vmareas.o: vmareas.c.o
@@ -966,7 +1383,7 @@ vmareas.o: vmareas.c.o
 
 # target to build an object file
 vmareas.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/vmareas.c.o
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/vmareas.c.o
 .PHONY : vmareas.c.o
 
 vmareas.i: vmareas.c.i
@@ -974,7 +1391,7 @@ vmareas.i: vmareas.c.i
 
 # target to preprocess a source file
 vmareas.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/vmareas.c.i
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/vmareas.c.i
 .PHONY : vmareas.c.i
 
 vmareas.s: vmareas.c.s
@@ -982,425 +1399,8 @@ vmareas.s: vmareas.c.s
 
 # target to generate assembly for a file
 vmareas.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/vmareas.c.s
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/vmareas.c.s
 .PHONY : vmareas.c.s
-
-x86/arch.o: x86/arch.c.o
-.PHONY : x86/arch.o
-
-# target to build an object file
-x86/arch.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/arch.c.o
-.PHONY : x86/arch.c.o
-
-x86/arch.i: x86/arch.c.i
-.PHONY : x86/arch.i
-
-# target to preprocess a source file
-x86/arch.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/arch.c.i
-.PHONY : x86/arch.c.i
-
-x86/arch.s: x86/arch.c.s
-.PHONY : x86/arch.s
-
-# target to generate assembly for a file
-x86/arch.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/arch.c.s
-.PHONY : x86/arch.c.s
-
-x86/decode.o: x86/decode.c.o
-.PHONY : x86/decode.o
-
-# target to build an object file
-x86/decode.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode.c.o
-.PHONY : x86/decode.c.o
-
-x86/decode.i: x86/decode.c.i
-.PHONY : x86/decode.i
-
-# target to preprocess a source file
-x86/decode.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode.c.i
-.PHONY : x86/decode.c.i
-
-x86/decode.s: x86/decode.c.s
-.PHONY : x86/decode.s
-
-# target to generate assembly for a file
-x86/decode.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode.c.s
-.PHONY : x86/decode.c.s
-
-x86/decode_fast.o: x86/decode_fast.c.o
-.PHONY : x86/decode_fast.o
-
-# target to build an object file
-x86/decode_fast.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode_fast.c.o
-.PHONY : x86/decode_fast.c.o
-
-x86/decode_fast.i: x86/decode_fast.c.i
-.PHONY : x86/decode_fast.i
-
-# target to preprocess a source file
-x86/decode_fast.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode_fast.c.i
-.PHONY : x86/decode_fast.c.i
-
-x86/decode_fast.s: x86/decode_fast.c.s
-.PHONY : x86/decode_fast.s
-
-# target to generate assembly for a file
-x86/decode_fast.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode_fast.c.s
-.PHONY : x86/decode_fast.c.s
-
-x86/decode_table.o: x86/decode_table.c.o
-.PHONY : x86/decode_table.o
-
-# target to build an object file
-x86/decode_table.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode_table.c.o
-.PHONY : x86/decode_table.c.o
-
-x86/decode_table.i: x86/decode_table.c.i
-.PHONY : x86/decode_table.i
-
-# target to preprocess a source file
-x86/decode_table.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode_table.c.i
-.PHONY : x86/decode_table.c.i
-
-x86/decode_table.s: x86/decode_table.c.s
-.PHONY : x86/decode_table.s
-
-# target to generate assembly for a file
-x86/decode_table.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/decode_table.c.s
-.PHONY : x86/decode_table.c.s
-
-x86/disassemble.o: x86/disassemble.c.o
-.PHONY : x86/disassemble.o
-
-# target to build an object file
-x86/disassemble.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/disassemble.c.o
-.PHONY : x86/disassemble.c.o
-
-x86/disassemble.i: x86/disassemble.c.i
-.PHONY : x86/disassemble.i
-
-# target to preprocess a source file
-x86/disassemble.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/disassemble.c.i
-.PHONY : x86/disassemble.c.i
-
-x86/disassemble.s: x86/disassemble.c.s
-.PHONY : x86/disassemble.s
-
-# target to generate assembly for a file
-x86/disassemble.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/disassemble.c.s
-.PHONY : x86/disassemble.c.s
-
-x86/emit_utils.o: x86/emit_utils.c.o
-.PHONY : x86/emit_utils.o
-
-# target to build an object file
-x86/emit_utils.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/emit_utils.c.o
-.PHONY : x86/emit_utils.c.o
-
-x86/emit_utils.i: x86/emit_utils.c.i
-.PHONY : x86/emit_utils.i
-
-# target to preprocess a source file
-x86/emit_utils.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/emit_utils.c.i
-.PHONY : x86/emit_utils.c.i
-
-x86/emit_utils.s: x86/emit_utils.c.s
-.PHONY : x86/emit_utils.s
-
-# target to generate assembly for a file
-x86/emit_utils.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/emit_utils.c.s
-.PHONY : x86/emit_utils.c.s
-
-x86/encode.o: x86/encode.c.o
-.PHONY : x86/encode.o
-
-# target to build an object file
-x86/encode.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/encode.c.o
-.PHONY : x86/encode.c.o
-
-x86/encode.i: x86/encode.c.i
-.PHONY : x86/encode.i
-
-# target to preprocess a source file
-x86/encode.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/encode.c.i
-.PHONY : x86/encode.c.i
-
-x86/encode.s: x86/encode.c.s
-.PHONY : x86/encode.s
-
-# target to generate assembly for a file
-x86/encode.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/encode.c.s
-.PHONY : x86/encode.c.s
-
-x86/instr.o: x86/instr.c.o
-.PHONY : x86/instr.o
-
-# target to build an object file
-x86/instr.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/instr.c.o
-.PHONY : x86/instr.c.o
-
-x86/instr.i: x86/instr.c.i
-.PHONY : x86/instr.i
-
-# target to preprocess a source file
-x86/instr.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/instr.c.i
-.PHONY : x86/instr.c.i
-
-x86/instr.s: x86/instr.c.s
-.PHONY : x86/instr.s
-
-# target to generate assembly for a file
-x86/instr.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/instr.c.s
-.PHONY : x86/instr.c.s
-
-x86/instrument.o: x86/instrument.c.o
-.PHONY : x86/instrument.o
-
-# target to build an object file
-x86/instrument.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/instrument.c.o
-.PHONY : x86/instrument.c.o
-
-x86/instrument.i: x86/instrument.c.i
-.PHONY : x86/instrument.i
-
-# target to preprocess a source file
-x86/instrument.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/instrument.c.i
-.PHONY : x86/instrument.c.i
-
-x86/instrument.s: x86/instrument.c.s
-.PHONY : x86/instrument.s
-
-# target to generate assembly for a file
-x86/instrument.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/instrument.c.s
-.PHONY : x86/instrument.c.s
-
-x86/interp.o: x86/interp.c.o
-.PHONY : x86/interp.o
-
-# target to build an object file
-x86/interp.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/interp.c.o
-.PHONY : x86/interp.c.o
-
-x86/interp.i: x86/interp.c.i
-.PHONY : x86/interp.i
-
-# target to preprocess a source file
-x86/interp.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/interp.c.i
-.PHONY : x86/interp.c.i
-
-x86/interp.s: x86/interp.c.s
-.PHONY : x86/interp.s
-
-# target to generate assembly for a file
-x86/interp.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/interp.c.s
-.PHONY : x86/interp.c.s
-
-x86/mangle.o: x86/mangle.c.o
-.PHONY : x86/mangle.o
-
-# target to build an object file
-x86/mangle.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/mangle.c.o
-.PHONY : x86/mangle.c.o
-
-x86/mangle.i: x86/mangle.c.i
-.PHONY : x86/mangle.i
-
-# target to preprocess a source file
-x86/mangle.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/mangle.c.i
-.PHONY : x86/mangle.c.i
-
-x86/mangle.s: x86/mangle.c.s
-.PHONY : x86/mangle.s
-
-# target to generate assembly for a file
-x86/mangle.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/mangle.c.s
-.PHONY : x86/mangle.c.s
-
-x86/optimize.o: x86/optimize.c.o
-.PHONY : x86/optimize.o
-
-# target to build an object file
-x86/optimize.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/optimize.c.o
-.PHONY : x86/optimize.c.o
-
-x86/optimize.i: x86/optimize.c.i
-.PHONY : x86/optimize.i
-
-# target to preprocess a source file
-x86/optimize.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/optimize.c.i
-.PHONY : x86/optimize.c.i
-
-x86/optimize.s: x86/optimize.c.s
-.PHONY : x86/optimize.s
-
-# target to generate assembly for a file
-x86/optimize.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/optimize.c.s
-.PHONY : x86/optimize.c.s
-
-x86/proc.o: x86/proc.c.o
-.PHONY : x86/proc.o
-
-# target to build an object file
-x86/proc.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/proc.c.o
-.PHONY : x86/proc.c.o
-
-x86/proc.i: x86/proc.c.i
-.PHONY : x86/proc.i
-
-# target to preprocess a source file
-x86/proc.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/proc.c.i
-.PHONY : x86/proc.c.i
-
-x86/proc.s: x86/proc.c.s
-.PHONY : x86/proc.s
-
-# target to generate assembly for a file
-x86/proc.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/proc.c.s
-.PHONY : x86/proc.c.s
-
-x86/retcheck.o: x86/retcheck.c.o
-.PHONY : x86/retcheck.o
-
-# target to build an object file
-x86/retcheck.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/retcheck.c.o
-.PHONY : x86/retcheck.c.o
-
-x86/retcheck.i: x86/retcheck.c.i
-.PHONY : x86/retcheck.i
-
-# target to preprocess a source file
-x86/retcheck.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/retcheck.c.i
-.PHONY : x86/retcheck.c.i
-
-x86/retcheck.s: x86/retcheck.c.s
-.PHONY : x86/retcheck.s
-
-# target to generate assembly for a file
-x86/retcheck.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/retcheck.c.s
-.PHONY : x86/retcheck.c.s
-
-x86/sideline.o: x86/sideline.c.o
-.PHONY : x86/sideline.o
-
-# target to build an object file
-x86/sideline.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/sideline.c.o
-.PHONY : x86/sideline.c.o
-
-x86/sideline.i: x86/sideline.c.i
-.PHONY : x86/sideline.i
-
-# target to preprocess a source file
-x86/sideline.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/sideline.c.i
-.PHONY : x86/sideline.c.i
-
-x86/sideline.s: x86/sideline.c.s
-.PHONY : x86/sideline.s
-
-# target to generate assembly for a file
-x86/sideline.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/sideline.c.s
-.PHONY : x86/sideline.c.s
-
-x86/steal_reg.o: x86/steal_reg.c.o
-.PHONY : x86/steal_reg.o
-
-# target to build an object file
-x86/steal_reg.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/steal_reg.c.o
-.PHONY : x86/steal_reg.c.o
-
-x86/steal_reg.i: x86/steal_reg.c.i
-.PHONY : x86/steal_reg.i
-
-# target to preprocess a source file
-x86/steal_reg.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/steal_reg.c.i
-.PHONY : x86/steal_reg.c.i
-
-x86/steal_reg.s: x86/steal_reg.c.s
-.PHONY : x86/steal_reg.s
-
-# target to generate assembly for a file
-x86/steal_reg.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/steal_reg.c.s
-.PHONY : x86/steal_reg.c.s
-
-x86/x86.o: x86/x86.asm.o
-.PHONY : x86/x86.o
-
-# target to build an object file
-x86/x86.asm.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/drpreload.dir/build.make core/CMakeFiles/drpreload.dir/x86/x86.asm.o
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/x86.asm.o
-.PHONY : x86/x86.asm.o
-
-x86/x86_code.o: x86/x86_code.c.o
-.PHONY : x86/x86_code.o
-
-# target to build an object file
-x86/x86_code.c.o:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/x86_code.c.o
-.PHONY : x86/x86_code.c.o
-
-x86/x86_code.i: x86/x86_code.c.i
-.PHONY : x86/x86_code.i
-
-# target to preprocess a source file
-x86/x86_code.c.i:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/x86_code.c.i
-.PHONY : x86/x86_code.c.i
-
-x86/x86_code.s: x86/x86_code.c.s
-.PHONY : x86/x86_code.s
-
-# target to generate assembly for a file
-x86/x86_code.c.s:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(MAKE) -f core/CMakeFiles/dynamorio.dir/build.make core/CMakeFiles/dynamorio.dir/x86/x86_code.c.s
-.PHONY : x86/x86_code.c.s
 
 # Help Target
 help:
@@ -1418,6 +1418,58 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... Arm/arch.o"
+	@echo "... Arm/arch.i"
+	@echo "... Arm/arch.s"
+	@echo "... Arm/arm.o"
+	@echo "... Arm/decode.o"
+	@echo "... Arm/decode.i"
+	@echo "... Arm/decode.s"
+	@echo "... Arm/decode_fast.o"
+	@echo "... Arm/decode_fast.i"
+	@echo "... Arm/decode_fast.s"
+	@echo "... Arm/decode_table.o"
+	@echo "... Arm/decode_table.i"
+	@echo "... Arm/decode_table.s"
+	@echo "... Arm/disassemble.o"
+	@echo "... Arm/disassemble.i"
+	@echo "... Arm/disassemble.s"
+	@echo "... Arm/emit_utils.o"
+	@echo "... Arm/emit_utils.i"
+	@echo "... Arm/emit_utils.s"
+	@echo "... Arm/encode.o"
+	@echo "... Arm/encode.i"
+	@echo "... Arm/encode.s"
+	@echo "... Arm/instr.o"
+	@echo "... Arm/instr.i"
+	@echo "... Arm/instr.s"
+	@echo "... Arm/instrument.o"
+	@echo "... Arm/instrument.i"
+	@echo "... Arm/instrument.s"
+	@echo "... Arm/interp.o"
+	@echo "... Arm/interp.i"
+	@echo "... Arm/interp.s"
+	@echo "... Arm/mangle.o"
+	@echo "... Arm/mangle.i"
+	@echo "... Arm/mangle.s"
+	@echo "... Arm/optimize.o"
+	@echo "... Arm/optimize.i"
+	@echo "... Arm/optimize.s"
+	@echo "... Arm/proc.o"
+	@echo "... Arm/proc.i"
+	@echo "... Arm/proc.s"
+	@echo "... Arm/retcheck.o"
+	@echo "... Arm/retcheck.i"
+	@echo "... Arm/retcheck.s"
+	@echo "... Arm/sideline.o"
+	@echo "... Arm/sideline.i"
+	@echo "... Arm/sideline.s"
+	@echo "... Arm/steal_reg.o"
+	@echo "... Arm/steal_reg.i"
+	@echo "... Arm/steal_reg.s"
+	@echo "... Arm/x86_code.o"
+	@echo "... Arm/x86_code.i"
+	@echo "... Arm/x86_code.s"
 	@echo "... buildmark.o"
 	@echo "... buildmark.i"
 	@echo "... buildmark.s"
@@ -1517,58 +1569,6 @@ help:
 	@echo "... vmareas.o"
 	@echo "... vmareas.i"
 	@echo "... vmareas.s"
-	@echo "... x86/arch.o"
-	@echo "... x86/arch.i"
-	@echo "... x86/arch.s"
-	@echo "... x86/decode.o"
-	@echo "... x86/decode.i"
-	@echo "... x86/decode.s"
-	@echo "... x86/decode_fast.o"
-	@echo "... x86/decode_fast.i"
-	@echo "... x86/decode_fast.s"
-	@echo "... x86/decode_table.o"
-	@echo "... x86/decode_table.i"
-	@echo "... x86/decode_table.s"
-	@echo "... x86/disassemble.o"
-	@echo "... x86/disassemble.i"
-	@echo "... x86/disassemble.s"
-	@echo "... x86/emit_utils.o"
-	@echo "... x86/emit_utils.i"
-	@echo "... x86/emit_utils.s"
-	@echo "... x86/encode.o"
-	@echo "... x86/encode.i"
-	@echo "... x86/encode.s"
-	@echo "... x86/instr.o"
-	@echo "... x86/instr.i"
-	@echo "... x86/instr.s"
-	@echo "... x86/instrument.o"
-	@echo "... x86/instrument.i"
-	@echo "... x86/instrument.s"
-	@echo "... x86/interp.o"
-	@echo "... x86/interp.i"
-	@echo "... x86/interp.s"
-	@echo "... x86/mangle.o"
-	@echo "... x86/mangle.i"
-	@echo "... x86/mangle.s"
-	@echo "... x86/optimize.o"
-	@echo "... x86/optimize.i"
-	@echo "... x86/optimize.s"
-	@echo "... x86/proc.o"
-	@echo "... x86/proc.i"
-	@echo "... x86/proc.s"
-	@echo "... x86/retcheck.o"
-	@echo "... x86/retcheck.i"
-	@echo "... x86/retcheck.s"
-	@echo "... x86/sideline.o"
-	@echo "... x86/sideline.i"
-	@echo "... x86/sideline.s"
-	@echo "... x86/steal_reg.o"
-	@echo "... x86/steal_reg.i"
-	@echo "... x86/steal_reg.s"
-	@echo "... x86/x86.o"
-	@echo "... x86/x86_code.o"
-	@echo "... x86/x86_code.i"
-	@echo "... x86/x86_code.s"
 .PHONY : help
 
 
@@ -1580,6 +1580,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,1 @@
-/usr/bin/gcc  -fPIC   -m32 -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector  -fPIC -shared -nostartfiles -nodefaultlibs -lgcc   -shared -Wl,-soname,libstrace.so -o bin/libstrace.so CMakeFiles/strace.dir/strace.c.o ../../lib/libdynamorio.so.2.0 
-/usr/bin/objcopy --only-keep-debug bin/libstrace.so bin/libstrace.so.debug
-/usr/bin/objcopy --add-gnu-debuglink=bin/libstrace.so.debug bin/libstrace.so
-/usr/bin/strip -g -x -p bin/libstrace.so
+arm-none-linux-gnueabi-gcc  -fPIC   -std=gnu99 -fno-strict-aliasing -fvisibility=internal -O3    -DX86_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector  -fPIC -shared -nostartfiles -nodefaultlibs -lgcc   -shared -Wl,-soname,libstrace.so -o ../../lib/libstrace.so CMakeFiles/strace.dir/strace.c.o ../../lib/libdynamorio.so.2.0 

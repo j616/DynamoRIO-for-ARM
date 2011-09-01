@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/instrcalls.dir/instrcalls.c.o"
-  "bin/libinstrcalls.pdb"
-  "bin/libinstrcalls.so"
+  "../../lib/libinstrcalls.pdb"
+  "../../lib/libinstrcalls.so"
 )
 
 # Per-language clean rules from dependency scanning.

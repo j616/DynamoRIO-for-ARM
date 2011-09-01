@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/prefetch.dir/prefetch.c.o"
-  "bin/libprefetch.pdb"
-  "bin/libprefetch.so"
+  "../../lib/libprefetch.pdb"
+  "../../lib/libprefetch.so"
 )
 
 # Per-language clean rules from dependency scanning.

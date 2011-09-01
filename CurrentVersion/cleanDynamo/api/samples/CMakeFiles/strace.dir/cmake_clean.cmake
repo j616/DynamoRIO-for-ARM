@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/strace.dir/strace.c.o"
-  "bin/libstrace.pdb"
-  "bin/libstrace.so"
+  "../../lib/libstrace.pdb"
+  "../../lib/libstrace.so"
 )
 
 # Per-language clean rules from dependency scanning.

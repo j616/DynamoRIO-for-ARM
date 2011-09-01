@@ -46,7 +46,7 @@
 # * move info like "build core solely from DDK" from make/compiler.mk into
 #   HowToBuild.wiki
 ###########################################################################
-
+message(STATUS "Running CMakeLists.txt")
 cmake_minimum_required(VERSION 2.6)
 set(cmake_ver_string
   "${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_RELEASE_VERSION}")
@@ -79,6 +79,25 @@ endif (NOT DEFINED CMAKE_INSTALL_PREFIX)
 if (NOT DEFINED ENV{CXXFLAGS})
   set(ENV{CXXFLAGS} "$ENV{CFLAGS}")
 endif (NOT DEFINED ENV{CXXFLAGS})
+
+# ARM for the moment doesn't accept 64 bit so no need to do this.
+if (ARM)
+	if(ARM_CROSS)
+  set(CMAKE_C_COMPILER arm-none-linux-gnueabi-gcc)
+  set(CMAKE_CXX_COMPILER arm-none-linux-gnueabi-g++)
+  set(CMAKE_OBJCOPY arm-none-linux-gnueabi_objcopy)
+  set(CMAKE_STRIP arm-none-linux-gnueabi-strip)
+  set(CMAKE_ASM_COMPILER arm-none-linux-gnueabi-as)
+  set(CMAKE_LINKER arm-none-linux-gnueabi-ld)
+ endif(ARM_CROSS)
+  set(X64 OFF)
+else(ARM)
+if (CMAKE_C_SIZEOF_DATA_PTR EQUAL 8)
+    set(X64 ON)
+  else(CMAKE_C_SIZEOF_DATA_PTR EQUAL 8)
+    set(X64 OFF)
+  endif (CMAKE_C_SIZEOF_DATA_PTR EQUAL 8)
+endif(ARM)
 
 project(DynamoRIO NONE)
 if (DEFINED GENERATE_PDBS AND NOT GENERATE_PDBS)
@@ -122,24 +141,6 @@ endif (WIN32)
 # to come from CXXFLAGS).  (CMAKE_C_SIZEOF_DATA_PTR can be relied on
 # to be set in all CMake versions we support.)
 
-# ARM for the moment doesn't accept 64 bit so no need to do this.
-if (ARM)
-	if(ARM_CROSS)
-  set(CMAKE_C_COMPILER arm-none-linux-gnueabi-gcc)
-  set(CMAKE_CXX_COMPILER arm-none-linux-gnueabi-g++)
-  set(CMAKE_OBJCOPY arm-none-linux-gnueabi_objcopy)
-  set(CMAKE_STRIP arm-none-linux-gnueabi-strip)
-  set(CMAKE_ASM_COMPILER arm-none-linux-gnueabi-as)
-  set(CMAKE_LINKER arm-none-linux-gnueabi-ld)
- endif(ARM_CROSS)
-  set(X64 OFF)
-else(ARM)
-if (CMAKE_C_SIZEOF_DATA_PTR EQUAL 8)
-    set(X64 ON)
-  else(CMAKE_C_SIZEOF_DATA_PTR EQUAL 8)
-    set(X64 OFF)
-  endif (CMAKE_C_SIZEOF_DATA_PTR EQUAL 8)
-endif(ARM)
 
 option(VMKERNEL "target VMkernel (not officially supported yet)")
 option(MACOS "target MacOS (not officially supported yet)")
@@ -1062,7 +1063,7 @@ install(FILES
   ${PROJECT_BINARY_DIR}/cmake/DynamoRIOConfigVersion.cmake
   DESTINATION ${INSTALL_CMAKE}
 )
-message(${CMAKE_C_COMPILER})
+
 # Extensions (i#277/PR 540817)
 if (BUILD_EXT)
   add_subdirectory(ext)

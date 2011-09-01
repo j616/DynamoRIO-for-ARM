@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/bbcount.dir/bbcount.c.o"
-  "bin/libbbcount.pdb"
-  "bin/libbbcount.so"
+  "../../lib/libbbcount.pdb"
+  "../../lib/libbbcount.so"
 )
 
 # Per-language clean rules from dependency scanning.

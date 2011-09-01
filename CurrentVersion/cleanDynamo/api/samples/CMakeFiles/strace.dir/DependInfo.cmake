@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/strace.c" "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/strace.dir/strace.c.o"
+  "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/strace.c" "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/api/samples/CMakeFiles/strace.dir/strace.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,5 +15,5 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/james/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/core/CMakeFiles/dynamorio.dir/DependInfo.cmake"
+  "/home/james/data/Uni/summer11/DynamoRIO-for-ARM/CurrentVersion/cleanDynamo/core/CMakeFiles/dynamorio.dir/DependInfo.cmake"
   )
