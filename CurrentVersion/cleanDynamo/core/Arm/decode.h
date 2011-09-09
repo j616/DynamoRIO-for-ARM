@@ -63,6 +63,9 @@ typedef struct decode_info_t {
     byte *orig_pc;
 } decode_info_t;
 
+/* DR_API EXPORT TOFILE dr_ir_opnd.h */
+/* DR_API EXPORT BEGIN */
+
 enum {
     /* register enum values are used for TYPE_*REG */
     OPSZ_NA = REG_LAST_ENUM+1, /**< Sentinel value: not a valid size. */ /* = 139 */
@@ -143,6 +146,8 @@ enum {
                    *   used by insertps. */
     OPSZ_LAST,
 };
+/* DR_API EXPORT END */
+
 #else
 typedef struct {
     /* Holds address and data size prefixes, as well as the prefixes
@@ -168,6 +173,8 @@ enum {
     /* register enum values are used for TYPE_*REG */
     OPSZ_NA, /**< Sentinel value: not a valid size. */ /* = 139 */
 };
+
+/* DR_API EXPORT TOFILE dr_ir_utils.h */
 
 #endif
 #ifndef ARM
@@ -329,10 +336,14 @@ enum {
  */
 #define PREFIX_SIGNIFICANT (PREFIX_LOCK|PREFIX_JCC_TAKEN|PREFIX_JCC_TAKEN)
 
+/* DR_API EXPORT TOFILE dr_ir_instr.h */
+/* DR_API EXPORT BEGIN */
 
 #define PREFIX_LOCK           0x1 /**< Makes the instruction's memory accesses atomic. */
 #define PREFIX_JCC_NOT_TAKEN  0x2 /**< Branch hint: conditional branch is taken. */
 #define PREFIX_JCC_TAKEN      0x4 /**< Branch hint: conditional branch is not taken. */
+
+/* DR_API EXPORT END */
 
 /* branch hints show up as segment modifiers */
 #define SEG_JCC_NOT_TAKEN     SEG_CS
@@ -351,6 +362,9 @@ enum {
 #define X64_INVALID           0x10
 /* to avoid needing a single-valid-entry subtable in prefix_extensions */
 #define REQUIRES_PREFIX       0x20
+
+/* DR_API EXPORT TOFILE dr_ir_opcodes.h */
+
 /* exported tables */
 extern const instr_info_t first_byte[];
 extern const instr_info_t second_byte[];
@@ -445,6 +459,9 @@ enum {
                            * indirected size varies w/ data prefix, except 64-bit Intel */
 };
 
+/* DR_API EXPORT TOFILE dr_ir_opnd.h */
+/* DR_API EXPORT BEGIN */
+
 #ifdef X64
 # define OPSZ_PTR OPSZ_8       /**< Operand size for pointer values. */
 # define OPSZ_STACK OPSZ_8     /**< Operand size for stack push/pop operand sizes. */
@@ -480,6 +497,8 @@ enum {
 #define OPSZ_fxsave OPSZ_512         /**< Operand size for fxsave memory reference. */
 #define OPSZ_fxrstor OPSZ_512        /**< Operand size for fxrstor memory reference. */
 
+/* DR_API EXPORT END */
+
 enum {
     /* OPSZ_ constants not exposed to the user */
     OPSZ_4_of_8 = OPSZ_LAST,  /* 32 bits, but can be half of MMX register */
@@ -487,6 +506,5 @@ enum {
     OPSZ_8_of_16, /* 64 bits, but can be half of XMM register */
     OPSZ_LAST_ENUM /* note last is NOT inclusive */
 };
-/* DR_API EXPORT END */
 #endif
 #endif /* DECODE_H */

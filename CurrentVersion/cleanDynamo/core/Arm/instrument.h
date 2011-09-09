@@ -6,6 +6,18 @@
 #include "arch.h"
 #include "instr.h"
 
+/* DR_API EXPORT TOFILE dr_events.h */
+/* DR_API EXPORT BEGIN */
+
+/****************************************************************************
+ * ROUTINES TO REGISTER EVENT CALLBACKS
+ */
+/**
+ * @file dr_events.h
+ * @brief Event callback registration routines.
+ */
+/* DR_API EXPORT END */
+
 typedef enum {
     /** Emit as normal. */
     DR_EMIT_DEFAULT              =    0,
@@ -81,6 +93,11 @@ struct _module_data_t {
 #endif
 };
 
+/* DR_API EXPORT BEGIN */
+/****************************************************************************
+ * MODULE INFORMATION ROUTINES
+ */
+ 
 /** For dr_module_iterator_* interface */
 typedef void * dr_module_iterator_t;
 /**
@@ -100,6 +117,8 @@ typedef enum {
     CUSTOM_TRACE_CONTINUE
 } dr_custom_trace_action_t;
 
+/* DR_API EXPORT END */
+
 void instrument_load_client_libs(void);
 
 DR_API
@@ -111,7 +130,7 @@ DR_API
  * does not prevent modules from being loaded or unloaded while the iterator is being
  * walked.
  */
-dr_module_iterator_t *
+dr_module_iterator_t
 dr_module_iterator_start(void);
 
 

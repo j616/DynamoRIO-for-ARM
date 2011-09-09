@@ -1,5 +1,13 @@
 #ifndef _INSTR_CREATE_H_
 #define _INSTR_CREATE_H_ 1
+
+/* DR_API EXPORT TOFILE dr_ir_macros.h */
+/* DR_API EXPORT BEGIN */
+/**
+ * @file dr_ir_macros.h
+ * @breif Instruction creation convenience macros.
+ */
+
 /**
  * Creates an instr_t with opcode OP_LABEL.  An OP_LABEL instruction can be used as a
  * jump or call instr_t target, and when emitted it will take no space in the
@@ -12,3 +20,5 @@
   instr_create_1dst_1src((dc), OP_mov_ld, (d), (s))
 #endif
 #endif
+
+/* DR_API EXPORT END */

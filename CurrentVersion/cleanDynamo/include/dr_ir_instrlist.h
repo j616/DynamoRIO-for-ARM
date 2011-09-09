@@ -121,6 +121,94 @@ void
 instrlist_remove(instrlist_t *ilist, instr_t *instr);
 
 
+/** Sets the user-controlled note field in \p instr to \p value. */
+void
+instr_set_note(instr_t *instr, void *value);
+
+/**
+ * Performs instr_free() and then deallocates the thread-local heap
+ * storage for \p instr.
+ */
+void
+instr_destroy(void *drcontext, instr_t *instr);
+
+/** Sets the next field of \p instr to point to \p next. */
+void
+instr_set_next(instr_t *instr, instr_t *next);
+
+/** Sets the prev field of \p instr to point to \p prev. */
+void
+instr_set_prev(instr_t *instr, instr_t *prev);
+
+/**
+ * Gets the value of the user-controlled note field in \p instr.
+ * \note Important: is also used when emitting for targets that are other
+ * instructions, so make sure to clear or set appropriately the note field
+ * prior to emitting.
+ */
+void *
+instr_get_note(instr_t *instr);
+
+/**
+ * Returns an initialized instr_t allocated on the thread-local heap.
+ * Sets the x86/x64 mode of the returned instr_t to the mode of dcontext.
+ */
+instr_t*
+instr_create(void *drcontext);
+
+/**
+ * Performs both instr_free() and instr_init().
+ * \p instr must have been initialized.
+ */
+void
+instr_reset(void *drcontext, instr_t *instr);
+
+/**
+ * Deallocates all memory that was allocated by \p instr.  This
+ * includes raw bytes allocated by instr_allocate_raw_bits() and
+ * operands allocated by instr_set_num_opnds().  Does not deallocate
+ * the storage for \p instr itself.
+ */
+void
+instr_free(void *drcontext, instr_t *instr);
+
+/** Initializes \p instr.
+ * Sets the x86/x64 mode of \p instr to the mode of dcontext.
+ */
+void
+instr_init(void *drcontext, instr_t *instr);
+
+/**
+ * Return true iff \p instr is not a meta-instruction
+ * (see instr_set_ok_to_mangle() for more information).
+ */
+bool
+instr_ok_to_mangle(instr_t *instr);
+
+/**
+ * Sets \p instr to "ok to mangle" if \p val is true and "not ok to
+ * mangle" if \p val is false.  An instruction that is "not ok to
+ * mangle" is treated by DR as a "meta-instruction", distinct from
+ * normal application instructions, and is not mangled in any way.
+ * This is necessary to have DR not create an exit stub for a direct
+ * jump.  All non-meta instructions that are added to basic blocks or
+ * traces should have their translation fields set (via
+ * #instr_set_translation(), or the convenience routine
+ * #instr_set_meta_no_translation()) when recreating state at a fault;
+ * meta instructions should not fault and are not considered
+ * application instructions but rather added instrumentation code (see
+ * #dr_register_bb_event() for further information on recreating).
+ *
+ * \note For meta-instructions that can fault but only when accessing
+ * client memory and that never access application memory, the
+ * "meta-instruction that can fault" property can be set via
+ * #instr_set_meta_may_fault to avoid incurring the cost of added
+ * sandboxing checks that look for changes to application code.
+ */
+void
+instr_set_ok_to_mangle(instr_t *instr, bool val);
+
+
 /**
  * Assumes that \p instr does not currently have any raw bits allocated.
  * Sets \p instr's raw bits to be \p length bytes starting at \p addr.
@@ -160,22 +248,6 @@ instr_set_raw_bits_valid(instr_t *instr, bool valid);
 /** Sets \p instr's operands to be valid if \p valid is true, invalid otherwise. */
 void
 instr_set_operands_valid(instr_t *instr, bool valid);
-
-
-/**
- * Decodes the instruction at address \p pc into \p instr, filling in the
- * instruction's opcode, eflags usage, prefixes, and operands.
- * The instruction's raw bits are set to valid and pointed at \p pc
- * (xref instr_get_raw_bits()).
- * Assumes that \p instr is already initialized, but uses the x86/x64 mode
- * for the thread \p dcontext rather than that set in instr.
- * If caller is re-using same instr_t struct over multiple decodings,
- * caller should call instr_reset() or instr_reuse().
- * Returns the address of the next byte after the decoded instruction.
- * Returns NULL on decoding an invalid instr and sets opcode to OP_INVALID.
- */
-byte *
-decode(void *drcontext, byte *pc, instr_t *instr);
 
 
 #endif /* _DR_IR_INSTRLIST_H_ */

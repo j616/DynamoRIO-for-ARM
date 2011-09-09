@@ -528,6 +528,19 @@ instr_is_exit_cti(instr_t *instr);
 
 int instr_exit_branch_type(instr_t *instr);
 
+/* DR_API EXPORT TOFILE dr_ir_instr.h */
+
+/* DR_API EXPORT BEGIN */
+/****************************************************************************
+ * INSTR ROUTINES
+ */
+/**
+ * @file dr_ir_instr.h
+ * @brief Functions to create and manipulate instructions.
+ */
+ 
+/* DR_API EXPORT END */
+
 DR_API
 /** Return the taken target pc of the (direct branch) instruction. */
 app_pc
@@ -548,6 +561,8 @@ DR_API
 bool
 instr_ok_to_emit(instr_t *instr);
 
+/* DR_API EXPORT TOFILE dr_ir_instr.h */
+
 DR_API
 /**
  * Encodes \p instr into the memory at \p pc.
@@ -559,6 +574,8 @@ DR_API
  */
 byte *
 instr_encode(dcontext_t *dcontext, instr_t *instr, byte *pc);
+
+/* DR_API EXPORT TOFILE dr_ir_instrlist.h */
 
 DR_API
 /** Sets the user-controlled note field in \p instr to \p value. */

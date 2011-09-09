@@ -1,6 +1,16 @@
 #ifndef _PROC_H_
 #define _PROC_H_ 1
 
+/* DR_API EXPORT TOFILE dr_proc.h */
+/* DR_API EXPORT BEGIN */
+/****************************************************************************
+ * PROCESSOR-SPECIFIC UTILITY ROUTINES AND CONSTANTS
+ */
+/**
+ * @file dr_proc.h
+ * @brief Utility routines for identifying features of the processor.
+ */
+
 void proc_init(void);
 /* page size is 4K on all DR-supported platforms */
 #define PAGE_SIZE (4*1024) /**< Size of a page of memory. */

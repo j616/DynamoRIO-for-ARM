@@ -311,7 +311,7 @@ add_client_lib(char *path, char *id_str, char *options)
 
 DR_API
 /* Initialize a new client module iterator. */
-dr_module_iterator_t *
+dr_module_iterator_t 
 dr_module_iterator_start(void)
 {
 	// COMPLETEDD #594 dr_module_iterator_start

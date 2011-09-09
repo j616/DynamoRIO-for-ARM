@@ -2,6 +2,17 @@
 #define _INSTR_H_ 1
 
 #include "../link.h"
+
+/* DR_API EXPORT TOFILE dr_ir_opnd.h */
+/* DR_API EXPORT BEGIN */
+/****************************************************************************
+ * OPERAND ROUTINES
+ */
+/**
+ * @file dr_ir_opnd.h
+ * @brief Functions and defines to create and manipulate instruction operands.
+ */
+
 typedef byte opnd_size_t; /* contains a REG_ or OPSZ_ enum value */
 /* we avoid typedef-ing the enum, as its storage size is compiler-specific */
 typedef byte reg_id_t; /* contains a REG_ enum value */
@@ -119,8 +130,11 @@ DR_API
 /** Returns true iff \p instr's operands are up to date. */
 bool
 instr_operands_valid(instr_t *instr);
+
 #ifndef ARM
 #define REG_LAST_ENUM     REG_INVALID /**< Last register enum value. */
+
+/* DR_API EXPORT END */
 
 #define INT8_MIN   SCHAR_MIN
 #define INT8_MAX   SCHAR_MAX
@@ -128,6 +142,7 @@ instr_operands_valid(instr_t *instr);
 #define INT16_MAX  SHRT_MAX
 #define INT32_MIN  INT_MIN
 #define INT32_MAX  INT_MAX
+/* DR_API EXPORT BEGIN */
 enum {
 #ifdef AVOID_API_EXPORT
     /* compiler gives weird errors for "REG_NONE" */
@@ -210,6 +225,9 @@ enum { /* FIXME: vs RAW_OPCODE_* enum */
     SIB_DISP32           = 0x25, /* see vol.2 Table 2-1 for modR/M */
 };
 #endif
+
+/* DR_API EXPORT END */
+
 
 #ifndef ARM
 /* length of our mangling of jecxz/loop* */
@@ -358,6 +376,12 @@ struct _instr_t {
     instr_t   *prev;
     instr_t   *next;
 };
+
+/* DR_API EXPORT TOFILE dr_ir_instr.h */
+
+/* functions to inspect and manipulate the fields of an instr_t
+ * NB: a number of instr_ routines are delared in arch_exports.h.
+ */
 
 #ifndef ARM
 /* Sets instr's eflags to be valid if valid is true, invalid otherwise. */
@@ -655,6 +679,17 @@ enum {
     INSTR_OUR_MANGLING          = 0x80000000,
 };
 
+/* DR_API EXPORT TOFILE dr_ir_opcodes.h */
+/* DR_API EXPORT BEGIN */
+
+/****************************************************************************
+ * OPCODES
+ */
+/**
+ * @file dr_ir_opcodes.h
+ * @brief Instruction opcode constants.
+ */
+
 /** Opcode constants for use in the instr_t data structure. */
 enum {
 /*   0 */     OP_INVALID,  /* NULL, */ /**< Indicates an invalid instr_t. */
@@ -706,6 +741,8 @@ enum {
 				OP_FIRST = OP_AND, /**< First real opcode. */
 				OP_LAST = OP_SVC,   /**< Last real opcode. */
 };
+
+/* DR_API EXPORT END */
 
 typedef struct
 {
